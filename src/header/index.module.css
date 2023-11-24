@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--portfolio-header-background);
+  height: 60px;
+  padding-right: 15px;
+  border-bottom: 1px solid purple;
+}
+
+.logo {
+  text-align: left;
+  width: 65%;
+}
+
+.button {
+  align-self: flex-end;
+  width: 85%;
+  margin: 35px 19px 19px 19px;
+  background: none;
+  border: none;
+  font-family: var(--portfolio-font-family);
+  font-size: var(--portfolio-base-text);
+  font-weight: bold;
+  color:var(--portfolio-text);
+  cursor: pointer;
+  position: relative; 
+  z-index: 2;
+  text-transform: uppercase;
+} 
+
+.button:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  background-image: linear-gradient(var(--portfolio-header-background)12px, var(--portfolio-button-gradient-end)12px);
+}
+
+.button:hover {
+  color: var(--portfolio-font-emphasis);
+  &::after{
+    width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+  }
+}
