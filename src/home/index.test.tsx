@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import {HomeComponent} from './home';
+import {HomeComponent} from '.';
 
 describe('home tests', () => {
   it('renders not signed in text when isAuthed is false', () =>{

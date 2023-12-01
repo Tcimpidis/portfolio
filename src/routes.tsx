@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { HomeComponent } from "./home/home";
+import { HomeComponent } from "./home";
 
 export const routes = [
 	{
