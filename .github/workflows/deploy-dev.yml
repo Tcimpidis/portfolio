@@ -32,4 +32,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         source: "./build/*"
-        target: /var/www/tcimpidis/dev/public_html
+        target: /var/www/tcimpidis/dev/public_html/
