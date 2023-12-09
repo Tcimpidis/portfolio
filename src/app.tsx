@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Outlet, RouterProvider, createHashRouter } from "react-router-dom";
+
 import { routes } from "./routes";
 import Header from "./header";
 import styles from './app.module.css'
