@@ -25,11 +25,11 @@ jobs:
       run: yarn build
 
     - name: Copy files via scp
-      uses: appleboy/scp-action@master              
+      uses: appleboy/ssh-action@master              
       with:
         host: ${{ secrets.HOST_SERVER }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        source: "./build/*"
-        target: /var/www/tcimpidis/dev/public_html/
+        script: |
+                scp -i ${{ env.SSH_AUTH_SOCK }} -r /build/. root@${{ secrets.HOST_SERVER }}:${{ secrets.DEV_WEB_SERVER_LOCATION }}
