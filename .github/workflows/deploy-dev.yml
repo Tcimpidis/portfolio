@@ -27,5 +27,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
         source: "./build/."
-        target: $${{ secrets.DEV_WEB_SERVER_LOCATION }}
+        target: /var/www/tcimpidis/dev/public_html
         strip_components: 1
