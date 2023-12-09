@@ -30,6 +30,6 @@ jobs:
         host: ${{ secrets.HOST_SERVER }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.PASSPHRASE }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         source: "./build"
         target: ${{ secrets.DEV_WEB_SERVER_LOCATION }}
