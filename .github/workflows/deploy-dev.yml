@@ -25,5 +25,5 @@ jobs:
         host: ${{ secrets.HOST_SERVER }}
         username: ${{ secrets.SERVER_ADMIN }}
         password: ${{ secrets.SERVER_ADMIN_PW }}
-        source: "./build/."
+        source: "./build/*"
         target: ${{ secrets.DEV_WEB_SERVER_LOCATION }}
