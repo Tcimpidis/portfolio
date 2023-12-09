@@ -1,7 +1,6 @@
 import styles from './index.module.css'
 import tci_logo from '../assets/tci_logo.png';
 
-
 const Header = () => {
   const redirectToServices = () => {
 
