@@ -23,7 +23,7 @@ jobs:
       uses: appleboy/scp-action@master
       env:
         host: ${{ secrets.HOST_SERVER }}
-        username: ${{ secrets.SERVER_USERNAME }}
+        username: ${{ secrets.SERVER_ADMIN }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
       with:
