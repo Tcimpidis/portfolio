@@ -6,11 +6,6 @@ on:
       - development
       - github_worflow_fired_and_failed
 
-env:
-  # Use the same ssh-agent socket value across all jobs
-  # Useful when a GH action is using SSH behind-the-scenes
-  SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-
 jobs:
   Build_with_SSH:
     runs-on: ubuntu-latest
@@ -32,4 +27,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
-                scp -r /build/. root@${{ secrets.HOST_SERVER }}:${{ secrets.DEV_WEB_SERVER_LOCATION }}
+                scp -i ${{ env.SSH_AUTH_SOCK }} -r /build/. root@${{ secrets.HOST_SERVER }}:${{ secrets.DEV_WEB_SERVER_LOCATION }}
