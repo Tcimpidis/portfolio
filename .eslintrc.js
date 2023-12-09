@@ -52,9 +52,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/forbid-dom-props': 'off',
     'react/prop-types': 'off',
-    // 'react/jsx-no-bind': 'warn',
-
-    camelcase: 'warn',
+    camelcase: 'off',
     'id-match': 'warn',
     'max-classes-per-file': 'off',
     'no-underscore-dangle': 'off',
@@ -111,7 +109,6 @@ module.exports = {
     'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
     'func-style': ['error', 'expression', { allowArrowFunctions: true }],
     'no-multiple-empty-lines': [1, { max: 1, maxEOF: 0 }],
-    // 'react/react-in-jsx-scope': 'off',
     'import/namespace': [
       'error',
       {

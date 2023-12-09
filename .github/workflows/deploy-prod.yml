@@ -3,7 +3,7 @@ name: Deploy to dev
 on: 
   push: 
     branches:
-      - development
+      - production
 
 jobs:
   Build_with_SSH:
@@ -26,5 +26,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
         source: "build/"
-        target: ${{ secrets.DEV_WEB_SERVER_LOCATION }}
+        target: ${{ secrets.PROD_WEB_SERVER_LOCATION }}
         strip_components: 1
