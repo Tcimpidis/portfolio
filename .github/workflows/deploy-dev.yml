@@ -26,8 +26,6 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
-        source: "build/"
+        source: "./build/."
         target: $${{ secrets.DEV_WEB_SERVER_LOCATION }}
         strip_components: 1
-        rm: true
-        overwrite: true
