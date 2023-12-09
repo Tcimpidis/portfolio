@@ -26,6 +26,6 @@ jobs:
         username: ${{ secrets.SERVER_ADMIN }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
-        source: "./build/."
+        source: "build/"
         target: /var/www/tcimpidis/dev/public_html
         strip_components: 1
