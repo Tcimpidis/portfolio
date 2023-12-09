@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "lib/esm",
     "module": "ESNext",
     "target": "ES6",
     "lib": ["ES6", "DOM", "ES2016", "ES2022"],
@@ -16,11 +15,5 @@
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
-  },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    "lib",
-    "src/**/*.spec.ts"
-  ]
+  }
 }

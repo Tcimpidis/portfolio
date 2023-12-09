@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src={tci_logo} alt="header" width={311} height={65}></img>
+        <img alt="header" height={65} src={tci_logo} width={311} />
       </div>
       <div>
         <button className={styles.button} onClick={redirectToServices}>Services</button>

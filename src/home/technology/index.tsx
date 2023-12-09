@@ -1,3 +1,5 @@
+import { FC } from 'react';
+
 import styles from './index.module.css';
 import mongo_db from '../../assets/mongodb_logo.png';
 import dotnet_core from '../../assets/dotnet_core_logo.png';
@@ -5,7 +7,6 @@ import oauth_2_logo from '../../assets/oauth_2_logo.png';
 import react_logo from '../../assets/react_logo.png';
 import redux_logo from '../../assets/redux_logo.png';
 import sql from '../../assets/sql_logo.png';
-import { FC } from 'react';
 
 interface TechnologyDetail {
   src: string;
@@ -48,7 +49,7 @@ export const TechnologyComponent = () => {
         <strong>I am well versed in the following, plus many more.</strong>
       </div>
       <div className={styles.container}>
-        {technologyDetails.map(({src, name}) => <Image alt={name} src={src}/>)}
+        {technologyDetails.map(({src, name}, i) => <Image alt={name} key={i} src={src}/>)}
       </div>
     </section>
   )
