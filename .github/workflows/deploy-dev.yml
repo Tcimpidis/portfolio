@@ -23,7 +23,8 @@ jobs:
       uses: appleboy/ssh-action@master              
       with:
         host: ${{ secrets.HOST_SERVER }}
-        username: ${{ secrets.SERVER_ADMIN }}
-        password: ${{ secrets.SERVER_ADMIN_PW }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
                 scp -vvv -r /build/. root@${{ secrets.HOST_SERVER }}:${{ secrets.DEV_WEB_SERVER_LOCATION }}
