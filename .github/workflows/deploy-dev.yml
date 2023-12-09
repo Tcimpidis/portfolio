@@ -20,11 +20,15 @@ jobs:
       run: yarn build
 
     - name: Copy files via scp
-      uses: appleboy/ssh-action@master              
-      with:
+      uses: appleboy/scp-action@master
+      env:
         host: ${{ secrets.HOST_SERVER }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
-        script: |
-                scp -vvv -r /build/. root@${{ secrets.HOST_SERVER }}:${{ secrets.DEV_WEB_SERVER_LOCATION }}
+        passphrase: ${{ secrets.SSH_PASSPHRASE }}    
+      with:
+        source: "build/"
+        target: $${{ secrets.DEV_WEB_SERVER_LOCATION }}
+        strip_components: 1
+        rm: true
+        overwrite: true
