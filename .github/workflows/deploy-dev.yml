@@ -31,5 +31,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
-        source: "./build"
-        target: ${{ secrets.DEV_WEB_SERVER_LOCATION }}
+        script: scp -i ${{ env.SSH_AUTH_SOCK }} -r /build/. root@${{ secrets.HOST_SERVER }}:${{ secrets.DEV_WEB_SERVER_LOCATION }}
