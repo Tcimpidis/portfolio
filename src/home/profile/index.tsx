@@ -22,9 +22,9 @@ export const ProfileComponent = () => {
         </div>
         <div className={styles.image}>
           <img
+            alt="profile"
             src={profile}
-            alt="profile">
-          </img>
+          />
         </div>
       </div>
     </section>

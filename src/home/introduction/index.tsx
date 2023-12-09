@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import profile_1 from '../../assets/profile_1.png'
 import styles from './index.module.css';
 
@@ -6,8 +7,8 @@ export const IntroductionComponent = () => {
   return (
     <section className={styles.section}>
       <div className={styles.shape_bottom} data-negative="false">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path className={styles.shape} d="M0,6V0h1000v100L0,6z"></path>
+        <svg preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
+          <path className={styles.shape} d="M0,6V0h1000v100L0,6z" />
         </svg>
       </div>
       <div className={styles.container}>
@@ -36,6 +37,6 @@ const IntroductionText: FC = () => (
 
 const ProfileImage: FC = () => (
   <div className={styles.picture}>
-    <img src={profile_1} alt="introduction" height={591} width={370}></img>
+    <img alt="introduction" height={591} src={profile_1} width={370} />
   </div>
 )

@@ -80,6 +80,7 @@ module.exports = {
     ],
     'no-nested-ternary': 'error',
     'no-unneeded-ternary': 'error',
+    "react/react-in-jsx-scope": "off",
     'react/jsx-curly-brace-presence': ['warn'],
     'prefer-destructuring': [
       2,
