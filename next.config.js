@@ -5,6 +5,7 @@ const envBaseRoute = {
   development: "/",
   production: "/"
 }
+
 const nextConfig = {
   output: 'export',
   assetPrefix: envBaseRoute[process.env.NODE_ENV],

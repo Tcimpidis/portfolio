@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Image from 'next/image';
 
 import styles from './index.module.css';
 
@@ -21,15 +22,15 @@ const technologyDetails: TechnologyDetail[] = [
     name: ".netcore"
   },
   {
-    src: "/assets/redux_logo.png",
+    src: "assets/redux_logo.png",
     name: "redux"
   },
   {
-    src: "/assets/mongodb_logo.png",
+    src: "assets/mongodb_logo.png",
     name: "mongo_db"
   },
   {
-    src: "/assets/sql_logo.png",
+    src: "assets/sql_logo.png",
     name: "sql"
   },
 ]
@@ -43,17 +44,17 @@ export const TechnologyComponent = () => {
         <strong>I am well versed in the following, plus many more.</strong>
       </div>
       <div className={styles.container}>
-        {technologyDetails.map(({src, name}, i) => <Image alt={name} key={i} src={src}/>)}
+        {technologyDetails.map(({src, name}, i) => <ImageComponent alt={name} key={i} src={src}/>)}
       </div>
     </section>
   )
 }
 
-const Image: FC<{ alt: string, src: string}> = ({
+const ImageComponent: FC<{ alt: string, src: string}> = ({
   alt,
   src
 }) => (
-  <img 
+  <Image 
     alt={alt}
     className={styles.image}
     height={215}
