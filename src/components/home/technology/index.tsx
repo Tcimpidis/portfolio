@@ -9,27 +9,27 @@ interface TechnologyDetail {
 
 const technologyDetails: TechnologyDetail[] = [
   {
-    src: "assets/oauth_2_logo.png",
+    src: "/assets/oauth_2_logo.png",
     name: "oauth"
   },
   {
-    src: "assets/react_logo.png",
+    src: "/assets/react_logo.png",
     name: "react"
   },
   {
-    src: "assets/dotnet_core_logo.png",
+    src: "/assets/dotnet_core_logo.png",
     name: ".netcore"
   },
   {
-    src: "assets/redux_logo.png",
+    src: "/assets/redux_logo.png",
     name: "redux"
   },
   {
-    src: "assets/mongodb_logo.png",
+    src: "/assets/mongodb_logo.png",
     name: "mongo_db"
   },
   {
-    src: "assets/sql_logo.png",
+    src: "/assets/sql_logo.png",
     name: "sql"
   },
 ]
