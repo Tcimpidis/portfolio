@@ -17,7 +17,7 @@ jobs:
     - name: Install Dependencies
       run: yarn install
     - name: Build
-      run: yarn build
+      run: yarn NODE_ENV=test next build
 
     - name: Clean old directory
       uses: appleboy/ssh-action@master

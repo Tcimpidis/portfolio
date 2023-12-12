@@ -26,7 +26,7 @@ export const ProfileComponent = () => {
             alt="profile"
             width={300}
             height={500}
-            src="/assets/profile_1.png"
+            src="/assets/jamin_image_1.png"
           />
         </div>
       </div>
