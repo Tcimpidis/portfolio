@@ -7,7 +7,7 @@ const envBaseRoute = {
 }
 const nextConfig = {
   output: 'export',
-  assetPrefix: '/',
+  assetPrefix: envBaseRoute[process.env.NODE_ENV],
   basePath: envBaseRoute[process.env.NODE_ENV]
 }
 
