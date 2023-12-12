@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import styles from './index.module.css';
+import { envBaseRoute } from '@/constants';
 
 export const IntroductionComponent = () => {
   return (
@@ -32,6 +33,6 @@ const IntroductionText: FC = () => (
 
 const ProfileImage: FC = () => (
   <div className={styles.picture}>
-    <Image alt="introduction" height={591} src='/assets/jamin_image_1.png' width={370} />
+    <Image alt="introduction" height={591} src={`${envBaseRoute[process.env.NODE_ENV]}/assets/jamin_image_1.png`} width={370} />
   </div>
 )
