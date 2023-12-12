@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import styles from './page.module.css';
-import { Person } from '../person';
+import { Person } from '../../components/person';
 
 export default function People() {
   return (
