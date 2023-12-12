@@ -25,6 +25,6 @@ jobs:
         username: ${{ secrets.SERVER_ADMIN }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
-        source: ".next/"
+        source: ".out/"
         target: ${{ secrets.PROD_WEB_SERVER_LOCATION }}
         strip_components: 1
