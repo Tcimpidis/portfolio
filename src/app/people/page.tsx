@@ -8,7 +8,7 @@ export default function People() {
     <div className={styles.container}>
       <Person 
         fullName='Jamin Tcimpidis'
-        imageUrl='/assets/profile_1.png'
+        imageUrl='assets/profile_1.png'
         summary='this Is a summary'
       />
     </div>

@@ -32,6 +32,6 @@ const IntroductionText: FC = () => (
 
 const ProfileImage: FC = () => (
   <div className={styles.picture}>
-    <Image alt="introduction" height={591} src='/assets/profile_1.png' width={370} />
+    <Image alt="introduction" height={591} src='assets/profile_1.png' width={370} />
   </div>
 )
