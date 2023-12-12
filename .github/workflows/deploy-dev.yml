@@ -4,6 +4,7 @@ on:
   push: 
     branches:
       - development
+      - wrong_file_name_on_build
 
 jobs:
   Build_with_SSH:
@@ -25,6 +26,6 @@ jobs:
         username: ${{ secrets.SERVER_ADMIN }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
-        source: ".out/"
+        source: "out/"
         target: ${{ secrets.DEV_WEB_SERVER_LOCATION }}
         strip_components: 1
