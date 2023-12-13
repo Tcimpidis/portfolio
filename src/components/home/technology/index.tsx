@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 
 import styles from './index.module.css';
-import { envBaseRoute } from '@/constants';
+import { envRoute } from '@/envUtility';
 
 interface TechnologyDetail {
   src: string;
@@ -11,27 +11,27 @@ interface TechnologyDetail {
 
 const technologyDetails: TechnologyDetail[] = [
   {
-    src: `${envBaseRoute[process.env.NODE_ENV]}/assets/oauth_2_logo.png`,
+    src: `${envRoute}/assets/oauth_2_logo.png`,
     name: "oauth"
   },
   {
-    src: `${envBaseRoute[process.env.NODE_ENV]}/assets/react_logo.png`,
+    src: `${envRoute}/assets/react_logo.png`,
     name: "react"
   },
   {
-    src: `${envBaseRoute[process.env.NODE_ENV]}/assets/dotnet_core_logo.png`,
+    src: `${envRoute}/assets/dotnet_core_logo.png`,
     name: ".netcore"
   },
   {
-    src: `${envBaseRoute[process.env.NODE_ENV]}/assets/redux_logo.png`,
+    src: `${envRoute}/assets/redux_logo.png`,
     name: "redux"
   },
   {
-    src: `${envBaseRoute[process.env.NODE_ENV]}/assets/mongodb_logo.png`,
+    src: `${envRoute}/assets/mongodb_logo.png`,
     name: "mongo_db"
   },
   {
-    src: `${envBaseRoute[process.env.NODE_ENV]}/assets/sql_logo.png`,
+    src: `${envRoute}/assets/sql_logo.png`,
     name: "sql"
   },
 ]
