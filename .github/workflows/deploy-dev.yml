@@ -4,7 +4,6 @@ on:
   push: 
     branches:
       - development
-      - wrong_file_name_on_build
 
 jobs:
   Build_with_SSH:
@@ -19,7 +18,7 @@ jobs:
     - name: Build
       run: yarn test
 
-    - name: Clean old directory
+    - name: Clear out directory
       uses: appleboy/ssh-action@master
       with: 
         host: ${{ secrets.HOST_SERVER }}
