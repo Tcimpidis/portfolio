@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import styles from  './index.module.css';
+import { envRoute } from '@/envUtility';
 
 export const ProfileComponent = () => {
   return (
@@ -26,7 +27,7 @@ export const ProfileComponent = () => {
             alt="profile"
             width={300}
             height={500}
-            src="/assets/profile_1.png"
+            src={`${envRoute}/assets/jamin_image_1.png`}
           />
         </div>
       </div>

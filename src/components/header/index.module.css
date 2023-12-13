@@ -61,7 +61,6 @@
 }
 
 .button:hover {
-  color: var(--tcimpidis-cool-shower);
   &::after{
     width: 100%;
     opacity: 1;
@@ -71,7 +70,7 @@
 }
 
 .button:active {
-  color: var(--tcimpidis-fresh-lips);
+  color: var(--tcimpidis-cool-shower);
 }
 
 .shape-bottom {
@@ -82,6 +81,6 @@
 }
 
 .shape {
-  fill: var(--tcimpidis-fresh-lips);
+  fill: var(--tcimpidis-sweet-nothings);
 }
 

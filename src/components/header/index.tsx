@@ -3,6 +3,7 @@ import Image from 'next/image';
 
 import styles from './index.module.css'
 import { useRouter } from 'next/navigation';
+import { envRoute } from '@/envUtility';
 
 const Header = () => {
   const router = useRouter()
@@ -26,7 +27,7 @@ const Header = () => {
       <header className={styles.header}>
         <div>
           <button className={styles.logo} onClick={redirectToHome}>
-            <Image alt="header" height={50} src="/assets/tci_logo.svg" width={260} />
+            <Image alt="header" height={50} src={`${envRoute}/assets/tci_logo.svg`} width={260} />
           </button>
         </div>
         <div className={styles['link-box']}>

@@ -1,6 +1,8 @@
 import { FC } from 'react';
+import Image from 'next/image';
 
 import styles from './index.module.css';
+import { envRoute } from '@/envUtility';
 
 interface TechnologyDetail {
   src: string;
@@ -9,27 +11,27 @@ interface TechnologyDetail {
 
 const technologyDetails: TechnologyDetail[] = [
   {
-    src: "assets/oauth_2_logo.png",
+    src: `${envRoute}/assets/oauth_2_logo.png`,
     name: "oauth"
   },
   {
-    src: "assets/react_logo.png",
+    src: `${envRoute}/assets/react_logo.png`,
     name: "react"
   },
   {
-    src: "assets/dotnet_core_logo.png",
+    src: `${envRoute}/assets/dotnet_core_logo.png`,
     name: ".netcore"
   },
   {
-    src: "assets/redux_logo.png",
+    src: `${envRoute}/assets/redux_logo.png`,
     name: "redux"
   },
   {
-    src: "assets/mongodb_logo.png",
+    src: `${envRoute}/assets/mongodb_logo.png`,
     name: "mongo_db"
   },
   {
-    src: "assets/sql_logo.png",
+    src: `${envRoute}/assets/sql_logo.png`,
     name: "sql"
   },
 ]
@@ -43,17 +45,17 @@ export const TechnologyComponent = () => {
         <strong>I am well versed in the following, plus many more.</strong>
       </div>
       <div className={styles.container}>
-        {technologyDetails.map(({src, name}, i) => <Image alt={name} key={i} src={src}/>)}
+        {technologyDetails.map(({src, name}, i) => <ImageComponent alt={name} key={i} src={src}/>)}
       </div>
     </section>
   )
 }
 
-const Image: FC<{ alt: string, src: string}> = ({
+const ImageComponent: FC<{ alt: string, src: string}> = ({
   alt,
   src
 }) => (
-  <img 
+  <Image 
     alt={alt}
     className={styles.image}
     height={215}
