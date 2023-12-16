@@ -1,0 +1,74 @@
+.container { 
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 0;
+  border: solid 1px var(--tcimpidis-sweet-nothings);
+  height: 60vh;
+}
+
+.display_name {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  padding-left: 1rem;
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  border-bottom: solid 1px var(--tcimpidis-sweet-nothings);
+}
+
+.item {
+  padding: .25rem 0 .25rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.text {
+  font-size: .9rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--tcimpidis-cool-shower);
+  width: 70%;
+}
+
+.project_text {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem 0;
+  font-size: .7rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--tcimpidis-cool-shower);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary_label {
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+  border-bottom: solid 1px var(--tcimpidis-sweet-nothings);
+}
+
+.summary_text {
+  font-size: .7rem;
+  font-weight: 600;
+  padding-left: 1.25rem;
+  overflow-wrap: break-word;
+  color: var(--tcimpidis-cool-shower);
+
+  overflow: hidden;
+
+}

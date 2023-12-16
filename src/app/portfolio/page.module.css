@@ -1,0 +1,30 @@
+.container { 
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 2rem;
+  padding: 2rem 6rem;
+  background-color: var(--tcimpidis-brunch-with-friends);
+}
+
+.container_odd { 
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 2rem;
+  padding: 2rem 6rem;
+  background-image: linear-gradient(var(--tcimpidis-sweet-nothings), var(--tcimpidis-sea-foam));
+}
+
+
+.title {
+  background-image: linear-gradient(var(--tcimpidis-sea-foam), var(--tcimpidis-cool-shower));
+  color: var(--tcimpidis-brunch-with-friends);
+  font-size: 52px;
+  font-family: 'lobster';
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
