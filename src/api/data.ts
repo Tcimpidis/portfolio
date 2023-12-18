@@ -359,21 +359,40 @@ Organiztion UI is an app for platform users to make changes to their organizatio
       Agile, TypeScript, CSS3, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, Google_analytics, HTML5, JavaScript, Node_js, Launchdarkly, CSharp, Docker, Dot_net_core, Figma, Terraform, OWASP, Sql_server
     ],
     highlights: `
-    ### Overview 
-Marketplace is an app for platform users that enables them to manage their existing subscriptions, subscribe to new apps released on the Marketplace, and, if they have the right role, create subscriptions to their apps on behalf of their customers.   
+### Overview 
+FreightQuote by CHR is an app that strives to deliver FreightQuote by CHR's vast carrier network to infrequent shippers. If offers free instant quotes on shipments, and then will bring users who sign up through creating an order. 
 ###  Specifications 
-- Developed with [Webpack module-federation](https://webpack.js.org/concepts/module-federation/) and is a host app.
-- Authed site requiring signup through the [Customer Sign Up UI](#${CustomerSignUpUI})
-- App uses Axios wrapped with react-query to optimize data fetching. The Axios server connects to a Node.js gateway api.
-- Checkout process with payment capture that leverages redis with form validation.
-- View and pay invoices.
-- Supports switching between user organizations.
-- Deployed through github actions to S3 bucket through cloudfront.
+- Greenfield project. When I joined we had just went live and hadn't captured more than 10 orders.
+- Built in the newest C.H. Robinson technologies: 
+  - React frontend, 
+  - Servicestack .net core gateways, microservicees, and kafka producers/consumers
+  - full devops pipeline with unit and e2e quality gates.
+- Had to work across functional domains to delivery FreightQuote business needs.
 
-### Takeaways
-- Module frontend architecture of Platform UI was effective, even allowing the host app to route the child, however the mount was always a bit slow. Which brought down user experience
-- Abstration of react context usage to Platform UI was effective.
-- Oidc-context left something to be desired. Redirects weren't working as expected but I was not able to prioritize resolving.
+
+### Summary
+- I was given a chance to have a lot of ownership with many projects while on this team. Most notably a B2B integration with twilio for managing uesr sms alters. One of the first times I got to develop an event based interation instead of pure api calls or older SOAP or Biztalk requests.
+- Another notable project was the decomposition  initiative that I spearheaded and sold to 
+`
+  },
+  [`${TMC}`]: <ProjectDataDto>{
+    title: "TMC a Division of C.H. Robinson ",
+    tech: [
+      Agile, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, React, Angular, Webpack, Sql_server, Xml, Microsoft_azure, Github, Git_bash
+    ],
+    highlights: `
+### Overview 
+TMC is a division of robinson that offers robinsons platform as a service to large scale customers. These are customers that have their own relationships with carriers and want to have a single UI to manage all of their logistics. 
+###  Specifications 
+- No longer worked within one functional domain. Instead had to deliver business initiatives across the entire chrobinson system. 
+- Worked with many teams, in many different code bases, with different deployment prototcals and legacy technologies.
+- Requrired doing in-depth techincal analysis across all of Robinson systems. 
+- Own and track deployment progress across the other systems. 
+
+### Summary
+- As I was working in this role C.H. Robinson was going through technical uplifts. Moving away from legacy deployment stratigies and legacy tech. I was introduced to so many different process in this role.
+- Towards the end of the role the team built a branch in Poland. I had to learn how to mentor and work with engineers in differnt time zones. I was even brought to Poland to train their developers in C.H. Robinson systems.
+- I worked within TMC for about two and a half to three years before I tranistioned to Freightquote by CHR. 
 `
   },
   [`${CHRobinsonOnline}`]: <ProjectDataDto>{
@@ -381,14 +400,20 @@ Marketplace is an app for platform users that enables them to manage their exist
     tech: [
       Agile, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, Sql_server, Xml
     ],
-    highlights: ""
-  },
-  [`${TMC}`]: <ProjectDataDto>{
-    title: "TMC a Division of C.H. Robinson ",
-    tech: [
-      Agile, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, React, Angular, Webpack, Sql_server, Xml, Microsoft_azure,
-    ],
-    highlights: ""
+    highlights: `
+### Overview 
+Navisphere Online is a portal for robinson customers to interact with Robinson's large network of carriers to ship freight. Navipshere Online's services are used by large scale distributors that do not ab adequate freight fleet to meet their demands.
+###  Specifications 
+- VB.Net and C# MVC with sql backend.
+- Legacy interactions with many functions and aggregations living in the data layer
+- Visual studio version control
+- Manual deployments had to be staged across the various enviroments with Prod deployments happening usually once a  month.
+- The responsibilities extended to the Navisphere Trucks and Wearhouse applications. All with the same tech
+
+### Summary
+- ChrobinsonOnline was the first posting I held after graduating from my bootcamp. I was here as an apprentice and worked with my mentor to deliver enchancements and bug fixes across the stack.
+- A little over 9 months into this role, the team was reconsontructed and I started working with for the [TMC](#${TMC}) business instead of just NavisphereOnline.
+`
   },
   [`${Portfolio}`]: <ProjectDataDto>{
     title: "Tcimpidis.com",
