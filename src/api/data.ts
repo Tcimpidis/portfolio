@@ -20,14 +20,13 @@ export interface ImportantUrl {
 export interface CompanyDataDto {
   projects: ProjectType[];
   summary: string;
-  references: PersonalReference[];
+  references?: PersonalReference[];
 }
 
 export interface PersonalReference {
   name: string;
   role: string;
   linkedIn?: string;
-  email?: string;
 }
 
 /* Company Names */
@@ -287,17 +286,58 @@ export const CompanyData: CompanyMap = {
         role: "Manager",
         linkedIn: "https://www.linkedin.com/in/john-holmen"
       },
-
       {
-        name: "John Holmen",
-        role: "Manager",
-        linkedIn: "https://www.linkedin.com/in/john-holmen"
+        name: "Carrie Drzewiecki",
+        role: "Lead Product Manager",
+        linkedIn: "https://www.linkedin.com/in/carriedrzewiecki"
+      },
+      {
+        name: "Ryan Arhart",
+        role: "UX Designer",
+        linkedIn: "https://www.linkedin.com/in/ryan-arhart-26b21712"
+      },
+      {
+        name: "Jack Hamby",
+        role: "Software Engineer",
+        linkedIn: "https://www.linkedin.com/in/jack-hamby-626ba7125"
+      },
+      {
+        name: "Drew Ward",
+        role: "Software Engineer",
+        linkedIn: "https://www.linkedin.com/in/andrew-m-ward"
       }
     ]
   },
   [`${Delhivery}`]: <CompanyDataDto>{
     projects: [CustomerSignUpUI, MarketplaceUI, DeveloperPortal, ConsoleUI],
-    summary: "I worked at Delhivery for one year and nine months before the India based headquaters dissolved the US based team in early November 2023. It the first time I had to make real technical desicions. Where I had true ownership. I was the sole UI designer, developer, and architect for the commercialization branch of their SaaS product OS1. I was tasked with creating an ecosystem that would allow for common login and UX across multiple applications. To accomplish this I created an internal framework of two libraries. One for core function features. Such as Http interceptors, Oauth wrappers, and base contexts/providers. The other for common reuseable styles and components, from complex components like a generic payment widget, to simple components like common buttons and inputs. These libraries were used in four different websites hosted in the os1 domain. One of which is a micro-frontend. Since they share a domain, they share session, allowing each app to use their own instance of the same authed session. The frameworked worked well and was easy enough to work within, though a little tedious to maintain given the scope of the product. The feedback I received from managers, colueges, and the product team was always generally positive and I always hit my deadlines. Though I am quite proud of this work. I would have to say that the overall execution of the product was subpar. I believe I leaned into the reusability concerns of product too much intially, due to my lack of experience, and built out a complex UI network far beyond what the product actually needed. There were simpler, faster ways to accomplish the job. I just didn't know when I started. Great learning experience"
+    summary: "I worked at Delhivery for one year and nine months before the India based headquaters dissolved the US based team in early November 2023. It the first time I had to make real technical desicions. Where I had true ownership. I was the sole UI designer, developer, and architect for the commercialization branch of their SaaS product OS1. I was tasked with creating an ecosystem that would allow for common login and UX across multiple applications. To accomplish this I created an internal framework of two libraries. One for core function features. Such as Http interceptors, Oauth wrappers, and base contexts/providers. The other for common reuseable styles and components, from complex components like a generic payment widget, to simple components like common buttons and inputs. These libraries were used in four different websites hosted in the os1 domain. One of which is a micro-frontend. Since they share a domain, they share session, allowing each app to use their own instance of the same authed session. The frameworked worked well and was easy enough to work within, though a little tedious to maintain given the scope of the product. The feedback I received from managers, colueges, and the product team was always generally positive and I always hit my deadlines. Though I am quite proud of this work. I would have to say that the overall execution of the product was subpar. I believe I leaned into the reusability concerns of product too much intially, due to my lack of experience, and built out a complex UI network far beyond what the product actually needed. There were simpler, faster ways to accomplish the job. I just didn't know when I started. Great learning experience",
+    references: [
+      {
+        name: "Derek Gordon",
+        role: "Lead Engineer",
+        linkedIn: "https://www.linkedin.com/in/gordon-derek"
+      },
+      {
+        name: "Sam Schneider",
+        role: "Architect",
+        linkedIn: "https://www.linkedin.com/in/samaschneider"
+      },
+      {
+        name: "Nathaniel Davidson",
+        role: "Software Developer",
+        linkedIn: "https://www.linkedin.com/in/nathanieldavidson"
+      },
+      {
+        name: "Shreya Jivani",
+        role: "Manager",
+        linkedIn: "https://www.linkedin.com/in/shreya-jivani-6bb85378"
+      },
+      {
+        name: "James Chainey",
+        role: "Hiring Manager",
+        linkedIn: 'https://www.linkedin.com/in/james-chainey-5673009'
+      },
+    ]
   },
   [`${Tcimpidis}`]: <CompanyDataDto>{
     projects: [Portfolio, Personal],
