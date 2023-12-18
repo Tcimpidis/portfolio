@@ -9,9 +9,12 @@ export interface ProjectDataDto {
   title: string;
   tech: ToolType[];
   highlights: string;
-  OverView: string;
-  Specs: string;
-  lessons: string;
+  importantUrls?: ImportantUrl[];
+}
+
+export interface ImportantUrl {
+  name: string;
+  urlList: string[]
 }
 
 export interface CompanyDataDto {
@@ -290,7 +293,11 @@ Customer sign up step driven user interface for capturing a customer product, co
 - Deployed through github actions to S3 bucket through cloudfront 
 ### Lessons
 - With this app I used react router with app state to maintain the form. This required that I solve managing form state (Current sign up step) with browser navigation buttons. Solving this was quite complex and I never was able to prioritize a solution that didn't require managing browser router state.
-`
+`,
+    importantUrls: [{
+      name: "Website Url",
+      urlList: ["https://getos1.com"]
+    }]
   },
   [`${MarketplaceUI}`]: <ProjectDataDto>{
     title: "Marketplace UI",
@@ -301,7 +308,7 @@ Customer sign up step driven user interface for capturing a customer product, co
 ### Overview 
 Marketplace is an app for platform users that enables them to manage their existing subscriptions, subscribe to new apps released on the Marketplace, and, if they have the right role, create subscriptions to their apps on behalf of their customers.   
 ###  Specifications 
-- Developed with [Webpack module-federation](https://webpack.js.org/concepts/module-federation/) and is a host app.
+- Developed with [Webpack](?tool=${Webpack}#tool_detail) module-federation as a host app.
 - Authed site requiring signup through the [Customer Sign Up UI](#${CustomerSignUpUI})
 - App uses Axios wrapped with react-query to optimize data fetching. The Axios server connects to a Node.js gateway api.
 - Checkout process with payment capture that leverages redis with form validation.
@@ -313,7 +320,11 @@ Marketplace is an app for platform users that enables them to manage their exist
 - Module frontend architecture of Platform UI was effective, even allowing the host app to route the child, however the mount was always a bit slow. Which brought down user experience
 - Abstration of react context usage to Platform UI was effective.
 - Oidc-context left something to be desired. Redirects weren't working as expected but I was not able to prioritize resolving.
-`
+`,
+    importantUrls: [{
+      name: "Website Url",
+      urlList: ['https://marketplace.getos1.com']
+    }]
   },
   [`${OrganizationUI}`]: <ProjectDataDto>{
     title: "Organization UI",
@@ -337,21 +348,54 @@ Organiztion UI is an app for platform users to make changes to their organizatio
 - Somewhat annoying to run locally as well.
 - Really interesting technology that opens up a lot of possiblilties for hosting sub apps 
 - Curious to see if something similiar could be implemented in next.js.
-`
+`,
+importantUrls: [{
+  name: "Website Url",
+  urlList: ['https://marketplace.getos1.com/organization']
+}]
   },
   [`${DeveloperPortal}`]: <ProjectDataDto>{
     title: "Developer Portal UI",
     tech: [
       Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
     ],
-    highlights: ""
+    highlights: `
+### Overview 
+Developer portal is a hub for developers that want to build apps within the OS1 ecosystem. With the intention of sellion those apps to users on the marketplaces. Apps can be packaged in groups and sold as solutions, or be developed in isolation with the intention of be used by many solutions.
+###  Specifications 
+- Developed with [Webpack](?tool=${Webpack}#tool_detail) module-federation as a host app.
+- Authed site requiring signup through its own login portal.
+- App uses Axios for data fetching. The Axios server connects to a Node.js gateway api.
+- Create organizations and add developers to an organization. 
+- Deployed through github actions to S3 bucket through cloudfront.
+### Takeaways
+- I built this with inital specs but we ended up downsizing pretty rapidly. This a bit over abstracted. Having all of these pieces in a single repo would have ended up being better. 
+- Platform UI base components and context worked well and I was please with the integration since Developer Portal ended up being deprioritized and therefore it wasn't kept up to date with Platform UI changes.
+`,
+importantUrls: [{
+  name: "Website Url",
+  urlList: ['https://developer.getos1.com']
+}]
   },
   [`${ConsoleUI}`]: <ProjectDataDto>{
     title: "Console UI",
     tech: [
       Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
     ],
-    highlights: ""
+    highlights:`
+### Overview 
+Console UI is an npm package that users pull down to create apps that are bootstrapped to integrate with a existing internal solution that is available on the marketplace. It is intended to facilitate login and accessibility to an instance of a purchased app or solution.
+###  Specifications 
+- Monorepo built with lerna
+- Exposes a [webpack](#${Webpack}) module fedeation remote module for apps that what to integrate to consume.
+- Built in react
+- Exposes an Axios client with predefined headers for data fetching. 
+- Exposes function for pulling apps associated with user
+### Summary
+- I took over responsibility of this app well after it was already deployed and in use. I felt there were issues with what was being exposed/how it was intended to be used vs how it was use.
+- There seemed to not be good enough communication on inital development between the teams using it and the team who had built it. I had put some effort into getting it to work, but in the end there were some real issues with consuming the module as intended in a Next.js app, which happened to be technology the consuming team was using.
+- I learned a lot about module federation and how to use it in Next.js through this project.
+`
   },
   [`${FreightQuote}`]: <ProjectDataDto>{
     title: "FreightQuote by CHR",
@@ -368,14 +412,16 @@ FreightQuote by CHR is an app that strives to deliver FreightQuote by CHR's vast
   - Servicestack .net core gateways, microservicees, and kafka producers/consumers
   - full devops pipeline with unit and e2e quality gates.
 - Had to work across functional domains to delivery FreightQuote business needs.
-
-
 ### Summary
 - I was given a chance to have a lot of ownership with many projects while on this team. Most notably a B2B integration with twilio for managing uesr sms alters. One of the first times I got to develop an event based interation instead of pure api calls or older SOAP or Biztalk requests.
 - Another notable project was the decomposition initiative that I spearheaded and potitioned our leadership group to prioritize.
   - App deployment was getting bogged down with end to end tests. The Application started managing so many tasks and if any of them failed during deployment, the entire deployment would fail. There were times where we'd lose a week of deliverables due to these bottlenecks.
   - With this I lead a micro-site initiative. Where we spilt the ui into funcitonal pieces and extended the domain so we could route each functional piece to its own url while sharing local and session (auth) storage.
-`
+`,
+importantUrls: [{
+  name: "Website Url",
+  urlList: ['https://freightquote.com/book']
+}]
   },
   [`${TMC}`]: <ProjectDataDto>{
     title: "TMC a Division of C.H. Robinson ",
@@ -422,7 +468,25 @@ Navisphere Online is a portal for robinson customers to interact with Robinson's
     tech: [
       TypeScript, React, Jest, Git_bash, Github, React_testing_library, HTML5, JavaScript, Node_js, Yaml, Next_js, CSS_Modules, Apache, Ubuntu, Linux
     ],
-    highlights: ""
+    highlights:`
+### Overview 
+Tcimpidis.com is the location of the Tcimpidis brand technical consulting firm. It currenly is jsut forming and only has the creator and founder as a developer. The domain is currently being used a excibition to showcase the Tcimpidis' experience, talents and serve as foundation for the Tcimpidis brand in the future. 
+###  Specifications 
+- Built in Next.js
+- There is no api. All data is static and served locally. This decision was based on cost and time.
+- Using Css modules instead of tailwind
+- Typescript
+- Deployed through secure ssh script to apache ubunto server.
+- Currently served as a static site, not a container.
+
+### Summary
+- Finding next.js to be interesting to work with. The AppRouter demands enforce a folder structure that I find easy to work with. Plust there are a lot of performance wins you get without have to think about. Really responsive thus far.
+- Tcimpidis.com isn't only a website. It also is a github repo that currently is has a couple of public pieces that showcase some of Tcimpidis' work.  
+`,
+importantUrls: [{
+  name: "github repo",
+  urlList: ['https://github.com/tcimpidis/portfolio']
+}]
   },
   [`${Personal}`]: <ProjectDataDto>{
     title: "Personal projects",
@@ -431,371 +495,371 @@ Navisphere Online is a portal for robinson customers to interact with Robinson's
     ],
     highlights:`
 ### Overview 
-Marketplace is an app for platform users that enables them to manage their existing subscriptions, subscribe to new apps released on the Marketplace, and, if they have the right role, create subscriptions to their apps on behalf of their customers.   
-###  Specifications 
-- Developed with [Webpack module-federation](https://webpack.js.org/concepts/module-federation/) and is a host app.
-- Authed site requiring signup through the [Customer Sign Up UI](#${CustomerSignUpUI})
-- App uses Axios wrapped with react-query to optimize data fetching. The Axios server connects to a Node.js gateway api.
-- Checkout process with payment capture that leverages redis with form validation.
-- View and pay invoices.
-- Supports switching between user organizations.
-- Deployed through github actions to S3 bucket through cloudfront.
+Aside from Tcimpidis' technical consulting and its repos, there's the Jamin Tcimpidis repos, and code sandbox where more code examples can be found.  
+`,
+importantUrls: [{
+  name: "Jamin's repo",
+  urlList: ['https://github.com/JaminTcimpidis']
+},{
+  name: "Code sandbox challenges"
+}
+]
 
-### Takeaways
-- Module frontend architecture of Platform UI was effective, even allowing the host app to route the child, however the mount was always a bit slow. Which brought down user experience
-- Abstration of react context usage to Platform UI was effective.
-- Oidc-context left something to be desired. Redirects weren't working as expected but I was not able to prioritize resolving.
-`
   }
+}
+
+const getProjectListForTool = (tool: ToolType) => {
+  const projectsThatUseTool = Object.keys(ProjectData).filter((key) => ProjectData[key as ProjectType].tech.includes(tool));
+  return projectsThatUseTool as ProjectType[];
 }
 
 export const ToolData : ToolMap = {
   [`${Agile}`]: <ToolDataDto>{
       displayName: "Agile Methodology",
       years: 8.5,
-      projects: [CustomerSignUpUI, MarketplaceUI, DeveloperPortal, CHRobinsonOnline, FreightQuote],
+      projects: getProjectListForTool(Agile),
       summary: '- Experience with one and two week sprints.\n\n- Engaged in all ceremony: Grooming, Planning, Standup and Retro.\n- Used tools like Jira, Azure, and trello to track work.\n - Reflected on burn down metrics to improve productivity.'
     },
     [`${Angular}`]: <ToolDataDto>{
       displayName: "Angular",
       years: 2.5,
-      projects: [CHRobinsonOnline],
+      projects: getProjectListForTool(Angular),
       summary:'',
     },
     [`${Apache}`]: <ToolDataDto>{
       displayName: "Apache",
       years: .2,
-      projects: [Portfolio],
+      projects: getProjectListForTool(Apache),
       summary:'',
     },
     [`${Aws}`]: <ToolDataDto>{
       displayName: "AWS",
       years: 1.5,
-      projects: [CustomerSignUpUI,MarketplaceUI,DeveloperPortal],
+      projects: getProjectListForTool(Aws),
       summary:'',
     },
     [`${Aws_cloudfront}`]: <ToolDataDto>{
       displayName: "Aws Cloudfront",
       years: 2.5,
-      projects: [CustomerSignUpUI,MarketplaceUI,DeveloperPortal],
+      projects: getProjectListForTool(Aws_cloudfront),
       summary:'',
     },
     [`${Azure_devops}`]: <ToolDataDto>{
       displayName: "Azure Devops",
       years: 2.5,
-      projects: [TMC, CHRobinsonOnline],
+      projects: getProjectListForTool(Azure_devops),
       summary:'',
     },
     [`${CSharp}`]: <ToolDataDto>{      
       displayName: "C#",
       years: 7,
-      projects: [CHRobinsonOnline, FreightQuote],
+      projects: getProjectListForTool(CSharp),
       summary:'',
     },
     [`${CSS_Modules}`]: <ToolDataDto>{
       displayName: "CSS Modules",
       years: .5,
-      projects: [Portfolio],
+      projects: getProjectListForTool(CSS_Modules),
       summary:'',
     },
     [`${CSS3}`]: <ToolDataDto>{
       displayName: "CSS3",
       years: 8.5,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(CSS3),
       summary:'',
     },
     [`${Cypress}`]: <ToolDataDto>{
       displayName: "Cypress",
       years: .1,
-      projects: [ConsoleUI],
+      projects: getProjectListForTool(Cypress),
       summary:'',
     },
     [`${Docker}`]: <ToolDataDto>{
       displayName: "Docker",
       years: 4,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Docker),
       summary:'',
     },
     [`${Dot_net_core}`]: <ToolDataDto>{
       displayName: "Docker",
       years: 4,
-      projects: [FreightQuote, TMC],
+      projects: getProjectListForTool(Dot_net_core),
       summary:'',
     },
     [`${Figma}`]: <ToolDataDto>{
       displayName: "Figma",
       years: 4,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(Figma),
       summary:'',
     },
     [`${Git_bash}`]: <ToolDataDto>{
       displayName: "Git Bash",
       years: 7,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(Git_bash),
       summary:'',
     },
     [`${Github}`]: <ToolDataDto>{
       displayName: "Github",
       years: 7,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(Github),
       summary:'',
     },
     [`${Google_analytics}`]: <ToolDataDto>{
       displayName: "Google Analytics",
       years: 4,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(Google_analytics),
       summary:'',
     },
     [`${HTML5}`]: <ToolDataDto>{
       displayName: "HTML 5",
       years: 8.5,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(HTML5),
       summary:'',
     },
     [`${IT_accessibility}`]: <ToolDataDto>{
       displayName: "IT Accessibility",
       years: 8.5,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(IT_accessibility),
       summary:'',
     },
     [`${JavaScript}`]: <ToolDataDto>{
       displayName: "JavaScript",
       years: 8.5,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(JavaScript),
       summary:'',
     },
     [`${Jenkins}`]: <ToolDataDto>{
       displayName: "Jenkins",
       years: 4,
-      projects: [FreightQuote, CHRobinsonOnline, TMC],
+      projects: getProjectListForTool(Jenkins),
       summary:'',
     },
     [`${Jest}`]: <ToolDataDto>{
       displayName: "Jest",
       years: 5,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(Jest),
       summary:'',
     },
     [`${Kafka}`]: <ToolDataDto>{
       displayName: "Kafka",
       years: 2,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Kafka),
       summary:'',
     },
     [`${Kubernetes}`]: <ToolDataDto>{
       displayName: "Kubernetes",
       years: 3,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Kubernetes),
       summary:'',
     },
     [`${Launchdarkly}`]: <ToolDataDto>{
       displayName: "LaunchDarkly",
       years: 4,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Launchdarkly),
       summary:'',
     },
     [`${Lerna}`]: <ToolDataDto>{
       displayName: "lerna",
       years: 1,
-      projects: [ConsoleUI, Personal],
+      projects: getProjectListForTool(Lerna),
       summary:'',
     },
     [`${Linux}`]: <ToolDataDto>{
       displayName: "Linux",
       years: 4,
-      projects: [FreightQuote, Portfolio, Personal],
+      projects: getProjectListForTool(Linux),
       summary:'',
     },
     [`${Microsoft_azure}`]: <ToolDataDto>{
       displayName: "Microsoft Azure",
       years: 3,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Microsoft_azure),
       summary:'',
     },
     [`${Mongodb}`]: <ToolDataDto>{
       displayName: "MongoDB",
       years: 2,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Mongodb),
       summary:'',
     },
     [`${MySql}`]: <ToolDataDto>{
       displayName: "MySql",
       years: 1,
-      projects: [Personal],
+      projects: getProjectListForTool(MySql),
       summary:'',
     },
     [`${Next_js}`]: <ToolDataDto>{
       displayName: "Next.js",
       years: 1,
-      projects: [ConsoleUI, Portfolio],
+      projects: getProjectListForTool(Next_js),
       summary:'',
     },
     [`${Node_js}`]: <ToolDataDto>{
       displayName: "Node.js",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, CHRobinsonOnline, Personal, Portfolio, TMC],
+      projects: getProjectListForTool(Node_js),
       summary:'',
     },
     [`${NPM}`]: <ToolDataDto>{
       displayName: "Figma",
       years: 8.5,
-      projects: [...ProjectNames],
+      projects: getProjectListForTool(NPM),
       summary:'',
     },
     [`${Oauth}`]: <ToolDataDto>{
       displayName: "Oauth",
       years: 5,
-      projects: [FreightQuote, TMC, MarketplaceUI, DeveloperPortal],
+      projects: getProjectListForTool(Oauth),
       summary:'',
     },
     [`${OWASP}`]: <ToolDataDto>{
       displayName: "OWASP",
       years: 3,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(OWASP),
       summary:'',
     },
     [`${PlatformUI}`]: <ToolDataDto>{
       displayName: "Platform UI Libraries",
       years: 1.9,
-      projects: [CustomerSignUpUI, MarketplaceUI, DeveloperPortal],
+      projects: getProjectListForTool(PlatformUI),
       summary:'',
     },
     [`${Powershell}`]: <ToolDataDto>{
       displayName: "Powershell",
       years: 3,
-      projects: [TMC, FreightQuote],
+      projects: getProjectListForTool(Powershell),
       summary:'',
     },
     [`${Protractor}`]: <ToolDataDto>{
       displayName: "Protractor",
       years: 4,
-      projects: [FreightQuote, TMC],
+      projects: getProjectListForTool(Protractor),
       summary:'',
     },
     [`${React_hook_form}`]: <ToolDataDto>{
       displayName: "React-hook-form",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(React_hook_form),
       summary:'',
     },
     [`${React_query}`]: <ToolDataDto>{
       displayName: "React-Query.",
       years: 1,
-      projects: [MarketplaceUI, CustomerSignUpUI],
+      projects: getProjectListForTool(React_query),
       summary:'',
     },
     [`${React_testing_library}`]: <ToolDataDto>{
       displayName: "React Testing library",
       years: 3,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(React_testing_library),
       summary:'',
     },
     [`${React}`]: <ToolDataDto>{
       displayName: "React",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, Personal, Portfolio, TMC],
+      projects: getProjectListForTool(React),
       summary:'',
     },
     [`${Redux}`]: <ToolDataDto>{
       displayName: "Node.js",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(Redux),
       summary:'',
     },
     [`${REST}`]: <ToolDataDto>{
       displayName: "REST",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, CHRobinsonOnline, Personal, Portfolio, TMC],
+      projects: getProjectListForTool(REST),
       summary:'',
     },
     [`${Rollupjs}`]: <ToolDataDto>{
       displayName: "Node.js",
       years: 1.5,
-      projects: [Personal],
+      projects: getProjectListForTool(Rollupjs),
       summary:'',
     },
     [`${S3}`]: <ToolDataDto>{
       displayName: "S3",
       years: 1.5,
-      projects: [MarketplaceUI, CustomerSignUpUI, DeveloperPortal],
+      projects: getProjectListForTool(S3),
       summary:'',
     },
     [`${Sass}`]: <ToolDataDto>{
       displayName: "SASS",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, Personal, Portfolio, TMC],
+      projects: getProjectListForTool(Sass),
       summary:'',
     },
     [`${Storybook}`]: <ToolDataDto>{
       displayName: "Storybook",
       years: 1.9,
-      projects: [Personal],
+      projects: getProjectListForTool(Storybook),
       summary:'',
     },
     [`${Sql_server}`]: <ToolDataDto>{
       displayName: "Sql Server",
       years: 7,
-      projects: [FreightQuote, CHRobinsonOnline, TMC],
+      projects: getProjectListForTool(Sql_server),
       summary:'',
     },
     [`${Styled_Components}`]: <ToolDataDto>{
       displayName: "Styled Components",
       years: 2,
-      projects: [Personal],
+      projects: getProjectListForTool(Styled_Components),
       summary:'',
     },
     [`${Tailwindcss}`]: <ToolDataDto>{
       displayName: "Tailwindcss",
       years: 1.9,
-      projects: [MarketplaceUI, CustomerSignUpUI, DeveloperPortal, Personal],
+      projects: getProjectListForTool(Tailwindcss),
       summary:'',
     },
     [`${Terraform}`]: <ToolDataDto>{
       displayName: "Terraform",
       years: 2,
-      projects: [FreightQuote],
+      projects: getProjectListForTool(Terraform),
       summary:'',
     },
     [`${TypeScript}`]: <ToolDataDto>{
       displayName: "Typescript",
       years: 6,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, CHRobinsonOnline, Personal, Portfolio, TMC],
+      projects: getProjectListForTool(TypeScript),
       summary:'',
     },
     [`${Ubuntu}`]: <ToolDataDto>{
       displayName: "Ubuntu",
       years: .2,
-      projects: [Portfolio],
+      projects: getProjectListForTool(Ubuntu),
       summary:'',
     },
     [`${VBNet}`]: <ToolDataDto>{
       displayName: "VB.Net",
       years: 3,
-      projects: [CHRobinsonOnline, TMC],
+      projects: getProjectListForTool(VBNet),
       summary:'',
     },
     [`${Web_performance}`]: <ToolDataDto>{
       displayName: "Web Performance",
       years: 5,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, CHRobinsonOnline, Personal, Portfolio],
+      projects: getProjectListForTool(Web_performance),
       summary:'',
     },
     [`${Webpack}`]: <ToolDataDto>{
       displayName: "Webpack",
       years: 3,
-      projects: [FreightQuote, MarketplaceUI, CustomerSignUpUI, DeveloperPortal, CHRobinsonOnline, Personal, Portfolio],
+      projects: getProjectListForTool(Webpack),
       summary:'',
     },
     [`${Xml}`]: <ToolDataDto>{
       displayName: "XML",
       years: 5,
-      projects: [FreightQuote, CHRobinsonOnline, TMC],
+      projects: getProjectListForTool(Xml),
       summary:'',
     },
     [`${Yaml}`]: <ToolDataDto>{
       displayName: "Yaml",
       years: 1.9,
-      projects: [MarketplaceUI, CustomerSignUpUI, DeveloperPortal, Personal, Portfolio],
+      projects: getProjectListForTool(Yaml),
       summary:'',
     },
 }
