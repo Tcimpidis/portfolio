@@ -484,7 +484,7 @@ Tcimpidis.com is the location of the Tcimpidis brand technical consulting firm. 
 - Tcimpidis.com isn't only a website. It also is a github repo that currently is has a couple of public pieces that showcase some of Tcimpidis' work.  
 `,
 importantUrls: [{
-  name: "github repo",
+  name: "Github repo",
   urlList: ['https://github.com/tcimpidis/portfolio']
 }]
   },
@@ -501,7 +501,12 @@ importantUrls: [{
   name: "Jamin's repo",
   urlList: ['https://github.com/JaminTcimpidis']
 },{
-  name: "Code sandbox challenges"
+  name: "Code sandbox challenges", 
+  urlList: [
+    'https://codesandbox.io/p/sandbox/number-counter-hsnmz7',
+    'https://codesandbox.io/p/devbox/crypto-converter-ch3v7z',
+    'https://codesandbox.io/p/sandbox/capture-the-flag-nzf5vw',
+  ]
 }
 ]
 

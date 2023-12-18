@@ -28,14 +28,17 @@ export const Company: FC<CompanyProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.heading}>{companyName}</div>
-      {projects?.map(({highlights, tech, title, type}, i) => 
-        <Project
-          highlights={highlights} 
-          key={i}
-          tech={tech} 
-          title={title}
-          type={type}
-          />
+      {projects?.map(({highlights, importantUrls, tech, title, type}, i) => 
+        <div className={styles.project} key={i}>
+          <Project
+            highlights={highlights}
+            importantUrls={importantUrls}
+            index={i}
+            tech={tech} 
+            title={title}
+            type={type}
+            />
+         </div> 
       )}
     </div>
   )
