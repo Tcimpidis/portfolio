@@ -372,7 +372,9 @@ FreightQuote by CHR is an app that strives to deliver FreightQuote by CHR's vast
 
 ### Summary
 - I was given a chance to have a lot of ownership with many projects while on this team. Most notably a B2B integration with twilio for managing uesr sms alters. One of the first times I got to develop an event based interation instead of pure api calls or older SOAP or Biztalk requests.
-- Another notable project was the decomposition  initiative that I spearheaded and sold to 
+- Another notable project was the decomposition initiative that I spearheaded and potitioned our leadership group to prioritize.
+  - App deployment was getting bogged down with end to end tests. The Application started managing so many tasks and if any of them failed during deployment, the entire deployment would fail. There were times where we'd lose a week of deliverables due to these bottlenecks.
+  - With this I lead a micro-site initiative. Where we spilt the ui into funcitonal pieces and extended the domain so we could route each functional piece to its own url while sharing local and session (auth) storage.
 `
   },
   [`${TMC}`]: <ProjectDataDto>{
