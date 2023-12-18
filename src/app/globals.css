@@ -5,6 +5,7 @@
   --tcimpidis-brunch-with-friends: #f8f0fc;
   --tcimpidis-sea-foam:#A1D9E6;
   --tcimpidis-plain-jane:#E3FBFF;
+  --tcimpidis-clean-skys: #2990A6;
   --portfolio-font-family: lobster;
   --portfolio-xl-text: 54px;
   --portfolio-base-text: 17px;
@@ -24,9 +25,9 @@ code {
 
 
 a {
-  color: var(--tcimpidis-cool-shower);
+  color: var(--tcimpidis-clean-skys);
 }
 a:visited{
-  color: var(--tcimpidis-sweet-nothings);
+  color: var(--tcimpidis-plain-jane);
   opacity: 2;
 }

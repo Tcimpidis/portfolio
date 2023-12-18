@@ -15,25 +15,21 @@ interface ProjectDto extends ProjectDataDto {
 export const Company: FC<CompanyProps> = ({
   companyName
 }) => {
-  const [projects, setProjects] = useState<ProjectDto[]>();
 
-  useEffect(() => {
-    const { projects } = CompanyData[companyName];
-    const projectDetails = projects.map(name => {
-      return {...ProjectData[name], type: name }
-    })
-    setProjects(projectDetails)
-  },[companyName])
+  const summary = CompanyData[companyName].summary;
+  const projects = CompanyData[companyName].projects.map(name => {
+    return {...ProjectData[name], type: name }
+  })
 
   return (
     <div className={styles.container}>
       <div className={styles.heading}>{companyName}</div>
+      <div className={styles.summary}>{summary}</div>
       {projects?.map(({highlights, importantUrls, tech, title, type}, i) => 
         <div className={styles.project} key={i}>
           <Project
             highlights={highlights}
             importantUrls={importantUrls}
-            index={i}
             tech={tech} 
             title={title}
             type={type}

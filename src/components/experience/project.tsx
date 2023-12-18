@@ -5,7 +5,6 @@ import styles from './project.module.css';
 import { ImportantUrl, ProjectType, ToolData, ToolType } from '@/api/data';
 import { useRouter } from 'next/navigation';
 import Markdown from 'react-markdown';
-import './project.css';
 import Link from 'next/link';
 
 interface ProjectProps {
@@ -14,7 +13,6 @@ interface ProjectProps {
   tech: ToolType[];
   highlights: string;
   importantUrls?: ImportantUrl[];
-  index: number;
 }
 
 export const Project: FC<ProjectProps> = ({
@@ -23,24 +21,13 @@ export const Project: FC<ProjectProps> = ({
   tech,
   highlights,
   importantUrls,
-  index,
 }) => {
   return (
     <div className={styles.container} id={type}>
       <div className={styles.heading}>{title}</div>
-      <div className={styles.project}>
-        {index % 2 === 0 ? (
-          <>
-            <ImageContainer importantUrls={importantUrls} tech={tech} title={title} type={type}/>
-            <DetailBox highlights={highlights}/>
-          </>
-        ) : (
-          <>
-            <DetailBox highlights={highlights}/>
-            <ImageContainer importantUrls={importantUrls} tech={tech} title={title} type={type}/>
-          </>
-        )}
-
+      <div className={styles.project}> 
+        <ImageContainer importantUrls={importantUrls} tech={tech} title={title} type={type}/>
+        <DetailBox highlights={highlights}/>
       </div>
     </div>
   )

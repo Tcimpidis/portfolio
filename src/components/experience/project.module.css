@@ -12,8 +12,9 @@
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 400;
+  font-family: lobster;
   color: var(--tcimpidis-dusk-on-the-lake);
-  text-transform: capitalize;
+  text-transform: uppercase;
 } 
 
 .image_box {
@@ -34,6 +35,11 @@
 }
 
 .detail_box:nth-child(odd) {
+  display: flex;
+  flex-direction: column;
+  width: 31rem;
+  gap: 1.5rem;
+  margin-top: 3rem;
   align-items: flex-start;
 }
 
@@ -48,7 +54,6 @@
 
 
 .icon_label {
-  font-family: lobster;
   font-weight: 600;
   font-size: 1rem;
   color: var(--tcimpidis-dusk-on-the-lake);
@@ -121,6 +126,11 @@
 
 
 .tech_container:nth-child(odd){
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: .5rem 0;
   align-items: flex-end;
 }
 

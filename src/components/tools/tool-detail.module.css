@@ -50,12 +50,6 @@
   font-size: .7rem;
   font-weight: 600;
   text-align: right;
-  color: var(--tcimpidis-cool-shower);
-}
-
-.project_link:visited{
-  color: var(--tcimpidis-sweet-nothings);
-  opacity: 2;
 }
 
 .summary {
