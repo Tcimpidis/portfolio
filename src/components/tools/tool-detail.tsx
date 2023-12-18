@@ -1,11 +1,13 @@
 import { FC } from 'react';
 import Markdown from 'react-markdown'
 import styles from './tool-detail.module.css';
+import Link from 'next/link';
+import { ProjectData, ProjectType } from '@/api/data';
 
 interface ToolDetailProps {
   displayName: string;
   years: number; 
-  projects: string[];
+  projects: ProjectType[];
   summary: string;
 }
 
@@ -16,7 +18,7 @@ export const ToolDetail: FC<ToolDetailProps> = ({
   summary,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <div className={styles.display_name}>
         {displayName}
       </div>
@@ -33,7 +35,16 @@ export const ToolDetail: FC<ToolDetailProps> = ({
           Projects: 
         </label>
         <div className={styles.project_text}>
-          {projects.map((project, i) => <span key={i}> {project}</span>)}
+          {projects.map((project, i) => 
+            <Link 
+              className={styles.project_link} 
+              href={`#${project}`}
+              key={i}
+              replace={true}
+              shallow={true} 
+              > 
+              {ProjectData[project].title}
+            </Link>)}
         </div>
       </div>
       <div className={styles.summary}>

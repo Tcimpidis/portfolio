@@ -1,19 +1,28 @@
 "use client";
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styles from './index.module.css';
 import { Tool } from './tool-icon';
 import { ToolDetail } from './tool-detail';
 import { ToolsList, ToolData, ToolType } from '@/api/data';
+import { useSearchParams } from 'next/navigation';
 
 export const Tools = () => {
-  const [focusedTool, setFocusedTool] = useState<ToolType>();
-  
+  const searchParams = useSearchParams()
+  const tool = searchParams.get('tool')
+  const [focusedTool, setFocusedTool] = useState<ToolType>(tool as ToolType);
+
+  useEffect(() => {
+    if(tool) {
+      setFocusedTool(tool as ToolType);
+    }
+  },[tool])
+
   const focusedDetails = useMemo(() => {
     if(focusedTool) {
       return { ...ToolData[focusedTool] } 
     }
+  }, [focusedTool]);
 
-  }, [focusedTool])
   return (
     <div className={styles.container}>
       <div className={styles.heading}>Tools/Skills</div>
@@ -21,7 +30,7 @@ export const Tools = () => {
         <div className={styles.detail_box}> 
           {focusedDetails && focusedTool && 
             <ToolDetail 
-            displayName={focusedTool}
+            displayName={focusedDetails.displayName}
             projects={focusedDetails.projects}
             summary={focusedDetails.summary}
             years={focusedDetails.years}

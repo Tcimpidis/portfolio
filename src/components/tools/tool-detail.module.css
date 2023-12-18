@@ -36,18 +36,26 @@
   font-size: .9rem;
   font-weight: 600;
   text-align: right;
-  color: var(--tcimpidis-cool-shower);
+  color: var(--tcimpidis-dusk-on-the-lake);
   width: 70%;
 }
 
 .project_text {
   display: flex;
   flex-direction: column;
+}
+
+.project_link {
   gap: .1rem 0;
   font-size: .7rem;
   font-weight: 600;
   text-align: right;
   color: var(--tcimpidis-cool-shower);
+}
+
+.project_link:visited{
+  color: var(--tcimpidis-sweet-nothings);
+  opacity: 2;
 }
 
 .summary {
@@ -67,8 +75,6 @@
   font-weight: 600;
   padding-left: 1.25rem;
   overflow-wrap: break-word;
-  color: var(--tcimpidis-cool-shower);
-
+  color: var(--tcimpidis-dusk-on-the-lake);
   overflow: hidden;
-
 }

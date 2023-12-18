@@ -14,17 +14,22 @@
   background-image: linear-gradient(var(--tcimpidis-sweet-nothings), var(--tcimpidis-sea-foam));
 }
 
-
-.title {
+.title_container {
   background-image: linear-gradient(var(--tcimpidis-sea-foam), var(--tcimpidis-cool-shower));
-  color: var(--tcimpidis-brunch-with-friends);
-  font-size: 52px;
-  font-family: 'lobster';
-  text-transform: uppercase;
-  font-weight: 700;
-  height: 50vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  background: linear-gradient(var(--tcimpidis-brunch-with-friends), var(--tcimpidis-sweet-nothings));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 52px;
+  font-family: 'lobster';
+  text-transform: uppercase;
+  font-weight: 700;
 }

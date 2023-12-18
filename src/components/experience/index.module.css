@@ -9,8 +9,9 @@
   font-size: 2.5rem;
   font-weight: 700;
   text-align: right;
+  margin-bottom: 2rem;
   color: var(--tcimpidis-brunch-with-friends);
-  border-bottom: 3px solid var(--tcimpidis-brunch-with-friends);
+  padding-bottom: 2rem;
   font-family: lobster;
   text-transform: uppercase;
   opacity: .8;

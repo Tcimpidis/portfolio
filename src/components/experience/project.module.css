@@ -1,4 +1,8 @@
 .container { 
+  padding: 0 3rem 5rem 3rem;
+}
+
+.project {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,10 +24,83 @@
   margin-top: 3rem;
 }
 
-.icon_box {
+.detail_box {
   display: flex;
   flex-direction: column;
   width: 31rem;
   gap: 1.5rem;
   margin-top: 3rem;
+}
+
+.tech_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+.icon_label {
+  font-family: lobster;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.tech {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: .5rem;
+  width: 60%;
+}
+
+.tech_item {
+  position: relative;
+  cursor: pointer;
+}
+
+.active_tech {
+  font-size: 12px;
+  padding: .25rem .75rem;
+  font-weight: 500;
+  white-space: nowrap; 
+  right: 0;
+  bottom: -5;
+  z-index: 4;
+  position: absolute;
+  border-radius: 4rem;
+  border: solid 1px var(--tcimpidis-cool-shower);
+  background-color: var(--tcimpidis-sea-foam);
+  opacity: .9;
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.text {
+  margin-top: .5rem;
+  margin-left: 2rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  width: 90%;
+  max-height: 35vh;
+  overflow: auto;
+}
+
+.text::-webkit-scrollbar-track {
+  border: 1px solid var(--tcimpidis-cool-shower);
+  padding: 2px 0;
+  background-color: var(--tcimpidis-sea-foam);
+}
+
+.text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--tcimpidis-dusk-on-the-lake);
+  border: 1px solid var(--tcimpidis-sea-foam);
 }

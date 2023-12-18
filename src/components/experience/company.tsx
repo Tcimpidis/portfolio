@@ -2,16 +2,14 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './company.module.css';
 import { Project } from './project';
-
-interface ProjectDto {
-  title: string;
-  imageUrl: string;
-  tech: string[];
-  highlights: string;
-}
+import { CompanyData, CompanyType, ProjectData, ProjectDataDto, ProjectType } from '@/api/data';
 
 interface CompanyProps {
-  companyName: string;
+  companyName: CompanyType;
+}
+
+interface ProjectDto extends ProjectDataDto {
+  type: ProjectType
 }
 
 export const Company: FC<CompanyProps> = ({
@@ -20,31 +18,25 @@ export const Company: FC<CompanyProps> = ({
   const [projects, setProjects] = useState<ProjectDto[]>();
 
   useEffect(() => {
-    const proj = getProjects(companyName);
-    setProjects(proj)
+    const { projects } = CompanyData[companyName];
+    const projectDetails = projects.map(name => {
+      return {...ProjectData[name], type: name }
+    })
+    setProjects(projectDetails)
   },[companyName])
 
   return (
-    <div className={styles.toolbox}>
+    <div className={styles.container}>
       <div className={styles.heading}>{companyName}</div>
-      {projects?.map(({highlights, imageUrl, tech, title}, i) => 
+      {projects?.map(({highlights, tech, title, type}, i) => 
         <Project
           highlights={highlights} 
           key={i}
-          imageUrl={imageUrl}
           tech={tech} 
           title={title}
+          type={type}
           />
       )}
     </div>
   )
-}
-
-const getProjects = (companyName: string) => {
-  return [{
-    title: 'Delhivery',
-    imageUrl: 'https://64.media.tumblr.com/51ce939c3b7570134515eea1c7eb59ff/tumblr_n2pgeb86ro1tw7pebo1_400.jpg',
-    tech: ['React', 'Typescript'],
-    highlights: 'a bunch of stuff',
-  }]
 }

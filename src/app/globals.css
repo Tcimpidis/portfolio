@@ -20,3 +20,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+a {
+  color: var(--tcimpidis-cool-shower);
+}
+a:visited{
+  color: var(--tcimpidis-sweet-nothings);
+  opacity: 2;
+}
