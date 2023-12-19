@@ -819,199 +819,339 @@ export const ToolData : ToolMap = {
       displayName: "Linux",
       years: 4,
       projects: getProjectListForTool(Linux),
-      summary:'',
+      summary:`
+- CRUD commands on files and directories.
+- Update existing files with nano.
+- update localhost proxys.
+- ssh into other running programs.
+      `,
     },
     [`${Microsoft_azure}`]: <ToolDataDto>{
       displayName: "Microsoft Azure",
       years: 3,
       projects: getProjectListForTool(Microsoft_azure),
-      summary:'',
+      summary:`
+- Connected github deployments to azure jobs.
+- Managed secrets 
+- Triage deployement issues
+      `,
     },
     [`${Mongodb}`]: <ToolDataDto>{
       displayName: "MongoDB",
       years: 2,
       projects: getProjectListForTool(Mongodb),
-      summary:'',
+      summary:`
+- Proficent with MongoDB compass.
+- Used document database for holding real-time data
+- Consumers would listen from different kafka streams and write to DB. 
+- Predefined queries optimized the document reads so they were efficient when read. 
+      `,
     },
     [`${MySql}`]: <ToolDataDto>{
       displayName: "MySql",
       years: 1,
       projects: getProjectListForTool(MySql),
-      summary:'',
+      summary:`
+- Very little experience. Only used for a simple personal project I created that captured inputs" 
+      `,
     },
     [`${Next_js}`]: <ToolDataDto>{
       displayName: "Next.js",
       years: 1,
       projects: getProjectListForTool(Next_js),
-      summary:'',
+      summary:`
+- Worked with next.js and module federation to try and get a host Next.js app to integrate with a none next remote.
+- Had limited success. All implementations broke the existing routing of the app. 
+- This website is built with Next.js As well. Been pretty happy with the experience using AppRouter. 
+      `,
     },
     [`${Node_js}`]: <ToolDataDto>{
       displayName: "Node.js",
       years: 6,
       projects: getProjectListForTool(Node_js),
-      summary:'',
+      summary:`
+- Use node to run scripts from time to time.
+- Understand asynchronous nature of a node server.
+- Done minor work with Node Express apis and GRPC services
+      `,
     },
     [`${NPM}`]: <ToolDataDto>{
-      displayName: "Figma",
+      displayName: "NPM",
       years: 8.5,
       projects: getProjectListForTool(NPM),
-      summary:'',
+      summary:`
+- Extensive use of package managers.
+- Know how to setup and maintain package.json.
+- Build and deploy packages in npm. 
+      `,
     },
     [`${Oauth}`]: <ToolDataDto>{
       displayName: "Oauth",
       years: 5,
       projects: getProjectListForTool(Oauth),
-      summary:'',
+      summary:`
+- Advanced understanding of Oauth principles and implementation.
+- Integrate internal and exteranl auth providers,
+- Manage auth across session and tabs.
+      `,
     },
     [`${OWASP}`]: <ToolDataDto>{
       displayName: "OWASP",
       years: 3,
       projects: getProjectListForTool(OWASP),
-      summary:'',
+      summary:`
+- Firm understanding of security principels using OWASP guidelines.
+- Build all products with OWASP principles in mind ensure company and user data is secure. 
+`,
     },
     [`${PlatformUI}`]: <ToolDataDto>{
       displayName: "Platform UI Libraries",
       years: 1.9,
       projects: getProjectListForTool(PlatformUI),
-      summary:'',
+      summary:`
+- Platform UI is the grouping of libraries created to run the OS1 commercialization websites. 
+- Plaform UI Core:
+  - Single location for HTTP inteceptors, Oauth Provider, Microfrontend component, Configuration Provider, Axios Client generator and module.
+  - Each Website implemented their own instance. not a singleton
+- Platform UI Common: 
+  - Large host of commonly used components. Buttons, Inputs, and some more complex items like state specific toggles, document upload components, and payment widget. 
+  - Reused across all websites, singleton
+`,
     },
     [`${Powershell}`]: <ToolDataDto>{
       displayName: "Powershell",
       years: 3,
       projects: getProjectListForTool(Powershell),
-      summary:'',
+      summary:`
+- When having to connect to docker or kubernetes from a windows machine I would usually user powershell
+`,
     },
     [`${Protractor}`]: <ToolDataDto>{
       displayName: "Protractor",
       years: 4,
       projects: getProjectListForTool(Protractor),
-      summary:'',
+      summary:`
+- I worked with Protractor sporadically with the project that leveraged it. 
+- There was a QA developer who wrote the tests.
+- Occassionally I would update when making small changes.
+- It was a good example of solid testing practices.
+`,
     },
     [`${React_hook_form}`]: <ToolDataDto>{
       displayName: "React-hook-form",
       years: 6,
       projects: getProjectListForTool(React_hook_form),
-      summary:'',
+      summary:`
+- React hook form is a form management tool that offers a lot of form management and validation tools.
+- I have used it extensively in all the projects I've built. 
+- It is an amazing tool for managing complex validation challeges, specifically as form state begings to grow and create its own challenges.
+`,
     },
     [`${React_query}`]: <ToolDataDto>{
-      displayName: "React-Query.",
+      displayName: "React-Query",
       years: 1,
       projects: getProjectListForTool(React_query),
-      summary:'',
+      summary:`
+- Only have worked with this in a couple of websites but I really liked it
+- Might be a bit obsolete with the way the industry is move. 
+- Server side components accomplish all of the things this package does.
+`,
     },
     [`${React_testing_library}`]: <ToolDataDto>{
       displayName: "React Testing library",
       years: 3,
       projects: getProjectListForTool(React_testing_library),
-      summary:'',
+      summary:`
+- Wonderful library for making robust integration tests or simple unit tests.
+- Created complex workflows with this library. 
+- Easily adapted to TDD.
+`,
     },
     [`${React}`]: <ToolDataDto>{
       displayName: "React",
       years: 6,
       projects: getProjectListForTool(React),
-      summary:'',
+      summary:`
+- I've used react extensively building complex echosystems on its library. 
+- Well versed in react context state vs app state.
+- React class components and lifecycle compoents. 
+- Connecting react data stores and asynchronously retriveing code.
+- React hooks 
+- Custom hooks 
+- Conditonal rendering
+- Complex routing strategies 
+`,
     },
     [`${Redux}`]: <ToolDataDto>{
-      displayName: "Node.js",
+      displayName: "Redux",
       years: 6,
       projects: getProjectListForTool(Redux),
-      summary:'',
+      summary:`
+- Experience standing up, bootstrapping and maintaining redux store
+- Connect redux store to saga middlewhere.
+- Use saga action to hydrate Redux for api actions.
+- Use reducer actions for hydtratng redux form state.
+- Save to session storage.
+`,
     },
     [`${REST}`]: <ToolDataDto>{
       displayName: "REST",
       years: 6,
       projects: getProjectListForTool(REST),
-      summary:'',
+      summary:`
+- Many years building out restful routes.
+- Exposing and consuming API routes.
+- Making requests from clients and handling responses. 
+- Intercepting requests and responses to manange headers and error messaging. 
+`,
     },
     [`${Rollupjs}`]: <ToolDataDto>{
-      displayName: "Node.js",
+      displayName: "Rollup.js",
       years: 1.5,
       projects: getProjectListForTool(Rollupjs),
-      summary:'',
+      summary:`
+- Built the libraries for Platform UI with rollup.
+- Very straightforward. Was building what I needed quickly
+`,
     },
     [`${S3}`]: <ToolDataDto>{
       displayName: "S3",
       years: 1.5,
       projects: getProjectListForTool(S3),
-      summary:'',
+      summary:`
+- Deployed static websites to S3 private buckets that were exposed via cloudfront.
+- Built S3 bucket and configured authorization rules.
+- Built out workflow to deploy to bucket
+`,
     },
     [`${Sass}`]: <ToolDataDto>{
       displayName: "SASS",
       years: 6,
       projects: getProjectListForTool(Sass),
-      summary:'',
+      summary:`
+- Built out styles with sass for many projects
+- Did not get deep into Mixins but I believe they are powerful tools for scalability.
+      `,
     },
     [`${Storybook}`]: <ToolDataDto>{
       displayName: "Storybook",
       years: 1.9,
       projects: getProjectListForTool(Storybook),
-      summary:'',
+      summary:`
+- First worked with storybook at Delhivery. It's very cool, simple to use, and powerful. 
+- Deployed storybook instance to a github page for easy to access view of common items. 
+- Building storybook components does add some overhead but if you abstract it right you can boiler plate some things.
+`,
     },
     [`${Sql_server}`]: <ToolDataDto>{
       displayName: "Sql Server",
       years: 7,
       projects: getProjectListForTool(Sql_server),
-      summary:'',
+      summary:`
+- Worked extesively with sql server. 
+- Have had to chain together stored procedures to debug logic that was built in sql. 
+- This type of sql shouldn't really be existing anymore but as a result I know what not to do. 
+- Built tables with indexs, foreign keys, primaray keys. 
+- Understand referentiail table patterns. Lookup tables. 
+- Have context to why sql relational database my not always be the best choice.
+`,
     },
     [`${Styled_Components}`]: <ToolDataDto>{
       displayName: "Styled Components",
       years: 2,
       projects: getProjectListForTool(Styled_Components),
-      summary:'',
+      summary:`
+- Have only worked with styled componenets a little bit and I found them to be to verbose for me. 
+- Perhaps I didn't get into it enough. just didn't match my coding style. 
+`,
     },
     [`${Tailwindcss}`]: <ToolDataDto>{
       displayName: "Tailwindcss",
       years: 1.9,
       projects: getProjectListForTool(Tailwindcss),
-      summary:'',
+      summary:`
+- Worked with tailwindcss extensively over the past two years. 
+- Really powerful tool for smaller websites.
+- As complexity grows maintaining styles can become cumbersome. 
+- Dynamic styling is really verbose. You have to define the style string a build time so you cannot have style variables be defined while running. You can only define their visibility" 
+`,
     },
     [`${Terraform}`]: <ToolDataDto>{
       displayName: "Terraform",
       years: 2,
       projects: getProjectListForTool(Terraform),
-      summary:'',
+      summary:`
+- Minimal experience. Mostly just wrote commands to a repo with terraform syntax.
+- Seemed like defining scheme values for a script
+`,
     },
     [`${TypeScript}`]: <ToolDataDto>{
       displayName: "Typescript",
       years: 6,
       projects: getProjectListForTool(TypeScript),
-      summary:'',
+      summary:`
+- Just strong typing of javascript
+- As a C# developer first and foremost, strong typing is preferable.
+- Will always opt for typescript. 
+- Typescript is driving the data layer of this application. 
+`,
     },
     [`${Ubuntu}`]: <ToolDataDto>{
       displayName: "Ubuntu",
       years: .2,
       projects: getProjectListForTool(Ubuntu),
-      summary:'',
+      summary:`
+- Only created ubuntu servers for Crypto mining and hosting this application
+`,
     },
     [`${VBNet}`]: <ToolDataDto>{
       displayName: "VB.Net",
       years: 3,
       projects: getProjectListForTool(VBNet),
-      summary:'',
+      summary:`
+- Maintained many aspx webpages when I first started developing.
+- Became well versed in creating MVC interactions through this technology. 
+- Worked on expanding my understanding of abstraction by creating c# factories for selecting vb.net pages
+`,
     },
     [`${Web_performance}`]: <ToolDataDto>{
       displayName: "Web Performance",
       years: 5,
       projects: getProjectListForTool(Web_performance),
-      summary:'',
+      summary:`
+- Consider web performance in all of my code building.
+- Re-renders, data fetches, lazy loading and more to ensure users have a crisp experience. 
+- Microfrontend concepts geared towards web performance.
+`,
     },
     [`${Webpack}`]: <ToolDataDto>{
       displayName: "Webpack",
       years: 3,
       projects: getProjectListForTool(Webpack),
-      summary:'',
+      summary:`
+- Bootstrapped my own webpack application.
+- Overwrite existing webpack configuations.
+- Create webpack module federation remotes and hosts.
+- Integrate module federation in an enterpise context
+`,
     },
     [`${Xml}`]: <ToolDataDto>{
       displayName: "XML",
       years: 5,
       projects: getProjectListForTool(Xml),
-      summary:'',
+      summary:`
+- Capture and debug xml soap requests.
+- Create software to process XML SOAP requests.
+`,
     },
     [`${Yaml}`]: <ToolDataDto>{
       displayName: "Yaml",
       years: 1.9,
       projects: getProjectListForTool(Yaml),
-      summary:'',
+      summary:`
+- build command scripts for github actions.
+- build command scripts for dockup compose.
+      `,
     },
 }
 

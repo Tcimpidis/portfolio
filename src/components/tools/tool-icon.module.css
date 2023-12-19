@@ -1,14 +1,10 @@
 .item {
-  padding: 15px;
-  border-radius: 40%;
-  background: none;
-  border: none;
-  z-index: 2;
-  cursor: pointer;
-  position: relative; 
+  padding: .5rem;
+  height: 3.2rem;
+  max-height: 50vh;
 }
 
-.item:after {
+.item_button:after {
   content: '';
   position: absolute;
   top: 0;
@@ -20,11 +16,20 @@
   background-image: linear-gradient( var(--tcimpidis-brunch-with-friends), var(--tcimpidis-sea-foam),  var(--tcimpidis-brunch-with-friends));
 }
 
-.item:hover {
+.item_button:hover {
   &::after {
     width: 90%;
     opacity: 1;
     transition: 0.6s;
     -webkit-transition: 0.6s;
   }
+}
+
+.item_button {
+  background: none;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  position: relative;
+  border-radius: 40%;
 }

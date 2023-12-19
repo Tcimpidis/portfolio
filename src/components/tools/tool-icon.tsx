@@ -16,8 +16,11 @@ export const Tool: FC<ToolProps> = ({name, onClick}) => {
   }, [name, onClick]);
 
   return (
+    <div 
+    className={styles.item}
+    >
     <button 
-      className={styles.item}
+      className={styles.item_button}
       onClick={handleOnClick}
       >
       <Image 
@@ -27,6 +30,8 @@ export const Tool: FC<ToolProps> = ({name, onClick}) => {
         width={40}
       />
     </button>
+    </div>
+
 
   )
 }
