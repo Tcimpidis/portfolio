@@ -63,7 +63,7 @@ const ImageContainer: FC<{  type: ProjectType;
       alt={`${title}_image`}
       className={styles.image_box}
       height={300}
-      src={`/projects/${type.toLowerCase()}.png`}
+      src={`${envRoute}/projects/${type.toLowerCase()}.png`}
       width={550}
     />
     <div className={styles.tech_container}>
