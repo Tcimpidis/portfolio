@@ -6,6 +6,7 @@ import { ImportantUrl, ProjectType, ToolData, ToolType } from '@/api/data';
 import { useRouter } from 'next/navigation';
 import Markdown from 'react-markdown';
 import Link from 'next/link';
+import { envRoute } from '@/envUtility';
 
 interface ProjectProps {
   type: ProjectType;
@@ -78,7 +79,7 @@ const ImageContainer: FC<{  type: ProjectType;
               onMouseLeave={onMouseLeave}
               onClick={onIconClick(tool)}
               height={20}
-              src={`/tools/${tool.toLowerCase()}.svg`}
+              src={`${envRoute}/tools/${tool.toLowerCase()}.svg`}
               width={20}
             />
             {activeTool !== undefined && activeTool === i &&
