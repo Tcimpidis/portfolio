@@ -4,6 +4,7 @@ import { FC, useCallback } from 'react';
 
 import styles from './tool-icon.module.css';
 import { ToolType } from '@/api/data';
+import { envRoute } from '@/envUtility';
 
 interface ToolProps {
   name: ToolType;
@@ -26,7 +27,7 @@ export const Tool: FC<ToolProps> = ({name, onClick}) => {
       <Image 
         alt={name}
         height={40}
-        src={`/tools/${name.toLowerCase()}.svg`}
+        src={`${envRoute}/tools/${name.toLowerCase()}.svg`}
         width={40}
       />
     </button>
