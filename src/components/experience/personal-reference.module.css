@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+} 
+
+.heading {
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: right;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  text-transform: uppercase;
+  font-family: lobster;
+}
+
+.item_list_box {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.item_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  gap: .2rem;
+  padding: .5rem 1rem;
+  border: 1px solid var(--tcimpidis-plain-jane);
+  border-radius: .75rem;
+  background: none;
+  cursor: pointer;
+}
+
+.item {
+  color: var(--tcimpidis-dusk-on-the-lake);
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: .2rem .5rem;
+}

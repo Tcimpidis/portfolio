@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   const redirectToPeople = () => {
-    router.push('/people')
+    router.push('/portfolio')
   }
 
   const redirectToProfile = () => {
@@ -30,19 +30,19 @@ const Header = () => {
             <Image alt="header" height={50} src={`${envRoute}/assets/tci_logo.svg`} width={260} />
           </button>
         </div>
-        <div className={styles['link-box']}>
+        <div className={styles.link_box}>
           <div>
             <button className={styles.button} onClick={redirectToServices}>Services</button>
           </div>
           <div>
-            <button className={styles.button} onClick={redirectToPeople}>People</button>
+            <button className={styles.button} onClick={redirectToPeople}>Portfolio</button>
           </div>
           <div>
-            <button className={styles.button} onClick={redirectToProfile}>About me</button>
+            <button className={styles.button} onClick={redirectToProfile}>Resumé</button>
           </div>
         </div>
       </header>
-      <div className={styles['shape-bottom']} data-negative="false">
+      <div className={styles.shape_bottom} data-negative="false">
         <svg preserveAspectRatio="none" viewBox="0 0 1850 100" xmlns="http://www.w3.org/2000/svg">
           <path className={styles.shape} d="M0,6V0h1850v100L0,0z" />
         </svg>

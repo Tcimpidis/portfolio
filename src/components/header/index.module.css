@@ -23,10 +23,10 @@
   cursor: pointer;
 }
 
-.link-box {
+.link_box {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
   gap: 0 4rem;
   padding-right: 4rem;
 }
@@ -62,10 +62,10 @@
 
 .button:hover {
   &::after{
-    width: 100%;
+    width: 95%;
     opacity: 1;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
   }
 }
 
@@ -73,7 +73,7 @@
   color: var(--tcimpidis-cool-shower);
 }
 
-.shape-bottom {
+.shape_bottom {
   position: absolute;
   width: 100%;
   top: -px;

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 55vh;
+}
+
+.toolbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.heading {
+  margin-right: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--tcimpidis-cool-shower);
+  font-family: lobster;
+  text-transform: uppercase;
+  opacity: .7;
+} 
+
+.detail_box {
+  display: flex;
+  flex-direction: column;
+  width: 31rem;
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+.icon_box {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  width: 31rem;
+  margin-top: 3rem;
+}

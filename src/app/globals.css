@@ -4,16 +4,16 @@
   --tcimpidis-cool-shower: #71A5E8;
   --tcimpidis-brunch-with-friends: #f8f0fc;
   --tcimpidis-sea-foam:#A1D9E6;
-  --portfolio-font-family: Lato,Helvetica Neue,helvetica,sans-serif;
+  --tcimpidis-plain-jane:#E3FBFF;
+  --tcimpidis-clean-skys: #2990A6;
+  --portfolio-font-family: lobster;
   --portfolio-xl-text: 54px;
   --portfolio-base-text: 17px;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: open-sans-regurlar;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,4 +21,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+a {
+  color: var(--tcimpidis-clean-skys);
+}
+a:visited{
+  color: var(--tcimpidis-plain-jane);
+  opacity: 2;
 }
