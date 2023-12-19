@@ -87,7 +87,6 @@ const Git_bash = "git-bash";
 const Github = "github";
 const Google_analytics = "google-analytics";
 const HTML5 = "HTML5";
-const IT_accessibility ="IT-Accessibility";
 const JavaScript = "JavaScript";
 const Jenkins = "Jenkins";
 const Jest ="Jest";
@@ -145,7 +144,6 @@ export type ToolType = typeof Agile
  |typeof Github 
  |typeof Google_analytics 
  |typeof HTML5 
- |typeof IT_accessibility
  |typeof JavaScript 
  |typeof Jenkins 
  |typeof Jest 
@@ -225,7 +223,6 @@ export const ToolsList: ToolType[] = [
   Github,
   Google_analytics,
   HTML5,
-  IT_accessibility,
   JavaScript,
   Jenkins,
   Jest,
@@ -619,129 +616,204 @@ export const ToolData : ToolMap = {
     },
     [`${Aws_cloudfront}`]: <ToolDataDto>{
       displayName: "Aws Cloudfront",
-      years: 2.5,
+      years: 1.5,
       projects: getProjectListForTool(Aws_cloudfront),
-      summary:'',
+      summary:`
+- I've had to use cloudfront urls to path into S3 buckets
+- Deployed to S3 through cloudfront using github actions
+- Configure cloudfront origins 
+      `,
     },
     [`${Azure_devops}`]: <ToolDataDto>{
       displayName: "Azure Devops",
       years: 2.5,
       projects: getProjectListForTool(Azure_devops),
-      summary:'',
+      summary: `
+- managed deployement secrets
+- created project configurations
+- built and managed azure pipelines
+      `,
     },
     [`${CSharp}`]: <ToolDataDto>{      
       displayName: "C#",
       years: 7,
       projects: getProjectListForTool(CSharp),
-      summary:'',
+      summary:`
+- I have extensive use of C# as a server language. With some legacy Razor MVC experince.
+- Very famility with C# OOP principles and concepts for code abstractions.
+- Familiar with Dependency injections, Ienumerable, Ilist, and other linq extensions. 
+- Many years experience developing in Visual Studio with advanced proficiency of the tool.
+      `,
     },
     [`${CSS_Modules}`]: <ToolDataDto>{
       displayName: "CSS Modules",
       years: .5,
       projects: getProjectListForTool(CSS_Modules),
-      summary:'',
+      summary:`
+- I've only worked with CSS mondules within this project.
+- So far I find them clean and easy to use. 
+      `,
     },
     [`${CSS3}`]: <ToolDataDto>{
       displayName: "CSS3",
       years: 8.5,
       projects: getProjectListForTool(CSS3),
-      summary:'',
+      summary:`
+- I've had to use css for many things throughout the years but I am still learning more each day
+- My experience with it, unti recently, had always been one of necessity. Trying to solve a problem instead of design a solution
+- Still have work to do with creating scalable css designs
+      `,
     },
     [`${Cypress}`]: <ToolDataDto>{
       displayName: "Cypress",
       years: .1,
       projects: getProjectListForTool(Cypress),
-      summary:'',
+      summary:`
+- Only worked with a few tests that had been built by someone else
+- Testing seemed straightforward enough.
+      `,
     },
     [`${Docker}`]: <ToolDataDto>{
       displayName: "Docker",
       years: 4,
       projects: getProjectListForTool(Docker),
-      summary:'',
+      summary:`
+- Very firm understanding of the concept behind docker, containerization, and the idea of hosting a self sustaining container on a server.
+- Once containerization is understood docker is pretty straight forward.
+- The biggest area of improvement for myself would be container security, but that may be more of a network issue than a container issue. 
+      `,
     },
     [`${Dot_net_core}`]: <ToolDataDto>{
-      displayName: "Docker",
+      displayName: "Dot net core",
       years: 4,
       projects: getProjectListForTool(Dot_net_core),
-      summary:'',
+      summary: `
+- Most of the projects I built were created off of a template. 
+- I understood, updated, and built a few apps at the config level but for the most part it wasn't necessary. 
+- My expertice in .net core is coupled with C#, servicestack, and kafka. 
+      `,
     },
     [`${Figma}`]: <ToolDataDto>{
       displayName: "Figma",
       years: 4,
       projects: getProjectListForTool(Figma),
-      summary:'',
+      summary: `
+- Used from a developer perspective to obtain specs
+- Would love to build a story book to figma library but have yet to have that experience.
+      `,
     },
     [`${Git_bash}`]: <ToolDataDto>{
       displayName: "Git Bash",
       years: 7,
       projects: getProjectListForTool(Git_bash),
-      summary:'',
+      summary:`
+- Use git command line exclusively when interacting with github 
+- Can create repos, push, update, rebase, merge and manage upstream from cli
+      `,
     },
     [`${Github}`]: <ToolDataDto>{
       displayName: "Github",
       years: 7,
       projects: getProjectListForTool(Github),
-      summary:'',
+      summary:`
+- Most of my version control experience has been done on github
+- Very familiar with branching strategies for deployment management and redundancy
+- Manage repo and organization secrets 
+- Create, configure, and authorize sso keys for push/pull security
+- Define and enfore branch rules
+      `,
     },
     [`${Google_analytics}`]: <ToolDataDto>{
       displayName: "Google Analytics",
       years: 4,
       projects: getProjectListForTool(Google_analytics),
-      summary:'',
+      summary:`
+- Create and pushed events to a system managed by someone else.
+- Mostly just ensuring we were firing the right event names with the right payload.
+      `,
     },
     [`${HTML5}`]: <ToolDataDto>{
       displayName: "HTML 5",
       years: 8.5,
       projects: getProjectListForTool(HTML5),
-      summary:'',
-    },
-    [`${IT_accessibility}`]: <ToolDataDto>{
-      displayName: "IT Accessibility",
-      years: 8.5,
-      projects: getProjectListForTool(IT_accessibility),
-      summary:'',
+      summary:`
+- Understand most html elements and their proper usages. 
+- Have not done any indepth HTML learning. Most of the usage is within other front libraries or frameworks. Likd JSX.
+      `,
     },
     [`${JavaScript}`]: <ToolDataDto>{
       displayName: "JavaScript",
       years: 8.5,
       projects: getProjectListForTool(JavaScript),
-      summary:'',
+      summary:`
+- Used VB.net and C# MVC applciations. Using jquery scripts to maninuplate client objects and make async server requests.
+- Used in Angular projects.
+- Used in React projects.
+- Used in Node API projects.
+- Familiar with JavaScript global hoisting, generator functions and asyncronisity. 
+      `,
     },
     [`${Jenkins}`]: <ToolDataDto>{
       displayName: "Jenkins",
       years: 4,
       projects: getProjectListForTool(Jenkins),
-      summary:'',
+      summary:`
+- Deployed with jenkins through devOps
+- Used UI to triage build failures
+- Rarely configured any builds
+      `,
     },
     [`${Jest}`]: <ToolDataDto>{
       displayName: "Jest",
       years: 5,
       projects: getProjectListForTool(Jest),
-      summary:'',
+      summary:`
+- All react and angular unit testing I've wrote has leveraged jest.
+- Very familiary with making jest mocks both of local files and npm modules. 
+- Know how to mock hooks, api calls, and other depenedencies
+- Know how to write tests so that mocks run the same every time and aren't doubled up unexpectedly
+- Write chain tests when the situation calls for it.
+      `,
     },
     [`${Kafka}`]: <ToolDataDto>{
       displayName: "Kafka",
       years: 2,
       projects: getProjectListForTool(Kafka),
-      summary:'',
+      summary:`
+- Build consumers and producers mostly with .net core.
+- Have deep understanding of core kafka features such as partitioning consumers and initializing with scalablity settings. 
+- Understand how to setup event workflows with kafka for message redudancy.
+- Have designed event driven workflows with Kafka
+      `,
     },
     [`${Kubernetes}`]: <ToolDataDto>{
       displayName: "Kubernetes",
       years: 3,
       projects: getProjectListForTool(Kubernetes),
-      summary:'',
+      summary:`
+- Only worked with kubermetes cli to view and debug issues with containers in the cluster
+- Have not managed and kubernetes clusters or side car configurations
+      `,
     },
     [`${Launchdarkly}`]: <ToolDataDto>{
       displayName: "LaunchDarkly",
       years: 4,
       projects: getProjectListForTool(Launchdarkly),
-      summary:'',
+      summary:`
+- Utilized company launch darkly contract to create A/B test and feature flag pathways
+- Useful for developing features without creating bottleneck
+- Only configured within consuming application 
+- Did not manage tokens or flags in anyway. Could only request to have flags created.  
+      `,
     },
     [`${Lerna}`]: <ToolDataDto>{
       displayName: "lerna",
       years: 1,
       projects: getProjectListForTool(Lerna),
-      summary:'',
+      summary:`
+- Familiarity with creating a mono-repo that is self referencing.
+- Create separate build pipelines for each package in mono-repo.
+      `,
     },
     [`${Linux}`]: <ToolDataDto>{
       displayName: "Linux",
