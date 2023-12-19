@@ -18,6 +18,8 @@
 
 .summary {
   padding: .75rem .5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   font-family: lobster;
   color: var(--tcimpidis-dusk-on-the-lake);
 }

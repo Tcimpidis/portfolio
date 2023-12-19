@@ -74,7 +74,6 @@ type ProjectMap = {
 const Agile = "agile";
 const Angular = "angular";
 const Apache = "apache";
-const Aws = "aws";
 const Aws_cloudfront = "aws-cloudfront";
 const Azure_devops = "azure-devops";
 const CSharp = "CSharp";
@@ -133,7 +132,6 @@ const Yaml = "yaml";
 export type ToolType = typeof Agile 
  |typeof Angular 
  |typeof Apache 
- |typeof Aws 
  |typeof Aws_cloudfront 
  |typeof Azure_devops
  |typeof CSharp 
@@ -214,7 +212,6 @@ export const ToolsList: ToolType[] = [
   Agile,
   Angular,
   Apache,
-  Aws,
   Aws_cloudfront,
   Azure_devops,
   CSharp,
@@ -274,7 +271,7 @@ export const ToolsList: ToolType[] = [
 export const CompanyData: CompanyMap = {
   [`${CHRobinson}`]: <CompanyDataDto>{
     projects: [FreightQuote, TMC, CHRobinsonOnline],
-    summary: `I spent most if my career at C.H. Robinson. Here I learned the foundations of builiding scalable softward. I was fortunate enough to be exposed to a very large technical network, where multiple, large, functional teams, worked in tandem, to deliver huge business initiatives, while maintaining their current running network, as this network was adapting to the new technical demands of the industry. I was introduced to older technologies, given just enough time to understanding them, then started seeing and implementing the uplift of these technologies into newer, scalable tech. I was also blessed with a patient and knowledgable mentor Chris Hince, whose guideance and support spurred my growth. Chris and I worked together  on an internal C.H. Robinson applciation for their yearly charity auctions. Which helped facilitate over $150,000 in charitable donations annually. This, and my varied other experiences at C.H. Robinson gave me opportunities to practice owning and developing technologies in a vary stable, growth centered enviornment.`,
+    summary: `At C.H. Robinson I learned the foundations of builiding scalable softward. I was fortunate enough to be exposed to a very large technical network, where multiple, large, functional teams, worked in tandem, to deliver huge business initiatives, while maintaining their current running network, as this network was adapting to the new technical demands of the industry. I was introduced to older technologies, given just enough time to understanding them, then started seeing and implementing the uplift of these technologies into newer, scalable tech. I was also blessed with a patient and knowledgable mentor Chris Hince, whose guideance and support spurred my growth. Chris and I worked together  on an internal C.H. Robinson applciation for their yearly charity auctions. Which helped facilitate over $150,000 in charitable donations annually. This, and my varied other experiences at C.H. Robinson gave me opportunities to practice owning and developing technologies in a vary stable, growth centered enviornment.`,
     references: [
       {
         name: "Chris Hince",
@@ -284,7 +281,7 @@ export const CompanyData: CompanyMap = {
       {
         name: "John Holmen",
         role: "Manager",
-        linkedIn: "https://www.linkedin.com/in/john-holmen"
+        linkedIn: "https://www.linkedin.com/in/john-holmen-15725b26"
       },
       {
         name: "Carrie Drzewiecki",
@@ -341,7 +338,7 @@ export const CompanyData: CompanyMap = {
   },
   [`${Tcimpidis}`]: <CompanyDataDto>{
     projects: [Portfolio, Personal],
-    summary: "A look into this website, which is Tcimpidis' first foree into owning every step of the process. From design to server management. As well as some other public code examples from Jamin Tcimpidis, the found of Tcimpidis."
+    summary: "A look into this website, which is Tcimpidis' first foree into owning every step of the process. From design to server management. As well as some other public code examples from Jamin Tcimpidis, the found of Tcimpidis.",
   },
 }
 
@@ -593,25 +590,32 @@ export const ToolData : ToolMap = {
       displayName: "Agile Methodology",
       years: 8.5,
       projects: getProjectListForTool(Agile),
-      summary: '- Experience with one and two week sprints.\n\n- Engaged in all ceremony: Grooming, Planning, Standup and Retro.\n- Used tools like Jira, Azure, and trello to track work.\n - Reflected on burn down metrics to improve productivity.'
+      summary: `
+- Experience with one and two week sprints.
+- Engaged in all ceremony: Grooming, Planning, Standup and Retro.
+- Used tools like Jira, Azure, and trello to track work.
+- Reflected on burn down metrics to improve productivity.
+`
     },
     [`${Angular}`]: <ToolDataDto>{
       displayName: "Angular",
       years: 2.5,
       projects: getProjectListForTool(Angular),
-      summary:'',
+      summary:`
+- Built a site using original angularJS many years ago.
+- Have worked a little with angular4, also many years ago.
+- In general moved away from angular towards more library driven software.
+`,
     },
     [`${Apache}`]: <ToolDataDto>{
       displayName: "Apache",
       years: .2,
       projects: getProjectListForTool(Apache),
-      summary:'',
-    },
-    [`${Aws}`]: <ToolDataDto>{
-      displayName: "AWS",
-      years: 1.5,
-      projects: getProjectListForTool(Aws),
-      summary:'',
+      summary:`
+- Used apache servers for crypto mining GPUs many many years ago, before I was a software engineer
+- This site is currently hosted on a apache server
+- This server is https and routed through a domain which all had to be configued on the apache server.
+      `,
     },
     [`${Aws_cloudfront}`]: <ToolDataDto>{
       displayName: "Aws Cloudfront",
