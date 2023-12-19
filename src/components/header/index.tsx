@@ -11,12 +11,12 @@ const Header = () => {
 
   }
 
-  const redirectToPeople = () => {
-    router.push('/portfolio')
+  const redirectToPortfolio = () => {
+    router.push('/portfolio');
   }
 
-  const redirectToProfile = () => {
-
+  const redirectToResume = () => {
+    router.push('/resume');
   }
 
   const redirectToHome = () => [
@@ -35,10 +35,10 @@ const Header = () => {
             <button className={styles.button} onClick={redirectToServices}>Services</button>
           </div>
           <div>
-            <button className={styles.button} onClick={redirectToPeople}>Portfolio</button>
+            <button className={styles.button} onClick={redirectToPortfolio}>Portfolio</button>
           </div>
           <div>
-            <button className={styles.button} onClick={redirectToProfile}>Resumé</button>
+            <button className={styles.button} onClick={redirectToResume}>Resumé</button>
           </div>
         </div>
       </header>

@@ -6,9 +6,9 @@
   --tcimpidis-sea-foam:#A1D9E6;
   --tcimpidis-plain-jane:#E3FBFF;
   --tcimpidis-clean-skys: #2990A6;
-  --portfolio-font-family: lobster;
-  --portfolio-xl-text: 54px;
-  --portfolio-base-text: 17px;
+  --tcimpidis-dark-beginnings: #4F47B2;
+  --tcimpidis-font-family: lobster;
+  --tcimpidis-border-radius: 0.75rem;
 }
 
 body {
@@ -28,6 +28,6 @@ a {
   color: var(--tcimpidis-clean-skys);
 }
 a:visited{
-  color: var(--tcimpidis-plain-jane);
+  color: var(--tcimpidis-dark-beginnings);
   opacity: 2;
 }

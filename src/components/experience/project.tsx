@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { FC, useState } from 'react';
 import styles from './project.module.css';
-import { ImportantUrl, ProjectType, ToolData, ToolType } from '@/api/data';
+import { ImportantUrl, ProjectType, ToolData, ToolType } from '@/api/portfolio';
 import { useRouter } from 'next/navigation';
 import Markdown from 'react-markdown';
 import Link from 'next/link';
@@ -95,7 +95,7 @@ const ImageContainer: FC<{  type: ProjectType;
       {importantUrls?.map(({name, urlList}, i) =>  (
         <div key={i} className={styles.url_container}>
           <label className={styles.icon_label}>
-            {name} -
+            {name}
           </label>
           <div className={styles.link_box}>
             {

@@ -1,4 +1,4 @@
-import { PersonalReference } from "@/api/data"
+import { PersonalReference } from "@/api/portfolio"
 import { FC } from "react"
 import Image from 'next/image';
 import styles from './personal-reference.module.css';

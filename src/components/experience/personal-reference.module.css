@@ -8,12 +8,8 @@
 .heading {
   margin-top: 2rem;
   margin-bottom: .75rem;
-  font-size: 1.5rem;
-  font-weight: 500;
+  composes: displayName from '../../app/layout.module.css';
   text-align: right;
-  color: var(--tcimpidis-dusk-on-the-lake);
-  text-transform: uppercase;
-  font-family: lobster;
 }
 
 .item_list_box {
@@ -31,7 +27,7 @@
   gap: .2rem;
   padding: .5rem 1rem;
   border: 1px solid var(--tcimpidis-plain-jane);
-  border-radius: .75rem;
+  border-radius: var(--tcimpidis-border-radius);
   background: none;
   cursor: pointer;
 }

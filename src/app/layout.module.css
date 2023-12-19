@@ -1,10 +1,82 @@
-.container {
-  @media only screen and (min-width: 1200px) {
-    width: 100%;
-    box-sizing: border-box;
-    margin: auto;
-  }
-  margin: auto;
-  padding-bottom: 0;
-  margin-top: 0;
+.heading_container {
+  background-image: linear-gradient(var(--tcimpidis-sea-foam), var(--tcimpidis-cool-shower));
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading { 
+  background: linear-gradient(var(--tcimpidis-brunch-with-friends), var(--tcimpidis-sweet-nothings));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.25rem;
+  font-family: var(--tcimpidis-font-family);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title { 
+  margin-right: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--tcimpidis-cool-shower);
+  font-family: var(--tcimpidis-font-family);
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  border-bottom: 1px solid var(--tcimpidis-dusk-on-the-lake);
+  text-transform: uppercase;
+  font-family: var(--tcimpidis-font-family);;
+}
+
+.display_name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  text-transform: uppercase;
+  font-family: var(--tcimpidis-font-family);;
+}
+
+.content {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--tcimpidis-font-family);
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.detail {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.container { 
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 2rem;
+  padding: 2rem 6rem;
+  background-color: var(--tcimpidis-brunch-with-friends);
+}
+
+.container_odd { 
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 2rem;
+  padding: 2rem 6rem;
+  background-image: linear-gradient(var(--tcimpidis-sweet-nothings), var(--tcimpidis-sea-foam));
 }

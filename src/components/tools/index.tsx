@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import styles from './index.module.css';
 import { Tool } from './tool-icon';
 import { ToolDetail } from './tool-detail';
-import { ToolsList, ToolData, ToolType } from '@/api/data';
+import { ToolsList, ToolData, ToolType } from '@/api/portfolio';
 import { useSearchParams } from 'next/navigation';
 
 export const Tools = () => {

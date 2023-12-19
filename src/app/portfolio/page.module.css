@@ -1,35 +1,18 @@
 .container { 
-  display: flex;
-  flex-direction: column;
-  gap: 3rem 2rem;
-  padding: 2rem 6rem;
+  composes: container_odd from '../layout.module.css';
+  background-image: none;
   background-color: var(--tcimpidis-brunch-with-friends);
 }
 
 .container_odd { 
-  display: flex;
-  flex-direction: column;
-  gap: 3rem 2rem;
-  padding: 2rem 6rem;
-  background-image: linear-gradient(var(--tcimpidis-sweet-nothings), var(--tcimpidis-sea-foam));
+  composes: container_odd from '../layout.module.css';
 }
 
 .title_container {
-  background-image: linear-gradient(var(--tcimpidis-sea-foam), var(--tcimpidis-cool-shower));
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  composes: heading_container from '../layout.module.css';
 }
 
 .title {
-  background: linear-gradient(var(--tcimpidis-brunch-with-friends), var(--tcimpidis-sweet-nothings));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 52px;
-  font-family: 'lobster';
-  text-transform: uppercase;
-  font-weight: 700;
+  composes: heading from '../layout.module.css';
 }
+

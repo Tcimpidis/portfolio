@@ -4,7 +4,7 @@ import styles from './page.module.css';
 import { Tools } from '@/components/tools';
 import { Experience } from '@/components/experience';
 
-export default function People() {
+export default function Portfolio() {
   return (
     <div>
       <div className={styles.title_container}>

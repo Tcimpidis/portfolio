@@ -7,10 +7,9 @@
 }
 
 .display_name {
-  font-size: 1.5rem;
+  composes: display_name from '../../app/layout.module.css';
   text-transform: capitalize;
   font-weight: 700;
-  color: var(--tcimpidis-dusk-on-the-lake);
   padding-left: 1rem;
   padding-bottom: .25rem;
   margin-bottom: .5rem;
@@ -26,17 +25,12 @@
 }
 
 .label {
-  font-size: 1rem;
-  text-transform: capitalize;
-  font-weight: 700;
-  color: var(--tcimpidis-dusk-on-the-lake);
+  composes: label from '../../app/layout.module.css';
 }
 
 .text {
-  font-size: .9rem;
-  font-weight: 600;
+  composes: detail from '../../app/layout.module.css';
   text-align: right;
-  color: var(--tcimpidis-dusk-on-the-lake);
   width: 70%;
 }
 
@@ -65,10 +59,8 @@
 }
 
 .summary_text {
-  font-size: .7rem;
-  font-weight: 600;
+  composes: detail from '../../app/layout.module.css';
   padding-left: 1.25rem;
   overflow-wrap: break-word;
-  color: var(--tcimpidis-dusk-on-the-lake);
   overflow: hidden;
 }

@@ -2,7 +2,7 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './company.module.css';
 import { Project } from './project';
-import { CompanyData, CompanyType, ProjectData, ProjectDataDto, ProjectType } from '@/api/data';
+import { CompanyData, CompanyType, ProjectData, ProjectDataDto, ProjectType } from '@/api/portfolio';
 import { PresonalReferences } from './personal-reference';
 
 interface CompanyProps {
