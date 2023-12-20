@@ -8,7 +8,7 @@ import { envRoute } from '@/envUtility';
 const Header = () => {
   const router = useRouter()
   const redirectToServices = () => {
-
+    router.push('/about')
   }
 
   const redirectToPortfolio = () => {
@@ -32,7 +32,7 @@ const Header = () => {
         </div>
         <div className={styles.link_box}>
           <div>
-            <button className={styles.button} onClick={redirectToServices}>Services</button>
+            <button className={styles.button} onClick={redirectToServices}>About</button>
           </div>
           <div>
             <button className={styles.button} onClick={redirectToPortfolio}>Portfolio</button>

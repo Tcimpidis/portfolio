@@ -2,24 +2,24 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './company.module.css';
 import { Project } from './project';
-import { CompanyData, CompanyType, ProjectData, ProjectDataDto, ProjectType } from '@/api/portfolio';
+import { CompanyMap, CompanyType, ProjectMap } from '@/api/portfolio';
 import { PresonalReferences } from './personal-reference';
 
 interface CompanyProps {
   companyName: CompanyType;
-}
-
-interface ProjectDto extends ProjectDataDto {
-  type: ProjectType
+  companyData: CompanyMap;
+  projectData: ProjectMap;
 }
 
 export const Company: FC<CompanyProps> = ({
-  companyName
+  companyName,
+  companyData,
+  projectData
 }) => {
 
-  const { summary, references }= CompanyData[companyName];
-  const projects = CompanyData[companyName].projects.map(name => {
-    return {...ProjectData[name], type: name }
+  const { summary, references }= companyData[companyName];
+  const projects = companyData[companyName].projects.map(name => {
+    return {...projectData[name], type: name }
   })
 
   return (

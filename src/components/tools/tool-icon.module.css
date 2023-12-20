@@ -31,5 +31,5 @@
   z-index: 2;
   cursor: pointer;
   position: relative;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
 }

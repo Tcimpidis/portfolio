@@ -27,7 +27,7 @@
   gap: .2rem;
   padding: .5rem 1rem;
   border: 1px solid var(--tcimpidis-plain-jane);
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   background: none;
   cursor: pointer;
 }

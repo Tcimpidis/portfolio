@@ -26,6 +26,7 @@
 
 .label {
   composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
 }
 
 .text {

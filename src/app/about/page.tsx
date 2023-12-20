@@ -1,10 +1,12 @@
+import Image from 'next/image'
+
 import styles from './page.module.css';
 
-export default async function Portfolio() {
+export default function Portfolio() {
   return (
     <div>
       <div className={styles.title_container}>
-        <span className={styles.title}>Portfolio</span>
+        <span className={styles.title}>About me</span>
       </div>
     </div>
   )

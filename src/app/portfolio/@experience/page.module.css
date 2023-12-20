@@ -1,11 +1,9 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.container { 
+  composes: container_odd from '../../layout.module.css';
 }
 
 .heading {
-  composes: title from '../../app/layout.module.css';
+  composes: title from '../../layout.module.css';
   text-align: right;
   margin-bottom: 2rem;
   color: var(--tcimpidis-brunch-with-friends);

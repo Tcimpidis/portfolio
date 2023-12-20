@@ -38,7 +38,7 @@ export type CompanyType = typeof CHRobinson
  | typeof Delhivery 
  | typeof Tcimpidis;
 
-type CompanyMap = {
+export type CompanyMap = {
   [key in CompanyType]: CompanyDataDto;
 };
   
@@ -66,7 +66,7 @@ export type ProjectType =
   typeof ConsoleUI | 
   typeof OrganizationUI;
 
-type ProjectMap = {
+export type ProjectMap = {
   [key in ProjectType]: ProjectDataDto;
 };
   
@@ -185,7 +185,7 @@ export type ToolType = typeof Agile
  |typeof Xml 
  |typeof Yaml;
 
-type ToolMap = {
+export type ToolMap = {
   [key in ToolType]: ToolDataDto;
 };
 

@@ -3,19 +3,19 @@
   flex-direction: column;
   align-items: center;
   height: 35rem;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   overflow: hidden;
 }
 
 .fullscreen_image {
   object-fit: scale-down;
   z-index: -1;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
 }
 
 .thumbnail_image {
   object-fit: contain;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
 }
 
 .selected_thumbnail_wrapper {
@@ -29,7 +29,7 @@
   position: relative;
   width: 30vw;
   height: 25vh;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   overflow: hidden;
   border: solid 1px var(--tcimpidis-dusk-on-the-lake);
 }
@@ -104,11 +104,11 @@
 
 .selector_image_wrapper {
   position: relative;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
 }
 
 .selector_image {
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
 }
 
 .selector_image_selected {
@@ -128,7 +128,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   background-color: var(--tcimpidis-cool-shower);
   opacity: .7;
   position: absolute;

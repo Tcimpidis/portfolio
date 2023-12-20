@@ -16,7 +16,7 @@
 .image_box {
   display: flex;
   flex-direction: column;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   margin: 3rem 0;
   width: 100%;
   max-width: 40vw;
@@ -77,7 +77,7 @@
   bottom: -5;
   z-index: 4;
   position: absolute;
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   border: solid 1px var(--tcimpidis-cool-shower);
   background-color: var(--tcimpidis-sea-foam);
   opacity: .9;
@@ -106,7 +106,7 @@
 }
 
 .text::-webkit-scrollbar-thumb {
-  border-radius: var(--tcimpidis-border-radius);
+  border-radius: var(--tcimpidis-image-border-radius);
   background-color: var(--tcimpidis-dusk-on-the-lake);
   border: 1px solid var(--tcimpidis-sea-foam);
 }
