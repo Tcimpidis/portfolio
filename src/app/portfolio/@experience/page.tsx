@@ -30,13 +30,11 @@ async function getProjectData() {
 
 export default async function Experience() {
   const companies = await getCompanyList();
-  const companyData = await getCompanyData();
-  const projectData = await getProjectData();
   return (  
     <div className={styles.container}>
       <div className={styles.heading}>Work Experience</div>
       {companies?.map(((name, i) => 
-        <Company companyData={companyData} companyName={name} key={i} projectData={projectData}/>
+        <Company  companyName={name} key={i} />
       ))}
     </div>
   )
