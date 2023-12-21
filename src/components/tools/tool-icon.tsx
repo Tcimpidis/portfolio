@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FC, useCallback } from 'react';
 
 import styles from './tool-icon.module.css';
-import { ToolType } from '@/api/data';
+import { ToolType } from '@/api/portfolio';
 import { envRoute } from '@/envUtility';
 
 interface ToolProps {

@@ -2,7 +2,7 @@
 import { FC, useEffect, useState } from 'react';
 import styles from './company.module.css';
 import { Project } from './project';
-import { CompanyData, CompanyType, ProjectData, ProjectDataDto, ProjectType } from '@/api/data';
+import { CompanyMap, CompanyType, PersonalReference, ProjectDataDto, ProjectMap, ProjectType } from '@/api/portfolio';
 import { PresonalReferences } from './personal-reference';
 
 interface CompanyProps {
@@ -14,13 +14,32 @@ interface ProjectDto extends ProjectDataDto {
 }
 
 export const Company: FC<CompanyProps> = ({
-  companyName
+  companyName,
 }) => {
+  const [summary, setSummary] = useState<string>();
+  const [references, setReferences] = useState<PersonalReference[]>()
+  const [projects, setProjects] = useState<ProjectDto[]>()
 
-  const { summary, references }= CompanyData[companyName];
-  const projects = CompanyData[companyName].projects.map(name => {
-    return {...ProjectData[name], type: name }
-  })
+  useEffect(() => {
+    const fetchData = async () => {
+      const companyResponse = await fetch('http://localhost:3000/portfolio/api/company-data', {
+        method: "get",
+      });
+      const companyData = await companyResponse.json() as CompanyMap;
+      const projectResponse = await fetch('http://localhost:3000/portfolio/api/project-data', {
+        method: "get",
+      });
+      const projectData = await projectResponse.json() as ProjectMap;
+      const { summary: summaryData, references: referenceData } = companyData[companyName];
+      const localProjects = companyData[companyName].projects.map((name) => {
+        return {...projectData[name], type: name}
+      })
+      setSummary(summaryData);
+      setReferences(referenceData);
+      setProjects(localProjects);
+    }
+    fetchData();
+  },[companyName]);
 
   return (
     <div className={styles.container}>
@@ -36,8 +55,8 @@ export const Company: FC<CompanyProps> = ({
             title={title}
             type={type}
             />
-         </div> 
-      )}
+        </div> 
+       )}
     </div>
   )
 }

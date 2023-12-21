@@ -1,12 +1,20 @@
 "use client";
-import { useEffect, useMemo, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import styles from './index.module.css';
 import { Tool } from './tool-icon';
 import { ToolDetail } from './tool-detail';
-import { ToolsList, ToolData, ToolType } from '@/api/data';
+import { ToolType, ToolMap } from '@/api/portfolio';
 import { useSearchParams } from 'next/navigation';
 
-export const Tools = () => {
+interface ToolListProps {
+  toolData: ToolMap;
+  toolList: ToolType[]
+}
+
+export const ToolList: FC<ToolListProps> = ({
+  toolData,
+  toolList
+}) => {
   const searchParams = useSearchParams()
   const tool = searchParams.get('tool')
   const [focusedTool, setFocusedTool] = useState<ToolType>(tool as ToolType);
@@ -19,7 +27,7 @@ export const Tools = () => {
 
   const focusedDetails = useMemo(() => {
     if(focusedTool) {
-      return { ...ToolData[focusedTool] } 
+      return { ...toolData[focusedTool] } 
     }
   }, [focusedTool]);
 
@@ -38,7 +46,7 @@ export const Tools = () => {
           }
         </div>
         <div className={styles.icon_box}> 
-          {ToolsList.map((tool, i) => <Tool 
+          {toolList.map((tool, i) => <Tool 
             name={tool}
             onClick={setFocusedTool}
             key={i} />)}

@@ -5,10 +5,11 @@
   --tcimpidis-brunch-with-friends: #f8f0fc;
   --tcimpidis-sea-foam:#A1D9E6;
   --tcimpidis-plain-jane:#E3FBFF;
-  --tcimpidis-clean-skys: #2990A6;
-  --portfolio-font-family: lobster;
-  --portfolio-xl-text: 54px;
-  --portfolio-base-text: 17px;
+  --tcimpidis-sea-scape: #2990A6;
+  --tcimpidis-dark-beginnings: #4F47B2;
+  --tcimpidis-font-family: lobster;
+  --tcimpidis-image-border-radius: 0.75rem;
+  --tcimpidis-input-border-radius: 0.4rem;
 }
 
 body {
@@ -25,9 +26,9 @@ code {
 
 
 a {
-  color: var(--tcimpidis-clean-skys);
+  color: var(--tcimpidis-sea-scape);
 }
 a:visited{
-  color: var(--tcimpidis-plain-jane);
+  color: var(--tcimpidis-dark-beginnings);
   opacity: 2;
 }

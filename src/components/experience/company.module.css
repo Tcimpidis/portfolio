@@ -6,20 +6,11 @@
 }
 
 .heading {
-  margin-top: 2rem;
-  font-size: 2.5rem;
-  font-weight: 500;
+  composes: subtitle from '../../app/layout.module.css';
   text-align: right;
-  color: var(--tcimpidis-dusk-on-the-lake);
-  border-bottom: 1px solid var(--tcimpidis-dusk-on-the-lake);
-  text-transform: uppercase;
-  font-family: lobster;
 }
 
 .summary {
+  composes: content from '../../app/layout.module.css';
   padding: .75rem .5rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  font-family: lobster;
-  color: var(--tcimpidis-dusk-on-the-lake);
 }

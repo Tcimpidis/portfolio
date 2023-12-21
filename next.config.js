@@ -7,12 +7,12 @@ const envBaseRoute = {
 }
 
 const nextConfig = {
-  output: 'export',
-  assetPrefix: envBaseRoute[process.env.NODE_ENV],
-  basePath: envBaseRoute[process.env.NODE_ENV],
-  images: {
-    unoptimized: true,
-  },
+  // output: 'export',
+  // assetPrefix: envBaseRoute[process.env.NODE_ENV],
+  // basePath: envBaseRoute[process.env.NODE_ENV],
+  // images: {
+  //   unoptimized: true,
+  // },
 }
 
 module.exports = nextConfig

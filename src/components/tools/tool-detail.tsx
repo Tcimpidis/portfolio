@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Markdown from 'react-markdown'
 import styles from './tool-detail.module.css';
 import Link from 'next/link';
-import { ProjectData, ProjectType } from '@/api/data';
+import { ProjectData, ProjectType } from '@/api/portfolio';
 
 interface ToolDetailProps {
   displayName: string;

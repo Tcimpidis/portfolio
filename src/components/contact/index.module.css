@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  min-width: 35wv;
+  max-width: 35vw;
+}
+
+.name_box {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  justify-content: space-between;
+}
+
+.input_box {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  gap: .25rem;
+}
+
+.input_label_text {
+  composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.input {
+  padding: .7rem .5rem;
+  border-radius: var(--tcimpidis-input-border-radius);
+  box-shadow: .05rem .15rem .15rem var(--tcimpidis-dusk-on-the-lake);
+  background-color: var(--tcimpidis-brunch-with-friends);
+  outline: none;
+  border: none;
+}
+
+.input:focus {
+  outline: 1px solid var(--tcimpidis-sea-scape);
+}
+
+.input:active {
+  outline: 1px solid var(--tcimpidis-sea-scape);
+}
+
+.button {
+  margin: 1rem 0;
+  padding: 1rem 1.75rem;
+  border-radius: var(--tcimpidis-input-border-radius);
+  background-color: var(--tcimpidis-cool-shower);
+  border: none;
+  color: var(--tcimpidis-brunch-with-friends);
+  outline: 1px solid var(--tcimpidis-sea-scape);
+  cursor: pointer;
+}
+
+.button:active {
+  outline: 1px solid var(--tcimpidis-dark-beginnings);
+}
+
+.button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  color: var(--tcimpidis-cool-shower);
+  background-color: var(--tcimpidis-brunch-with-friends);
+  pointer-events: none;
+}

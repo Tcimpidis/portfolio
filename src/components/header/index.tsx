@@ -8,15 +8,15 @@ import { envRoute } from '@/envUtility';
 const Header = () => {
   const router = useRouter()
   const redirectToServices = () => {
-
+    router.push('/about')
   }
 
-  const redirectToPeople = () => {
-    router.push('/portfolio')
+  const redirectToPortfolio = () => {
+    router.push('/portfolio');
   }
 
-  const redirectToProfile = () => {
-
+  const redirectToResume = () => {
+    router.push('/resume');
   }
 
   const redirectToHome = () => [
@@ -32,13 +32,13 @@ const Header = () => {
         </div>
         <div className={styles.link_box}>
           <div>
-            <button className={styles.button} onClick={redirectToServices}>Services</button>
+            <button className={styles.button} onClick={redirectToServices}>About</button>
           </div>
           <div>
-            <button className={styles.button} onClick={redirectToPeople}>Portfolio</button>
+            <button className={styles.button} onClick={redirectToPortfolio}>Portfolio</button>
           </div>
           <div>
-            <button className={styles.button} onClick={redirectToProfile}>Resumé</button>
+            <button className={styles.button} onClick={redirectToResume}>Resumé</button>
           </div>
         </div>
       </header>
