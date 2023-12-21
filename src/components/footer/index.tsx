@@ -17,7 +17,7 @@ export const Footer = () => {
           />
           <div>
             <div className={styles.summary}>
-              I'm an full stack developer who specializes in secure, responsive, and scalable frontends. Interested in seeing how I can help you? Let's Talk! 
+              I&apos;m an full stack developer who specializes in secure, responsive, and scalable frontends. Interested in seeing how I can help you? Let&apos;s Talk! 
             </div>
           </div>
 
