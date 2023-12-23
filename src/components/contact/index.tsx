@@ -1,5 +1,5 @@
 "use client"
-import { FC, useState } from "react";
+import { FC } from "react";
 import { useForm, Resolver, FieldErrors, FieldError, UseFormRegister, Path } from 'react-hook-form';
 import styles from './index.module.css';
 
@@ -91,7 +91,7 @@ export const Contact = () => {
     subject,
     message,
   }) => {
-    await fetch('http://localhost:3000/api/footer', {
+    await fetch('http://localhost:3000/api', {
       method: "post",
       body: JSON.stringify({
         email,

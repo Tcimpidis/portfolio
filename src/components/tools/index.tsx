@@ -29,7 +29,7 @@ export const ToolList: FC<ToolListProps> = ({
     if(focusedTool) {
       return { ...toolData[focusedTool] } 
     }
-  }, [focusedTool]);
+  }, [focusedTool, toolData]);
 
   return (
     <div className={styles.container}>
