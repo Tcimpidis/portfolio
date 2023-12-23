@@ -9,11 +9,11 @@ export default async function Experience() {
   return (  
     <div className={styles.container}>
       <div className={styles.heading}>Work Experience</div>
-      {CompanyNames?.map(((name, i) => 
-      <Suspense fallback={<span>...loading</span>} key={i} >
-        <Company  companyName={name} />
+      <Suspense fallback={<span>...loading</span>}  >
+        {CompanyNames?.map(((name, i) => 
+          <Company  companyName={name} key={i}/>
+        ))}
       </Suspense>
-      ))}
     </div>
   )
 }
