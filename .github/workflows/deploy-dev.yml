@@ -66,5 +66,6 @@ jobs:
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
             git clone https://github.com/Tcimpidis/portfolio.git
+            docker stop ${{ env.IMAGE_NAME }}
             docker build -t ${{ env.IMAGE_NAME }} --build-args NEXT_PUBLIC_NODE_ENV=development --build-args RESEND_API_KEY=${{ secrets.RESEND_API_KEY }} ./portfolio/Dockerfile
             docker run --name ${{ env.IMAGE_NAME }} -dit -p 3000:3000 
