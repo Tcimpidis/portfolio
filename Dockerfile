@@ -5,8 +5,7 @@ FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-ARG NEXT_PUBLIC_NODE_ENV
-ARG RESEND_API_KEY
+
 
 
 # Install dependencies based on the preferred package manager
@@ -21,11 +20,13 @@ RUN \
 
 # Rebuild the source code only when needed
 FROM base AS builder
+ARG NEXT_PUBLIC_NODE_ENV
+ARG RESEND_API_KEY
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN echo -e "NEXT_PUBLIC_NODE_ENV=${NEXT_PUBLIC_NODE_ENV} \n RESEND_API_KEY=${RESEND_API_KEY}" > .env.local
+RUN echo -e "NEXT_PUBLIC_NODE_ENV=${NEXT_PUBLIC_NODE_ENV} \n RESEND_API_KEY=${RESEND_API_KEY}" > .env.$NEXT_PUBLIC_NODE_ENV.local
 RUN yarn build 
 
 FROM base AS runner
