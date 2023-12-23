@@ -4,7 +4,7 @@ on:
   push: 
     branches:
       - development
-      - realized_i_still_had_bad_api_call
+      - new_branch_has_to_be_lower_case
 
 env:
   REGISTRY: ghcr.io
