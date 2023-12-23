@@ -91,7 +91,7 @@ export const Contact = () => {
     subject,
     message,
   }) => {
-    await fetch('http://127.0.0.1:3000/api', {
+    await fetch('http://host.docker.internal:3000/api', {
       method: "post",
       body: JSON.stringify({
         email,
