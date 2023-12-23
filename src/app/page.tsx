@@ -1,9 +1,7 @@
-import { HomeComponent } from '../components/home'
-
 export default function Home() {
   return (
     <main >
-      <HomeComponent />
+      <span>Welcome Home!</span>
     </main>
   )
 }
