@@ -91,7 +91,7 @@ export const Contact = () => {
     subject,
     message,
   }) => {
-    await fetch('http://tcimpidis.com/api', {
+    await fetch('http://localhost:3000/api', {
       method: "post",
       body: JSON.stringify({
         email,
