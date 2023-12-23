@@ -5,7 +5,7 @@ import { ResumeDetail } from '@/components/resume/detail';
 import { ResumeDataDto } from '@/api/resume';
 
 async function getResumeData() {
-  const res = await fetch('http://localhost:3000/resume/api/', {method: "get"});
+  const res = await fetch('http://host.docker.internal:3000/resume/api/', {method: "get"});
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
