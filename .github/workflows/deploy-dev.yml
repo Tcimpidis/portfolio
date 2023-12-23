@@ -43,6 +43,9 @@ jobs:
         with:
           context: .
           push: true
+          build-args: |
+            NEXT_PUBLIC_NODE_ENV=development
+            RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       - name: Deploy package to Server
@@ -51,11 +54,10 @@ jobs:
           GITHUB_USERNAME: ${{ github.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-        host: ${{ secrets.HOST_SERVER }}
-        username: ${{ secrets.SERVER_ADMIN }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
-          key: ${{ secrets.DEPLOY_KEY }}
+          host: ${{ secrets.HOST_SERVER }}
+          username: ${{ secrets.SERVER_ADMIN }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
             docker login ${{ env.REGISTRY }} -u $GITHUB_USERNAME -p $GITHUB_TOKEN
@@ -63,36 +65,3 @@ jobs:
             docker stop ${{ env.IMAGE_NAME }}
             docker system prune -f
             docker run --name ${{ env.IMAGE_NAME }} -dit -p 3000:3000 ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-
-# jobs:
-#   Build_with_SSH:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - name: Checkout repository
-#       uses: actions/checkout@v2
-
-#     - name: Install Dependencies
-#       run: yarn install
-#     - name: Build
-#       run: yarn test
-
-#     - name: Clear out directory
-#       uses: appleboy/ssh-action@master
-#       with: 
-#         host: ${{ secrets.HOST_SERVER }}
-#         username: ${{ secrets.SERVER_ADMIN }}
-#         key: ${{ secrets.SSH_PRIVATE_KEY }}
-#         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
-#         script: rm -r ${{ secrets.DEV_WEB_SERVER_LOCATION }}/*
-
-#     - name: Copy files via scp
-#       uses: appleboy/scp-action@master
-#       with:
-#         host: ${{ secrets.HOST_SERVER }}
-#         username: ${{ secrets.SERVER_ADMIN }}
-#         key: ${{ secrets.SSH_PRIVATE_KEY }}
-#         passphrase: ${{ secrets.SSH_PASSPHRASE }}    
-#         source: "out/"
-#         target: ${{ secrets.DEV_WEB_SERVER_LOCATION }}
-#         strip_components: 1
