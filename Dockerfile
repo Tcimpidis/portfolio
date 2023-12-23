@@ -25,7 +25,7 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-RUN echo NEXT_PUBLIC_NODE_ENV=${NEXT_PUBLIC_NODE_ENV} \n RESEND_API_KEY=${RESEND_API_KEY} > .env.local
+RUN echo - e "NEXT_PUBLIC_NODE_ENV=${NEXT_PUBLIC_NODE_ENV} \n RESEND_API_KEY=${RESEND_API_KEY}" > .env.local
 RUN yarn build 
 
 FROM base AS runner
