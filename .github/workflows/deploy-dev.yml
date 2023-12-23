@@ -33,6 +33,18 @@ jobs:
         uses: docker/metadata-action@master
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Install pip
+        run: |
+          apt-get update; apt-get install -y python3-pip
+      - name: Build and ENV
+        run: |
+          cd api
+          cp .env_example_docker .env
+          pip3 install -r requirements.txt
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
