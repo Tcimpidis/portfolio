@@ -57,4 +57,4 @@ jobs:
             docker pull ${{ steps.meta.outputs.tags }}:latest
             docker stop ${{ env.IMAGE_NAME }}
             docker system prune -f
-            docker run --name ${{ env.IMAGE_NAME }} -p 3000:3000 ${{ steps.meta.outputs.tags }}:latest
+            docker --name ${{ env.IMAGE_NAME }} -p 3000:3000 run ${{ steps.meta.outputs.tags }}:latest
