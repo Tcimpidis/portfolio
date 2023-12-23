@@ -4,7 +4,6 @@ on:
   push: 
     branches:
       - development
-      - put_app_in_container
 
 env:
   REGISTRY: ghcr.io
