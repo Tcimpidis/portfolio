@@ -4,11 +4,11 @@ on:
   push: 
     branches:
       - development
-      - realized_I_still_had_bad_api_call
+      - realized_i_still_had_bad_api_call
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: dev_tcimpidis.com
+  IMAGE_NAME: dev-tcimpidis.com
 
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
