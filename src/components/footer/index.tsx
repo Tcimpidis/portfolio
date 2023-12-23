@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import { Contact } from '../contact';
 import styles from './index.module.css';
