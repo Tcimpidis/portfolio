@@ -22,11 +22,11 @@ export const Company: FC<CompanyProps> = ({
 
   useEffect(() => {
     const fetchData = async () => {
-      const companyResponse = await fetch('http://host.docker.internal:3000/portfolio/api/company-data', {
+      const companyResponse = await fetch('http://tcimpidis.com/portfolio/api/company-data', {
         method: "get",
       });
       const companyData = await companyResponse.json() as CompanyMap;
-      const projectResponse = await fetch('http://host.docker.internal:3000/portfolio/api/project-data', {
+      const projectResponse = await fetch('http://tcimpidis.com/portfolio/api/project-data', {
         method: "get",
       });
       const projectData = await projectResponse.json() as ProjectMap;
