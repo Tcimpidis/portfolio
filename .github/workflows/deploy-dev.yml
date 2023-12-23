@@ -4,6 +4,7 @@ on:
   push: 
     branches:
       - development
+      - realized_I_still_had_bad_api_call
 
 env:
   REGISTRY: ghcr.io
