@@ -10,7 +10,6 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: tcimpidis/dev/portfilio
 
-# There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
@@ -53,8 +52,8 @@ jobs:
           passphrase: ${{ secrets.SSH_PASSPHRASE }}
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
-            echo $GITHUB_TOKEN | docker login ${{ env.REGISTRY }} -u $GITHUB_USERNAME --password-stdin
+            echo $GITHUB_TOKEN docker login ${{ env.REGISTRY }} -u $GITHUB_USERNAME --password-stdin
             docker pull ${{ steps.meta.outputs.tags }}:latest
             docker stop ${{ env.IMAGE_NAME }}
             docker system prune -f
-            docker --name ${{ env.IMAGE_NAME }} -p 3000:3000 run ${{ steps.meta.outputs.tags }}:latest
+            docker run --name ${{ env.IMAGE_NAME }} -dit -p 3000:3000 ${{ steps.meta.outputs.tags }}
