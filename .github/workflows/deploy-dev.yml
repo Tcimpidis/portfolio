@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: tcimpidis/dev/portfilio
+  IMAGE_NAME: tcimpidis_portfilio_dev
 
 jobs:
   build-and-push-image:
