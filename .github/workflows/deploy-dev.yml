@@ -56,4 +56,4 @@ jobs:
             docker pull ${{ steps.meta.outputs.tags }}:latest
             docker stop ${{ env.IMAGE_NAME }}
             docker system prune -f
-            docker run --name ${{ env.IMAGE_NAME }} -dit -p 3000:3000 ${{ env.IMAGE_NAME }}:${{GITHUB_REF#refs/heads/}}
+            docker run --name ${{ env.IMAGE_NAME }} -dit -p 3000:3000 ${{ env.IMAGE_NAME }}:${{github.branch}}
