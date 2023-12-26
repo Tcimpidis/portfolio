@@ -56,4 +56,4 @@ jobs:
             docker pull ${{ steps.meta.outputs.tags }}
             docker stop ${{ env.CONTAINER_NAME }}
             docker system prune -f
-            docker run --detach --name ${{ env.CONTAINER_NAME }} --env "VIRTUAL_HOST=${{ secrets.DEV_HOST_DOMAIN }}" --env "LETSENCRYPT_HOST=${{ secrets.DEV_HOST_DOMAIN }}" nginx
+            docker run --detach --name ${{ env.CONTAINER_NAME }} --env "VIRTUAL_HOST=${{ secrets.DEV_HOST_DOMAIN }}" --env "LETSENCRYPT_HOST=${{ secrets.DEV_HOST_DOMAIN }}" ${{ steps.meta.outputs.tags }}
