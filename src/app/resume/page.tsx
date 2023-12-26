@@ -2,18 +2,10 @@ import Image from 'next/image'
 
 import styles from './page.module.css';
 import { ResumeDetail } from '@/components/resume/detail';
-import { ResumeDataDto } from '@/api/resume';
-
-async function getResumeData() {
-  const res = await fetch('http://172.17.0.1:3000/resume/api/', {method: "get"});
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json() as Promise<ResumeDataDto>;
-}
+import { ResumeData } from '@/api/resume';
 
 export default async function Resume() {
-  const {education, experience, extracurricular, summary } = await getResumeData();
+  const {education, experience, extracurricular, summary } =  ResumeData;
   return (
     <div>
       <div className={styles.title_container}>

@@ -1,3 +1,5 @@
+import { Suspense } from "react"
+
 export default async function Layout(props: {
   children: React.ReactNode
   tool: React.ReactNode
@@ -6,8 +8,12 @@ export default async function Layout(props: {
   return (
     <>
       {props.children}
-      {props.tool}
-      {props.experience}
+      <Suspense fallback={<span>...loading</span>}  >
+        {props.tool}
+      </Suspense>
+      <Suspense fallback={<span>...loading</span>}  >
+        {props.experience}
+      </Suspense>
     </>
   )
 }
