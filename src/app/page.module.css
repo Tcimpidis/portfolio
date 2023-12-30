@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--tcimpidis-brunch-with-friends);
+}
+
+.title_container {
+  composes: heading_container from './layout.module.css';
+}
+
+.title {
+  composes: heading from './layout.module.css';
+}
+
+.tool_container { 
+  @media only screen and (max-width: 1280px) {
+    width: 100%;
+  }
+  background-color: var(--tcimpidis-brunch-with-friends);
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  @media only screen and (max-width: 1280px) {
+    padding: 1rem;
+    width: 100%;
+    margin: 0;
+  }
+  @media only screen and (max-width: 640px) {
+    font-size: 1.25rem;
+  }
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--tcimpidis-dusk-on-the-lake);
+  padding: 10rem;
+}

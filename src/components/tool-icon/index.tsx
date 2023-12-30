@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { FC, useCallback } from 'react';
 
-import styles from './tool-icon.module.css';
+import styles from './index.module.css';
 import { ToolType } from '@/api/portfolio';
 import { envRoute } from '@/envUtility';
 
@@ -18,21 +18,19 @@ export const Tool: FC<ToolProps> = ({name, onClick}) => {
 
   return (
     <div 
-    className={styles.item}
-    >
-    <button 
-      className={styles.item_button}
-      onClick={handleOnClick}
+      className={styles.item}
       >
-      <Image 
-        alt={name}
-        height={40}
-        src={`${envRoute}/tools/${name.toLowerCase()}.svg`}
-        width={40}
-      />
-    </button>
+      <button 
+        className={styles.item_button}
+        onClick={handleOnClick}
+        >
+        <Image 
+          alt={name}
+          height={40}
+          src={`${envRoute}/tools/${name.toLowerCase()}.svg`}
+          width={40}
+        />
+      </button>
     </div>
-
-
   )
 }

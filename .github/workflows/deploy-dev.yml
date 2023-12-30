@@ -4,7 +4,6 @@ on:
   push: 
     branches:
       - development
-      - new_branch_has_to_be_lower_case
 
 env:
   REGISTRY: ghcr.io

@@ -1,0 +1,22 @@
+.button {
+  margin: 1rem 0;
+  padding: 1rem 1.75rem;
+  border-radius: var(--tcimpidis-input-border-radius);
+  background-color: var(--tcimpidis-cool-shower);
+  border: none;
+  color: var(--tcimpidis-brunch-with-friends);
+  outline: 1px solid var(--tcimpidis-sea-scape);
+  cursor: pointer;
+}
+
+.button:active {
+  outline: 1px solid var(--tcimpidis-dark-beginnings);
+}
+
+.button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  color: var(--tcimpidis-cool-shower);
+  background-color: var(--tcimpidis-brunch-with-friends);
+  pointer-events: none;
+}

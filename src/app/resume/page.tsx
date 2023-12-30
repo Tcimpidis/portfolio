@@ -1,17 +1,17 @@
 import Image from 'next/image'
 
 import styles from './page.module.css';
-import { ResumeDetail } from '@/components/resume/detail';
+import { ResumeDetail } from '@/components/resume';
 import { ResumeData } from '@/api/resume';
 
 export default async function Resume() {
   const {education, experience, extracurricular, summary } =  ResumeData;
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.title_container}>
         <span className={styles.title}>Resume</span>
       </div>
-      <div className={styles.container}> 
+      <div className={styles.detail_container}> 
         <div className={styles.container}>
           <div className={styles.section}>
             <span className={styles.section_title}>Summary</span>

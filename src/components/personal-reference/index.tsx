@@ -1,7 +1,7 @@
 import { PersonalReference } from "@/api/portfolio"
 import { FC } from "react"
 import Image from 'next/image';
-import styles from './personal-reference.module.css';
+import styles from './index.module.css';
 
 interface PresonalReferencesProps {
   references: PersonalReference[]
@@ -20,7 +20,7 @@ export const PresonalReferences: FC<PresonalReferencesProps> = ({
       <div className={styles.item_list_box}>
         {references && references.map(({name, role, linkedIn}, i) => (
           <button className={styles.item_box} key={i} type="button" onClick={handleOnReferenceClick(linkedIn as string)}>
-            <div><strong>{name}</strong></div>
+            <div className={styles.name} >{name}</div>
             <div className={styles.item} >
               {role}
               <Image alt="linkedIn" src="./assets/LinkedIn.svg" height={15} width={14}/>

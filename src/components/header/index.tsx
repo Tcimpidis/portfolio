@@ -4,24 +4,40 @@ import Image from 'next/image';
 import styles from './index.module.css'
 import { useRouter } from 'next/navigation';
 import { envRoute } from '@/envUtility';
+import { IconContext } from 'react-icons';
+import { FaBars } from 'react-icons/fa6';
+import { useState } from 'react';
 
 const Header = () => {
   const router = useRouter()
+  const [isBarsActive, setIsBarsActive] = useState<boolean>(false);
+  const resetBarsActivity = () => {
+    if(isBarsActive){
+      setIsBarsActive(!isBarsActive);
+    }
+  }
   const redirectToServices = () => {
+    resetBarsActivity();
     router.push('/about')
   }
 
   const redirectToPortfolio = () => {
+    resetBarsActivity();
     router.push('/portfolio');
   }
 
   const redirectToResume = () => {
+    resetBarsActivity();
     router.push('/resume');
   }
 
-  const redirectToHome = () => [
+  const redirectToHome = () => {
+    resetBarsActivity();
     router.push('/')
-  ]
+  }
+  const handleOnBarsClick = () => {
+    setIsBarsActive(!isBarsActive);
+  }
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -40,6 +56,26 @@ const Header = () => {
           <div>
             <button className={styles.button} onClick={redirectToResume}>Resumé</button>
           </div>
+        </div>
+        <div className={styles.mobile_link_box}>
+          <button className={styles.bars_button} onClick={handleOnBarsClick}>
+            <IconContext.Provider value={{className:`${styles.chevron}`}}>
+              <FaBars />
+            </IconContext.Provider>
+          </button>
+          {isBarsActive && (
+            <div className={styles.bars_menu}>
+              <div className={styles.menu_button_container}>
+                <button className={styles.menu_button} onClick={redirectToServices}>About</button>
+              </div>
+              <div className={styles.menu_button_container}>
+                <button className={styles.menu_button} onClick={redirectToPortfolio}>Portfolio</button>
+              </div>
+              <div className={styles.menu_button_container}>
+                <button className={styles.menu_button} onClick={redirectToResume}>Resumé</button>
+              </div>
+            </div>
+          )}
         </div>
       </header>
       <div className={styles.shape_bottom} data-negative="false">

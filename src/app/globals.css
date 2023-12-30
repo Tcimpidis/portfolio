@@ -1,4 +1,5 @@
 :root {
+  --tcimpidis-mean-mug-rgb: 14, 17, 20;
   --tcimpidis-dusk-on-the-lake: #64758b;
   --tcimpidis-sweet-nothings: #CAB0E1;
   --tcimpidis-cool-shower: #71A5E8;
@@ -7,6 +8,7 @@
   --tcimpidis-plain-jane:#E3FBFF;
   --tcimpidis-sea-scape: #2990A6;
   --tcimpidis-dark-beginnings: #4F47B2;
+  --tcimpidis-too-hot: #EF1B68;
   --tcimpidis-font-family: lobster;
   --tcimpidis-image-border-radius: 0.75rem;
   --tcimpidis-input-border-radius: 0.4rem;

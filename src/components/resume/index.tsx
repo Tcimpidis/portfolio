@@ -1,11 +1,10 @@
 import { ResumeDetailDto } from '@/api/resume'
-import styles from './detail.module.css'
+import styles from './index.module.css'
 import { FC } from 'react';
 
 interface ResumeDetailProps {
   detail: ResumeDetailDto;
 }
-
 
 export const ResumeDetail: FC<ResumeDetailProps> = (
   {detail:{

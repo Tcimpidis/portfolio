@@ -1,9 +1,15 @@
 .container { 
   composes: container from '../layout.module.css';
+  background-color: var(--tcimpidis-brunch-with-friends);
+  display: flex;
+  flex-direction: column;
 }
 
 .container_odd { 
-  composes: container_odd from '../layout.module.css';
+  composes: container from '../layout.module.css';
+  background-image: linear-gradient(var(--tcimpidis-sweet-nothings), var(--tcimpidis-sea-foam));
+  display: flex;
+  flex-direction: column;
 }
 
 .title_container {

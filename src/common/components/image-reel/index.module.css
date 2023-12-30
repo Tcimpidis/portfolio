@@ -1,0 +1,93 @@
+.view_height {
+  min-height: 60vh;
+  height: 60vh;
+}
+
+.container { 
+  composes: view_height;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  z-index: 0;
+}
+
+.overlay_buttons {
+  @media only screen and (max-width: 1400px) {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  composes: view_height;
+}
+
+.overlay_content {
+  @media only screen and (max-width: 1400px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 5rem 2rem;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top:0;
+  left:0;
+  composes: view_height;
+  width: 50%;
+  padding: 10rem 2rem;
+  background-image: linear-gradient( to right, rgba(var(--tcimpidis-mean-mug-rgb), 0.8), rgba(var(--tcimpidis-mean-mug-rgb), 0.4));
+  gap: 2rem;
+}
+
+.chevron_button {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--tcimpidis-cool-shower);
+  cursor: pointer;
+  width: 2vw;
+}
+
+.chevron_button_prev {
+  text-align: left;
+}
+
+.chevron_button_next {
+  @media only screen and (max-width: 1024px) {
+    padding-right: 1rem;;
+  }
+  text-align: right;
+}
+
+.chevron_button:disabled {
+  opacity: .3;
+  cursor: auto;
+}
+
+.chevron {
+  height: 3rem;
+}
+
+.action_container {
+  @media only screen and (max-width: 1400px) {
+    justify-content: flex-end;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 100%;
+  padding: 0 0 14rem 15rem;
+}
