@@ -1,11 +1,3 @@
-.container { 
-  composes: container from '../layout.module.css';
-}
-
-.container_odd { 
-  composes: container_odd from '../layout.module.css';
-}
-
 .title_container {
   composes: heading_container from '../layout.module.css';
 }
@@ -14,3 +6,26 @@
   composes: heading from '../layout.module.css';
 }
 
+.container { 
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+    padding: 0;
+    gap: 3rem 0;
+  }
+  gap: 3rem 2rem;
+  padding: 2rem 6rem;
+  background-image: linear-gradient(var(--tcimpidis-brunch-with-friends), var(--tcimpidis-sweet-nothings));
+}
+
+.heading {
+  composes: title from '../layout.module.css';
+  text-align: right;
+  margin-bottom: 2rem;
+  color: var(--tcimpidis-brunch-with-friends);
+  padding-bottom: 2rem;
+  opacity: .9;
+} 
+
+.background {
+  background-color: var(--tcimpidis-brunch-with-friends);
+}

@@ -1,0 +1,21 @@
+.title {
+  @media only screen and (max-width: 786px) {
+    width: 75%;
+  }
+  composes: subtitle from '../../app/layout.module.css';
+  font-weight: 600;
+  color: var(--tcimpidis-sweet-nothings);
+
+}
+
+.key_points {
+  @media only screen and (max-width: 786px) {
+    width: 75%;
+  }
+  @media only screen and (max-width: 640px) {
+    font-size: 1rem;
+  }
+  font-size: 1.5rem;
+  text-align: left;
+  color: var(--tcimpidis-brunch-with-friends);
+}

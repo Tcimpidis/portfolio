@@ -1,7 +1,9 @@
 .heading_container {
-  /* background-image: linear-gradient(var(--tcimpidis-sea-foam), var(--tcimpidis-cool-shower)); */
+  @media only screen and (min-width: 1800px) {
+    min-height:20vh;
+  }
   background-color: var(--tcimpidis-brunch-with-friends);
-  height: 25vh;
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,6 +11,9 @@
 }
 
 .heading { 
+  @media only screen and (max-width: 640px) {
+    font-size: 1.8rem;
+  }
   background: linear-gradient(var(--tcimpidis-dusk-on-the-lake), var(--tcimpidis-sweet-nothings));
   background-clip: text;
   -webkit-background-clip: text;
@@ -20,6 +25,9 @@
 }
 
 .title { 
+  @media only screen and (max-width: 640px) {
+    font-size: 2rem;
+  }
   margin-right: 1.4rem;
   font-size: 2.5rem;
   font-weight: 700;
@@ -30,23 +38,29 @@
 }
 
 .subtitle {
+  @media only screen and (max-width: 640px) {
+    font-size: 1.5rem;
+  }
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--tcimpidis-dusk-on-the-lake);
-  border-bottom: 1px solid var(--tcimpidis-dusk-on-the-lake);
   text-transform: uppercase;
   font-family: var(--tcimpidis-font-family);;
 }
 
 .display_name {
+  @media only screen and (max-width: 640px) {
+    font-size: 1.25rem;
+  }
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--tcimpidis-dusk-on-the-lake);
   text-transform: uppercase;
   font-family: var(--tcimpidis-font-family);;
 }
 
 .content {
+  @media only screen and (max-width: 640px) {
+    font-size: .95rem;
+  }
   font-size: 1.25rem;
   font-weight: 500;
   font-family: var(--tcimpidis-font-family);
@@ -66,17 +80,6 @@
 }
 
 .container { 
-  display: flex;
-  flex-direction: column;
   gap: 3rem 2rem;
   padding: 2rem 6rem;
-  background-color: var(--tcimpidis-brunch-with-friends);
-}
-
-.container_odd { 
-  display: flex;
-  flex-direction: column;
-  gap: 3rem 2rem;
-  padding: 2rem 6rem;
-  background-image: linear-gradient(var(--tcimpidis-sweet-nothings), var(--tcimpidis-sea-foam));
 }

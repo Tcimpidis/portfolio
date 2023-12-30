@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Markdown from 'react-markdown'
-import styles from './tool-detail.module.css';
+import styles from './index.module.css';
 import Link from 'next/link';
 import { ProjectData, ProjectType } from '@/api/portfolio';
 
@@ -38,7 +38,7 @@ export const ToolDetail: FC<ToolDetailProps> = ({
           {projects.map((project, i) => 
             <Link 
               className={styles.project_link} 
-              href={`#${project}`}
+              href={`/portfolio/${project}`}
               key={i}
               replace={true}
               shallow={true} 

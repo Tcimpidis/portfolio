@@ -1,7 +1,8 @@
 "use client"
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { useForm, Resolver, FieldErrors, FieldError, UseFormRegister, Path } from 'react-hook-form';
 import styles from './index.module.css';
+import { Button } from "@/common/components/button";
 
 interface ContactForm {
   firstName: string;
@@ -63,22 +64,33 @@ const contactValidationResolver: Resolver<ContactForm> = (values) => {
 interface ContactInputProps {
   register: UseFormRegister<ContactForm>;
   inputKey: Path<ContactForm>;
+  errors: FieldErrors<ContactForm>
   label: string;
 }
 
 const ContactInput: FC<ContactInputProps> = ({
   register,
   inputKey,
-  label
-}) => (
-  <div className={styles.input_box}>
-    <label className={styles.input_label_text} htmlFor={inputKey}>{label}</label>
-    <input {...register(inputKey)} className={styles.input}/>
-  </div>
-)
+  label,
+  errors
+}) => { 
+  const hasError = errors && errors[inputKey];
+  let errorMessage = hasError && (errors[inputKey]?.message as ReactNode);
 
+  return (
+    <div className={styles.input_box}>
+      <label className={styles.input_label_text} htmlFor={inputKey}>{label}</label>
+      <input {...register(inputKey)} className={`${styles.input} ${hasError ? styles.error_border : "" }`}/>
+      <div className={styles.error_box}>
+        {errorMessage && (
+          <span className={styles.error_message}>{errorMessage}</span>
+        )}
+      </div>
+    </div>
+  )
+}
 export const Contact = () => {
-  const {register, handleSubmit, reset, formState: {isValid}} = useForm<ContactForm>({
+  const {register, handleSubmit, reset, formState: {isValid, errors }} = useForm<ContactForm>({
     mode: "onChange",
     defaultValues: {},
     resolver: contactValidationResolver
@@ -104,20 +116,24 @@ export const Contact = () => {
   return (
     <div className={styles.container}>
       <div className={styles.name_box}> 
-        <ContactInput register={register} inputKey="firstName" label="First Name" />
-        <ContactInput register={register} inputKey="lastName" label="Last Name" />
+        <ContactInput errors={errors} register={register} inputKey="firstName" label="First Name" />
+        <ContactInput errors={errors} register={register} inputKey="lastName" label="Last Name" />
       </div>
-
-      <ContactInput register={register} inputKey="email" label="Email" />
-      <ContactInput register={register} inputKey="subject" label="Subject" />
+      <ContactInput errors={errors} register={register} inputKey="email" label="Email" />
+      <ContactInput errors={errors} register={register} inputKey="subject" label="Subject" />
       <div className={styles.input_box}>
         <label className={styles.input_label_text} htmlFor="message">Message</label>
-        <textarea {...register("message")} className={styles.input} />
+        <textarea {...register("message")} className={`${styles.input} ${styles.textbox} ${errors['message'] ? styles.error_border : "" }`} />
+        <div className={styles.error_box}>
+        {errors['message']?.message && (
+          <span className={styles.error_message}>{errors['message']?.message}</span>
+        )}
+      </div>
       </div>
       <div>
-        <button className={styles.button} disabled={!isValid} onClick={onSubmit}>
+        <Button disabled={!isValid} className={styles.button} onClick={onSubmit}>
           Send Email
-        </button>
+        </Button>
       </div>
     </div>
   ) 

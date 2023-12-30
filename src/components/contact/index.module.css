@@ -1,23 +1,30 @@
 .container {
+  @media only screen and (max-width: 1280px) {
+    width: 100%;
+  }
   display: flex;
   flex-direction: column;
   gap: 1rem 0;
-  min-width: 35wv;
-  max-width: 35vw;
+  width: 50%;
 }
 
 .name_box {
+  @media only screen and (max-width: 1280px) {
+    flex-direction: column;
+  }
   display: flex;
   flex-direction: row;
   gap: 2rem;
-
+  width: 100%;
   justify-content: space-between;
 }
 
 .input_box {
+  position: relative;
   display: flex;
   flex-direction: column;
   white-space: nowrap;
+  width: 100%;
   gap: .25rem;
 }
 
@@ -27,9 +34,11 @@
 }
 
 .input {
+  font-weight: 600;
+  color: var(--tcimpidis-dusk-on-the-lake);
   padding: .7rem .5rem;
   border-radius: var(--tcimpidis-input-border-radius);
-  box-shadow: .05rem .15rem .15rem var(--tcimpidis-dusk-on-the-lake);
+  box-shadow: .05rem .05rem .15rem var(--tcimpidis-dusk-on-the-lake);
   background-color: var(--tcimpidis-brunch-with-friends);
   outline: none;
   border: none;
@@ -43,25 +52,28 @@
   outline: 1px solid var(--tcimpidis-sea-scape);
 }
 
+.textbox {
+  height: 5rem;
+}
+
+
+.error_border {
+  border: 1px solid var(--tcimpidis-too-hot);;
+}
+
+.error_box {
+  position: absolute;
+  bottom: -1.125rem;
+  left: 0;
+}
+
+.error_message {
+  color: var(--tcimpidis-too-hot);
+  font-size: 0.875rem;
+}
+
 .button {
-  margin: 1rem 0;
-  padding: 1rem 1.75rem;
-  border-radius: var(--tcimpidis-input-border-radius);
-  background-color: var(--tcimpidis-cool-shower);
-  border: none;
-  color: var(--tcimpidis-brunch-with-friends);
-  outline: 1px solid var(--tcimpidis-sea-scape);
-  cursor: pointer;
-}
-
-.button:active {
-  outline: 1px solid var(--tcimpidis-dark-beginnings);
-}
-
-.button:disabled {
-  opacity: .6;
-  cursor: not-allowed;
-  color: var(--tcimpidis-cool-shower);
-  background-color: var(--tcimpidis-brunch-with-friends);
-  pointer-events: none;
+  @media only screen and (max-width: 1280px) {
+    width: 100%;
+  }
 }
