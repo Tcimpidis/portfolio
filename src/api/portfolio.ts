@@ -55,7 +55,7 @@ const DeveloperPortal =  'developer_portal';
 const ConsoleUI = 'console_ui';
 const FreightQuote =  'freightquote_by_chr';
 const CHRobinsonOnline =  'navisphere_online';
-const Portfolio = 'tcimpidis.com';
+const Portfolio = 'jamin.tcimpidis.com';
 const TMC = "tmc";
 const Personal = 'personal';
 
@@ -84,7 +84,6 @@ const Azure_devops = "azure-devops";
 const CSharp = "CSharp";
 const CSS_Modules = "CSS-Modules";
 const CSS3 = "CSS3";
-const Cypress = "cypress";
 const Docker = "Docker";
 const Dot_net_core = "dot-net-core";
 const Figma = "figma";
@@ -122,7 +121,6 @@ const S3 = "S3";
 const Sass ="sass";
 const Storybook = "storybook";
 const Sql_server = "sql-server";
-const Styled_Components = "Styled-Components";
 const Tailwindcss = "tailwindcss"
 const Terraform = "terraform";
 const TypeScript = "TypeScript";
@@ -141,7 +139,6 @@ export type ToolType = typeof Agile
  |typeof CSharp 
  |typeof CSS_Modules 
  |typeof CSS3 
- |typeof Cypress 
  |typeof Docker 
  |typeof Dot_net_core
  |typeof Figma 
@@ -179,7 +176,6 @@ export type ToolType = typeof Agile
  |typeof Sass 
  |typeof Storybook 
  |typeof Sql_server 
- |typeof Styled_Components 
  |typeof Tailwindcss 
  |typeof Terraform 
  |typeof TypeScript 
@@ -193,82 +189,6 @@ export type ToolType = typeof Agile
 export type ToolMap = {
   [key in ToolType]: ToolDataDto;
 };
-
-export const CompanyNames: CompanyType[] = [
-  CHRobinson,
-  Delhivery,
-  Tcimpidis
-]
-
-export const ProjectNames: ProjectType[] = [
-  CustomerSignUpUI,
-  MarketplaceUI,
-  DeveloperPortal,
-  FreightQuote,
-  CHRobinsonOnline,
-  Portfolio,
-  TMC,
-  Personal
-]
-
-export const ToolsList: ToolType[] = [
-  Agile,
-  Angular,
-  Apache,
-  Aws_cloudfront,
-  Azure_devops,
-  CSharp,
-  CSS_Modules,
-  CSS3,
-  Cypress,
-  Docker,
-  Dot_net_core,
-  Figma,
-  Git_bash,
-  Github,
-  Google_analytics,
-  HTML5,
-  JavaScript,
-  Jenkins,
-  Jest,
-  Kafka,
-  Kubernetes,
-  Launchdarkly,
-  Linux,
-  Lerna,
-  Microsoft_azure,
-  Mongodb,
-  MySql,
-  Next_js,
-  Node_js,
-  NPM,
-  Oauth, 
-  OWASP,
-  PlatformUI,
-  Protractor,
-  Powershell,
-  React_hook_form,
-  React_query, 
-  React_testing_library,
-  React,
-  Redux,
-  REST,
-  Rollupjs,
-  S3,
-  Sass,
-  Storybook,
-  Sql_server,
-  Styled_Components,
-  Tailwindcss,
-  Terraform,
-  TypeScript,
-  Ubuntu,
-  VBNet,
-  Web_performance,
-  Webpack,
-  Xml,
-  Yaml,
-]
 
 export const CompanyData: CompanyMap = {
   [`${CHRobinson}`]: <CompanyDataDto>{
@@ -711,15 +631,6 @@ export const ToolData : ToolMap = {
 - Still have work to do with creating scalable css designs
       `,
     },
-    [`${Cypress}`]: <ToolDataDto>{
-      displayName: "Cypress",
-      years: .1,
-      projects: getProjectListForTool(Cypress),
-      summary:`
-- Only worked with a few tests that had been built by someone else
-- Testing seemed straightforward enough.
-      `,
-    },
     [`${Docker}`]: <ToolDataDto>{
       displayName: "Docker",
       years: 4,
@@ -775,8 +686,8 @@ export const ToolData : ToolMap = {
       years: 4,
       projects: getProjectListForTool(Google_analytics),
       summary:`
-- Create and pushed events to a system managed by someone else.
-- Mostly just ensuring we were firing the right event names with the right payload.
+- Pushed events.
+- Ensure events fired with correct name and payload.
       `,
     },
     [`${HTML5}`]: <ToolDataDto>{
@@ -1101,15 +1012,6 @@ export const ToolData : ToolMap = {
 - Built tables with indexs, foreign keys, primaray keys. 
 - Understand referentiail table patterns. Lookup tables. 
 - Have context to why sql relational database my not always be the best choice.
-`,
-    },
-    [`${Styled_Components}`]: <ToolDataDto>{
-      displayName: "Styled Components",
-      years: 2,
-      projects: getProjectListForTool(Styled_Components),
-      summary:`
-- Have only worked with styled componenets a little bit and I found them to be to verbose for me. 
-- Perhaps I didn't get into it enough. just didn't match my coding style. 
 `,
     },
     [`${Tailwindcss}`]: <ToolDataDto>{

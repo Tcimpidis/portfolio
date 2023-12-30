@@ -1,19 +1,21 @@
 "use client"
 import Image from 'next/image';
-
-import styles from './index.module.css'
-import { useRouter } from 'next/navigation';
-import { envRoute } from '@/envUtility';
 import { IconContext } from 'react-icons';
 import { FaBars } from 'react-icons/fa6';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
+import styles from './index.module.css'
+import { envRoute } from '@/envUtility';
+import { useComponentVisible } from '@/common/hooks/useComponentVisible';
 
 const Header = () => {
   const router = useRouter()
-  const [isBarsActive, setIsBarsActive] = useState<boolean>(false);
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
+  
   const resetBarsActivity = () => {
-    if(isBarsActive){
-      setIsBarsActive(!isBarsActive);
+    if(isComponentVisible){
+      setIsComponentVisible(!isComponentVisible);
     }
   }
   const redirectToServices = () => {
@@ -36,7 +38,7 @@ const Header = () => {
     router.push('/')
   }
   const handleOnBarsClick = () => {
-    setIsBarsActive(!isBarsActive);
+    setIsComponentVisible(!isComponentVisible);
   }
   return (
     <div className={styles.container}>
@@ -63,8 +65,8 @@ const Header = () => {
               <FaBars />
             </IconContext.Provider>
           </button>
-          {isBarsActive && (
-            <div className={styles.bars_menu}>
+          {isComponentVisible && (
+            <div className={styles.bars_menu} ref={ref}>
               <div className={styles.menu_button_container}>
                 <button className={styles.menu_button} onClick={redirectToServices}>About</button>
               </div>
