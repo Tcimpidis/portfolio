@@ -99,22 +99,6 @@
   overflow: auto;
 }
 
-.text::-webkit-scrollbar-track {
-  border: 1px solid var(--tcimpidis-cool-shower);
-  padding: 2px 0;
-  background-color: var(--tcimpidis-sea-foam);
-}
-
-.text::-webkit-scrollbar {
-  width: 10px;
-}
-
-.text::-webkit-scrollbar-thumb {
-  border-radius: var(--tcimpidis-image-border-radius);
-  background-color: var(--tcimpidis-dusk-on-the-lake);
-  border: 1px solid var(--tcimpidis-sea-foam);
-}
-
 .url_container {
   display: flex;
   flex-direction: column;

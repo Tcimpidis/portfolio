@@ -26,10 +26,6 @@
   @media only screen and (max-width: 640px) {
     font-size: 1.8rem;
   }
-  background: linear-gradient(var(--tcimpidis-dusk-on-the-lake), var(--tcimpidis-sweet-nothings));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 3.25rem;
   font-family: var(--tcimpidis-font-family);
   text-transform: uppercase;

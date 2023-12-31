@@ -30,7 +30,7 @@ export const Project: FC<ProjectProps> = ({
   return (
     <div className={styles.container} id={type}>
       <div className={styles.heading}>{title}</div>
-      <ImageContainer importantUrls={importantUrls} overview={overview} tech={tech} title={title} type={type}/>
+      <ImageContainer importantUrls={importantUrls} overview={overview} tech={tech.sort((a, b) => 0.5 - Math.random())} title={title} type={type}/>
       {(specifications || takeaways)  && <DetailBox  specifications={specifications} takeaways={takeaways} /> }
     </div>
   )

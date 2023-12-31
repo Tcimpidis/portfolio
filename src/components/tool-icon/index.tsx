@@ -26,9 +26,9 @@ export const Tool: FC<ToolProps> = ({name, onClick}) => {
         >
         <Image 
           alt={name}
-          height={40}
+          height={32}
           src={`${envRoute}/tools/${name.toLowerCase()}.svg`}
-          width={40}
+          width={32}
         />
       </button>
     </div>

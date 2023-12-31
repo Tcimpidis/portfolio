@@ -11,6 +11,10 @@
 
 .title {
   composes: heading from './layout.module.css';
+  background: linear-gradient(var(--tcimpidis-dusk-on-the-lake), var(--tcimpidis-sweet-nothings));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tool_container { 
@@ -34,5 +38,5 @@
   font-size: 1.7rem;
   font-weight: 700;
   color: var(--tcimpidis-dusk-on-the-lake);
-  padding: 10rem;
+  padding: 0 10rem 1rem 10rem;
 }

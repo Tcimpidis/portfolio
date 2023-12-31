@@ -68,7 +68,7 @@
 
 .item_box:active {
   z-index: 2;
-  background-color: var(--tcimpidis-cool-shower);
+  background-color: var(--tcimpidis-dry-toes);
 }
 
 .name {

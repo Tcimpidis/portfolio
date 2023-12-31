@@ -1,8 +1,16 @@
+export enum ToolProficiencyEnum {
+  novice,
+  intermediate,
+  professional, 
+  expert,
+}
+
 export interface ToolDataDto {
   displayName: string;
   years: number; 
   projects: ProjectType[];
   summary: string;
+  proficiency: ToolProficiencyEnum 
 }
 
 export interface ProjectDataDto {
@@ -33,6 +41,8 @@ export interface PersonalReference {
   role: string;
   linkedIn?: string;
 }
+
+
 
 /* Company Names */
 const CHRobinson = 'C.H Robinson worldwide';
@@ -101,7 +111,6 @@ const Lerna = "lerna";
 const Linux = "linux";
 const Microsoft_azure = "microsoft-azure";
 const Mongodb = "mongodb";
-const MySql = "MySql";
 const Next_js = "Next-js";
 const Node_js = "node-js";
 const NPM = "NPM";
@@ -156,7 +165,6 @@ export type ToolType = typeof Agile
  |typeof Linux
  |typeof Microsoft_azure 
  |typeof Mongodb 
- |typeof MySql 
  |typeof Next_js 
  |typeof Node_js 
  |typeof NPM 
@@ -271,7 +279,7 @@ export const ProjectData: ProjectMap = {
   [`${CustomerSignUpUI}`]: <ProjectDataDto>{
     title: "Customer Sign-up UI",
     tech: [
-      Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
+      Web_performance, Agile, TypeScript, Tailwindcss, React, React_hook_form, Jest, Git_bash, React_query, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma, CSS3, Linux, NPM
     ],
     overview: `Customer sign up step driven user interface for capturing a customer product, company, billing details and payment. Product specific screens for post purchase details. 
     `,
@@ -300,7 +308,7 @@ export const ProjectData: ProjectMap = {
   [`${MarketplaceUI}`]: <ProjectDataDto>{
     title: "Marketplace UI",
     tech: [
-      Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
+      Web_performance, Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, React_query, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma, CSS3, Linux, NPM, Storybook
     ],
     overview: `Marketplace is an app for platform users that enables them to manage their existing subscriptions, subscribe to new apps released on the Marketplace, and, if they have the right role, create subscriptions to their apps on behalf of their customers.`,
     specifications: `
@@ -333,7 +341,7 @@ export const ProjectData: ProjectMap = {
   [`${OrganizationUI}`]: <ProjectDataDto>{
     title: "Organization UI",
     tech: [
-      Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
+      Web_performance, Agile, TypeScript, Tailwindcss, React, React_query, Oauth, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma, CSS3, Linux, NPM, Rollupjs
     ],
     overview: `Organiztion UI is an app for platform users to make changes to their organization. It is abstracted out into its own micro frontend so it can be used in both marketplace and developer portal.`,
     specifications: `
@@ -364,7 +372,7 @@ export const ProjectData: ProjectMap = {
   [`${DeveloperPortal}`]: <ProjectDataDto>{
     title: "Developer Portal UI",
     tech: [
-      Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
+      Web_performance, Agile, TypeScript, Tailwindcss, React, Oauth, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma, CSS3, Linux, NPM, Storybook
     ],
     overview: `Developer portal is a hub for developers that want to build apps within the OS1 ecosystem. With the intention of sellion those apps to users on the marketplaces. Apps can be packaged in groups and sold as solutions, or be developed in isolation with the intention of be used by many solutions.`,
     specifications: `
@@ -392,8 +400,7 @@ export const ProjectData: ProjectMap = {
   [`${ConsoleUI}`]: <ProjectDataDto>{
     title: "Console UI",
     tech: [
-      Agile, TypeScript, Tailwindcss, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma
-    ],
+      Web_performance, Agile, TypeScript, Tailwindcss, React, Oauth, React_hook_form, Jest, Git_bash, Lerna, Next_js, Github, React_testing_library, REST, S3, Google_analytics, HTML5, JavaScript, Node_js, Yaml, Aws_cloudfront, PlatformUI, Webpack, Figma, CSS3, Linux, NPM, Rollupjs, Docker ],
     overview: `Console UI is an npm package that users pull down to create apps that are bootstrapped to integrate with a existing internal solution that is available on the marketplace. It is intended to facilitate login and accessibility to an instance of a purchased app or solution.`,
     specifications: `
 - Monorepo built with lerna
@@ -416,7 +423,7 @@ export const ProjectData: ProjectMap = {
   [`${FreightQuote}`]: <ProjectDataDto>{
     title: "FreightQuote by CHR",
     tech: [
-      Agile, TypeScript, CSS3, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, Google_analytics, HTML5, JavaScript, Node_js, Launchdarkly, CSharp, Docker, Dot_net_core, Figma, Terraform, OWASP, Sql_server
+      Agile, Azure_devops, TypeScript, CSS3, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, Google_analytics, HTML5, JavaScript, Node_js, Launchdarkly, CSharp, Docker, Dot_net_core, Figma, Terraform, OWASP, Sql_server, Kafka, Kubernetes, Jenkins, Mongodb, NPM, Powershell, Protractor, Redux, Sass, Web_performance, Webpack, Xml
     ],
     overview: `FreightQuote by CHR is an app that strives to deliver FreightQuote by CHR's vast carrier network to infrequent shippers. If offers free instant quotes on shipments, and then will bring users who sign up through creating an order.`,
     specifications: `
@@ -448,7 +455,7 @@ export const ProjectData: ProjectMap = {
   [`${TMC}`]: <ProjectDataDto>{
     title: "TMC a Division of C.H. Robinson ",
     tech: [
-      Agile, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, React, Angular, Webpack, Sql_server, Xml, Microsoft_azure, Github, Git_bash
+      Agile, Angular, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, React, Webpack, Kafka, Sql_server, Xml, Jenkins, Github, Git_bash, Docker, Dot_net_core, Powershell, TypeScript
     ],
     overview: `TMC is a division of robinson that offers robinsons platform as a service to large scale customers. These are customers that have their own relationships with carriers and want to have a single UI to manage all of their logistics.`,
     specifications: `
@@ -470,7 +477,7 @@ export const ProjectData: ProjectMap = {
   [`${CHRobinsonOnline}`]: <ProjectDataDto>{
     title: "Navisphere Online",
     tech: [
-      Agile, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, Sql_server, Xml
+      Agile, Angular, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, Sql_server, Xml
     ],
     overview: `Navisphere Online is a portal for robinson customers to interact with Robinson's large network of carriers to ship freight. Navipshere Online's services are used by large scale distributors that do not ab adequate freight fleet to meet their demands.`,
     specifications: `
@@ -493,7 +500,7 @@ export const ProjectData: ProjectMap = {
   [`${Portfolio}`]: <ProjectDataDto>{
     title: "jamin.tcimpidis.com",
     tech: [
-      TypeScript, React, Jest, Git_bash, Github, React_testing_library, HTML5, JavaScript, Node_js, Yaml, Next_js, CSS_Modules, Apache, Ubuntu, Linux
+      TypeScript, React, Jest, Git_bash, Github, CSS3, React_testing_library, HTML5, JavaScript, Node_js, Yaml, Next_js, CSS_Modules, Apache, Ubuntu, Linux, Docker, NPM, React_hook_form, Web_performance
     ],
     overview: `jamin.tcimpidis.com is the location of the Tcimpidis brand technical consulting firm. It currenly is jsut forming and only has the creator and founder as a developer. The domain is currently being used a excibition to showcase the Tcimpidis' experience, talents and serve as foundation for the Tcimpidis brand in the future. 
     `,
@@ -522,7 +529,7 @@ export const ProjectData: ProjectMap = {
   [`${Personal}`]: <ProjectDataDto>{
     title: "Personal projects",
     tech: [
-      TypeScript, React, Jest, Git_bash, Github, React_testing_library, HTML5, JavaScript, Node_js, Yaml, Next_js, CSS_Modules, Apache, Ubuntu, Linux
+      TypeScript, React, Jest, Git_bash, Github, React_testing_library, HTML5, JavaScript, Node_js, Yaml, Next_js, CSS_Modules, Apache, Ubuntu, Linux, Storybook, CSharp, Dot_net_core, Lerna, NPM, Oauth, Sass, Webpack
     ],
     overview: `Aside from Tcimpidis' repos, there's the Jamin Tcimpidis repos, and code sandbox where more code examples can be found.`,
     keyPoints: [
@@ -556,10 +563,11 @@ export const ToolData : ToolMap = {
       projects: getProjectListForTool(Agile),
       summary: `
 - Experience with one and two week sprints.
-- Engaged in all ceremony: Grooming, Planning, Standup and Retro.
+- Engaged in all ceremonies: Grooming, Planning, Standup and Retro.
 - Used tools like Jira, Azure, and trello to track work.
 - Reflected on burn down metrics to improve productivity.
-`
+`,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Angular}`]: <ToolDataDto>{
       displayName: "Angular",
@@ -568,28 +576,32 @@ export const ToolData : ToolMap = {
       summary:`
 - Built a site using original angularJS many years ago.
 - Have worked a little with angular4, also many years ago.
-- In general moved away from angular towards more library driven software.
-`,
+- Moved away from angular towards more library driven software.
+`,   
+      proficiency: ToolProficiencyEnum.novice,
     },
     [`${Apache}`]: <ToolDataDto>{
       displayName: "Apache",
       years: .2,
       projects: getProjectListForTool(Apache),
       summary:`
-- Used apache servers for crypto mining GPUs many many years ago, before I was a software engineer
-- This site is currently hosted on a apache server
-- This server is https and routed through a domain which all had to be configued on the apache server.
+- Crypto mining with GPUs.
+- Initial domain server for tcimpidis.com
+- Setup with https
       `,
+      proficiency: ToolProficiencyEnum.novice,
     },
     [`${Aws_cloudfront}`]: <ToolDataDto>{
       displayName: "Aws Cloudfront",
       years: 1.5,
       projects: getProjectListForTool(Aws_cloudfront),
       summary:`
-- I've had to use cloudfront urls to path into S3 buckets
+- Use cloudfront urls to path into S3 buckets
 - Deployed to S3 through cloudfront using github actions
-- Configure cloudfront origins 
+- Configure cloudfront origins
+- Setup url configurations and attached to S3 buckets
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Azure_devops}`]: <ToolDataDto>{
       displayName: "Azure Devops",
@@ -600,65 +612,73 @@ export const ToolData : ToolMap = {
 - created project configurations
 - built and managed azure pipelines
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${CSharp}`]: <ToolDataDto>{      
       displayName: "C#",
       years: 7,
       projects: getProjectListForTool(CSharp),
       summary:`
-- I have extensive use of C# as a server language. With some legacy Razor MVC experince.
-- Very famility with C# OOP principles and concepts for code abstractions.
-- Familiar with Dependency injections, Ienumerable, Ilist, and other linq extensions. 
+- Extensive use of C# as a server language. With some legacy Razor MVC experince.
+- Very famility with C# OOP principles.
+- Dependency injections, Ienumerable, Ilist, and other linq extensions. 
 - Many years experience developing in Visual Studio with advanced proficiency of the tool.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${CSS_Modules}`]: <ToolDataDto>{
       displayName: "CSS Modules",
       years: .5,
       projects: getProjectListForTool(CSS_Modules),
       summary:`
-- I've only worked with CSS mondules within this project.
-- So far I find them clean and easy to use. 
+- Used in portfolio website.
+- Created some base level classes to be consumed.
+- Consuming a styel class seems more effective at the file level. 
+- To keep modules from getting brittle I use color variables and small amounts of compose
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${CSS3}`]: <ToolDataDto>{
       displayName: "CSS3",
       years: 8.5,
       projects: getProjectListForTool(CSS3),
       summary:`
-- I've had to use css for many things throughout the years but I am still learning more each day
-- My experience with it, unti recently, had always been one of necessity. Trying to solve a problem instead of design a solution
-- Still have work to do with creating scalable css designs
+- All projects have been web applications that relied on css for styling.
+- Css variables are a powerful tool fo consistent colors, padding, and margins.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Docker}`]: <ToolDataDto>{
       displayName: "Docker",
       years: 4,
       projects: getProjectListForTool(Docker),
       summary:`
-- Very firm understanding of the concept behind docker, containerization, and the idea of hosting a self sustaining container on a server.
-- Once containerization is understood docker is pretty straight forward.
+- Firm understanding of the concept behind docker, containerization, and the idea of hosting a self sustaining container on a server.
+- Portfolio web app is a next.js container. 
 - The biggest area of improvement for myself would be container security, but that may be more of a network issue than a container issue. 
       `,
+
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Dot_net_core}`]: <ToolDataDto>{
       displayName: "Dot net core",
       years: 4,
       projects: getProjectListForTool(Dot_net_core),
       summary: `
-- Most of the projects I built were created off of a template. 
+- Setup many web servers. 
 - I understood, updated, and built a few apps at the config level but for the most part it wasn't necessary. 
 - My expertice in .net core is coupled with C#, servicestack, and kafka. 
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Figma}`]: <ToolDataDto>{
       displayName: "Figma",
       years: 4,
       projects: getProjectListForTool(Figma),
       summary: `
-- Used from a developer perspective to obtain specs
-- Would love to build a story book to figma library but have yet to have that experience.
+- Use from a developer perspective to obtain specs.
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Git_bash}`]: <ToolDataDto>{
       displayName: "Git Bash",
@@ -666,20 +686,22 @@ export const ToolData : ToolMap = {
       projects: getProjectListForTool(Git_bash),
       summary:`
 - Use git command line exclusively when interacting with github 
-- Can create repos, push, update, rebase, merge and manage upstream from cli
+- Create repos, push, update, rebase, merge and manage upstream from cli.
+- Use submodules.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Github}`]: <ToolDataDto>{
       displayName: "Github",
       years: 7,
       projects: getProjectListForTool(Github),
       summary:`
-- Most of my version control experience has been done on github
-- Very familiar with branching strategies for deployment management and redundancy
-- Manage repo and organization secrets 
+- Branching strategies for deployment management and redundancy.
+- Manage repo secrets. 
 - Create, configure, and authorize sso keys for push/pull security
 - Define and enfore branch rules
       `,
+      proficiency: ToolProficiencyEnum.expert,
     },
     [`${Google_analytics}`]: <ToolDataDto>{
       displayName: "Google Analytics",
@@ -689,6 +711,7 @@ export const ToolData : ToolMap = {
 - Pushed events.
 - Ensure events fired with correct name and payload.
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${HTML5}`]: <ToolDataDto>{
       displayName: "HTML 5",
@@ -696,8 +719,8 @@ export const ToolData : ToolMap = {
       projects: getProjectListForTool(HTML5),
       summary:`
 - Understand most html elements and their proper usages. 
-- Have not done any indepth HTML learning. Most of the usage is within other front libraries or frameworks. Likd JSX.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${JavaScript}`]: <ToolDataDto>{
       displayName: "JavaScript",
@@ -708,8 +731,9 @@ export const ToolData : ToolMap = {
 - Used in Angular projects.
 - Used in React projects.
 - Used in Node API projects.
-- Familiar with JavaScript global hoisting, generator functions and asyncronisity. 
+- Familiar with JavaScript global hoisting, generator functions and asynchronicity. 
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Jenkins}`]: <ToolDataDto>{
       displayName: "Jenkins",
@@ -720,58 +744,63 @@ export const ToolData : ToolMap = {
 - Used UI to triage build failures
 - Rarely configured any builds
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Jest}`]: <ToolDataDto>{
       displayName: "Jest",
       years: 5,
       projects: getProjectListForTool(Jest),
       summary:`
-- All react and angular unit testing I've wrote has leveraged jest.
-- Very familiary with making jest mocks both of local files and npm modules. 
-- Know how to mock hooks, api calls, and other depenedencies
-- Know how to write tests so that mocks run the same every time and aren't doubled up unexpectedly
-- Write chain tests when the situation calls for it.
+- Create jest mocks both of local files and npm modules. 
+- Mock hooks, api calls, and other depenedencies.
+- Mocks run the same every time and aren't doubled up unexpectedly.
+- Chain tests.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Kafka}`]: <ToolDataDto>{
       displayName: "Kafka",
       years: 2,
       projects: getProjectListForTool(Kafka),
       summary:`
-- Build consumers and producers mostly with .net core.
-- Have deep understanding of core kafka features such as partitioning consumers and initializing with scalablity settings. 
-- Understand how to setup event workflows with kafka for message redudancy.
-- Have designed event driven workflows with Kafka
+- Build consumers and producers with .net core.
+- Deep understanding of core kafka features such as partitioning consumers and initializing with scalablity settings. 
+- Setup event workflows with kafka for message redudancy.
+- Designed event driven workflows with Kafka.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Kubernetes}`]: <ToolDataDto>{
       displayName: "Kubernetes",
       years: 3,
       projects: getProjectListForTool(Kubernetes),
       summary:`
-- Only worked with kubermetes cli to view and debug issues with containers in the cluster
-- Have not managed and kubernetes clusters or side car configurations
+- Debug Containers in cluster with kubermetes cli.
+- Created helm charts.
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Launchdarkly}`]: <ToolDataDto>{
       displayName: "LaunchDarkly",
       years: 4,
       projects: getProjectListForTool(Launchdarkly),
       summary:`
-- Utilized company launch darkly contract to create A/B test and feature flag pathways
-- Useful for developing features without creating bottleneck
-- Only configured within consuming application 
+- Utilized company launch darkly contract to create A/B test and feature flag pathways.
+- Useful for developing features without creating bottleneck.
+- Only configured within consuming application.
 - Did not manage tokens or flags in anyway. Could only request to have flags created.  
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Lerna}`]: <ToolDataDto>{
       displayName: "lerna",
       years: 1,
       projects: getProjectListForTool(Lerna),
       summary:`
-- Familiarity with creating a mono-repo that is self referencing.
-- Create separate build pipelines for each package in mono-repo.
+- Create self referencing mono-repo.
+- Build pipelines for each package in mono-repo.
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Linux}`]: <ToolDataDto>{
       displayName: "Linux",
@@ -780,9 +809,11 @@ export const ToolData : ToolMap = {
       summary:`
 - CRUD commands on files and directories.
 - Update existing files with nano.
-- update localhost proxys.
-- ssh into other running programs.
+- Update localhost proxys.
+- Run ssh scripts.
+- Create and manage system users. 
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Microsoft_azure}`]: <ToolDataDto>{
       displayName: "Microsoft Azure",
@@ -793,6 +824,7 @@ export const ToolData : ToolMap = {
 - Managed secrets 
 - Triage deployement issues
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Mongodb}`]: <ToolDataDto>{
       displayName: "MongoDB",
@@ -800,18 +832,11 @@ export const ToolData : ToolMap = {
       projects: getProjectListForTool(Mongodb),
       summary:`
 - Proficent with MongoDB compass.
-- Used document database for holding real-time data
+- Used document database for holding real-time data.
 - Consumers would listen from different kafka streams and write to DB. 
 - Predefined queries optimized the document reads so they were efficient when read. 
       `,
-    },
-    [`${MySql}`]: <ToolDataDto>{
-      displayName: "MySql",
-      years: 1,
-      projects: getProjectListForTool(MySql),
-      summary:`
-- Very little experience. Only used for a simple personal project I created that captured inputs" 
-      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Next_js}`]: <ToolDataDto>{
       displayName: "Next.js",
@@ -820,8 +845,10 @@ export const ToolData : ToolMap = {
       summary:`
 - Worked with next.js and module federation to try and get a host Next.js app to integrate with a none next remote.
 - Had limited success. All implementations broke the existing routing of the app. 
-- This website is built with Next.js As well. Been pretty happy with the experience using AppRouter. 
+- This website is built with Next.js As well.
+- AppRouter is easy to use and powerful. 
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Node_js}`]: <ToolDataDto>{
       displayName: "Node.js",
@@ -832,6 +859,7 @@ export const ToolData : ToolMap = {
 - Understand asynchronous nature of a node server.
 - Done minor work with Node Express apis and GRPC services
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${NPM}`]: <ToolDataDto>{
       displayName: "NPM",
@@ -842,6 +870,7 @@ export const ToolData : ToolMap = {
 - Know how to setup and maintain package.json.
 - Build and deploy packages in npm. 
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Oauth}`]: <ToolDataDto>{
       displayName: "Oauth",
@@ -852,6 +881,7 @@ export const ToolData : ToolMap = {
 - Integrate internal and exteranl auth providers,
 - Manage auth across session and tabs.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${OWASP}`]: <ToolDataDto>{
       displayName: "OWASP",
@@ -860,7 +890,8 @@ export const ToolData : ToolMap = {
       summary:`
 - Firm understanding of security principels using OWASP guidelines.
 - Build all products with OWASP principles in mind ensure company and user data is secure. 
-`,
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${PlatformUI}`]: <ToolDataDto>{
       displayName: "Platform UI Libraries",
@@ -874,15 +905,20 @@ export const ToolData : ToolMap = {
 - Platform UI Common: 
   - Large host of commonly used components. Buttons, Inputs, and some more complex items like state specific toggles, document upload components, and payment widget. 
   - Reused across all websites, singleton
-`,
+      `,
+      proficiency: ToolProficiencyEnum.expert,
     },
     [`${Powershell}`]: <ToolDataDto>{
       displayName: "Powershell",
       years: 3,
       projects: getProjectListForTool(Powershell),
       summary:`
-- When having to connect to docker or kubernetes from a windows machine I would usually user powershell
-`,
+- Connect to docker or kubernetes from a windows.
+- Update existing files.
+- Run scripts. 
+- Start and kill processes 
+      `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Protractor}`]: <ToolDataDto>{
       displayName: "Protractor",
@@ -891,54 +927,59 @@ export const ToolData : ToolMap = {
       summary:`
 - I worked with Protractor sporadically with the project that leveraged it. 
 - There was a QA developer who wrote the tests.
-- Occassionally I would update when making small changes.
+- Occassionally update tests with small changes.
 - It was a good example of solid testing practices.
 `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${React_hook_form}`]: <ToolDataDto>{
       displayName: "React-hook-form",
       years: 6,
       projects: getProjectListForTool(React_hook_form),
       summary:`
-- React hook form is a form management tool that offers a lot of form management and validation tools.
-- I have used it extensively in all the projects I've built. 
-- It is an amazing tool for managing complex validation challeges, specifically as form state begings to grow and create its own challenges.
+- Used extensively in all the projects built. 
+- Create complex form management systems.
+- Amazing tool for managing complex validation challeges. 
+- Great documentation.
 `,
+      proficiency: ToolProficiencyEnum.expert,
     },
     [`${React_query}`]: <ToolDataDto>{
       displayName: "React-Query",
       years: 1,
       projects: getProjectListForTool(React_query),
       summary:`
-- Only have worked with this in a couple of websites but I really liked it
-- Might be a bit obsolete with the way the industry is move. 
-- Server side components accomplish all of the things this package does.
-`,
+- Responsive client cacheing solution for API.
+- Easily abstracted out too hooks.
+- Easily configurable. 
+- Great documentation.
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${React_testing_library}`]: <ToolDataDto>{
       displayName: "React Testing library",
       years: 3,
       projects: getProjectListForTool(React_testing_library),
       summary:`
-- Wonderful library for making robust integration tests or simple unit tests.
-- Created complex workflows with this library. 
+- Tests writing is intuitive. 
+- Create robust integration tests or simple unit tests.
+- Created complex workflows. 
 - Easily adapted to TDD.
-`,
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${React}`]: <ToolDataDto>{
       displayName: "React",
       years: 6,
       projects: getProjectListForTool(React),
       summary:`
-- I've used react extensively building complex echosystems on its library. 
+- Used react extensively building complex ecosystems. 
 - Well versed in react context state vs app state.
 - React class components and lifecycle compoents. 
-- Connecting react data stores and asynchronously retriveing code.
-- React hooks 
-- Custom hooks 
-- Conditonal rendering
-- Complex routing strategies 
-`,
+- Fetching data asynchronously.
+- React hooks, custom hooks, conditonal rendering, complex routing strategies, server components, fetch (react 18), suspense and useTransition. 
+      `,
+      proficiency: ToolProficiencyEnum.expert,
     },
     [`${Redux}`]: <ToolDataDto>{
       displayName: "Redux",
@@ -950,18 +991,20 @@ export const ToolData : ToolMap = {
 - Use saga action to hydrate Redux for api actions.
 - Use reducer actions for hydtratng redux form state.
 - Save to session storage.
-`,
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${REST}`]: <ToolDataDto>{
       displayName: "REST",
-      years: 6,
+      years: 8,
       projects: getProjectListForTool(REST),
       summary:`
 - Many years building out restful routes.
 - Exposing and consuming API routes.
-- Making requests from clients and handling responses. 
+- Making requests from clients and handling responses.
 - Intercepting requests and responses to manange headers and error messaging. 
-`,
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Rollupjs}`]: <ToolDataDto>{
       displayName: "Rollup.js",
@@ -971,59 +1014,62 @@ export const ToolData : ToolMap = {
 - Built the libraries for Platform UI with rollup.
 - Very straightforward. Was building what I needed quickly
 `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${S3}`]: <ToolDataDto>{
       displayName: "S3",
       years: 1.5,
       projects: getProjectListForTool(S3),
       summary:`
-- Deployed static websites to S3 private buckets that were exposed via cloudfront.
+- Deployed static websites to S3 private buckets exposed through cloudfront.
 - Built S3 bucket and configured authorization rules.
-- Built out workflow to deploy to bucket
+- Built out workflow to deploy to bucket.
 `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Sass}`]: <ToolDataDto>{
       displayName: "SASS",
       years: 6,
       projects: getProjectListForTool(Sass),
       summary:`
-- Built out styles with sass for many projects
-- Did not get deep into Mixins but I believe they are powerful tools for scalability.
+- Built out styles.
+- Creeate Mixins.
       `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Storybook}`]: <ToolDataDto>{
       displayName: "Storybook",
       years: 1.9,
       projects: getProjectListForTool(Storybook),
-      summary:`
-- First worked with storybook at Delhivery. It's very cool, simple to use, and powerful. 
-- Deployed storybook instance to a github page for easy to access view of common items. 
-- Building storybook components does add some overhead but if you abstract it right you can boiler plate some things.
-`,
+      summary:` 
+- Deployed storybook instance to a github page for easy to access view of common items.
+- Building storybook components is a little cumbersome intiially
+- Once component is stood up its easy to maintain.
+      `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Sql_server}`]: <ToolDataDto>{
       displayName: "Sql Server",
       years: 7,
       projects: getProjectListForTool(Sql_server),
       summary:`
-- Worked extesively with sql server. 
-- Have had to chain together stored procedures to debug logic that was built in sql. 
-- This type of sql shouldn't really be existing anymore but as a result I know what not to do. 
+- Chained stored procedures.
 - Built tables with indexs, foreign keys, primaray keys. 
-- Understand referentiail table patterns. Lookup tables. 
-- Have context to why sql relational database my not always be the best choice.
-`,
+- Understand referential table patterns: Lookup tables. 
+- Understand why sql relational database my not always be the best choice.
+      `, 
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Tailwindcss}`]: <ToolDataDto>{
       displayName: "Tailwindcss",
       years: 1.9,
       projects: getProjectListForTool(Tailwindcss),
       summary:`
-- Worked with tailwindcss extensively over the past two years. 
-- Really powerful tool for smaller websites.
-- As complexity grows maintaining styles can become cumbersome. 
-- Dynamic styling is really verbose. You have to define the style string a build time so you cannot have style variables be defined while running. You can only define their visibility" 
-`,
+- Powerful out of the box styling.
+- Easy to override and customize. 
+- Dymanic styling is verbose.
+    `,
+    proficiency: ToolProficiencyEnum.professional,
     },
     [`${Terraform}`]: <ToolDataDto>{
       displayName: "Terraform",
@@ -1032,57 +1078,62 @@ export const ToolData : ToolMap = {
       summary:`
 - Minimal experience. Mostly just wrote commands to a repo with terraform syntax.
 - Seemed like defining scheme values for a script
-`,
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${TypeScript}`]: <ToolDataDto>{
       displayName: "Typescript",
       years: 6,
       projects: getProjectListForTool(TypeScript),
       summary:`
-- Just strong typing of javascript
-- As a C# developer first and foremost, strong typing is preferable.
-- Will always opt for typescript. 
-- Typescript is driving the data layer of this application. 
-`,
+- Strong typing of javascript.
+- Perfer strongly typed code.
+- Use complex typing patterns.
+- Makes code more maintainable.
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Ubuntu}`]: <ToolDataDto>{
       displayName: "Ubuntu",
       years: .2,
       projects: getProjectListForTool(Ubuntu),
       summary:`
-- Only created ubuntu servers for Crypto mining and hosting this application
-`,
+- Created ubuntu servers for Crypto mining and hosting this application.
+      `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${VBNet}`]: <ToolDataDto>{
       displayName: "VB.Net",
       years: 3,
       projects: getProjectListForTool(VBNet),
       summary:`
-- Maintained many aspx webpages when I first started developing.
-- Became well versed in creating MVC interactions through this technology. 
-- Worked on expanding my understanding of abstraction by creating c# factories for selecting vb.net pages
-`,
+- Maintained aspx webpages.
+- Create MVC interactions. 
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Web_performance}`]: <ToolDataDto>{
       displayName: "Web Performance",
       years: 5,
       projects: getProjectListForTool(Web_performance),
       summary:`
-- Consider web performance in all of my code building.
-- Re-renders, data fetches, lazy loading and more to ensure users have a crisp experience. 
-- Microfrontend concepts geared towards web performance.
-`,
+- Always web performance.
+- Re-renders, data fetches, lazy loading and more to ensure users have a crisp experience.
+- Microfrontend concepts.
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Webpack}`]: <ToolDataDto>{
       displayName: "Webpack",
-      years: 3,
+      years: 5,
       projects: getProjectListForTool(Webpack),
       summary:`
 - Bootstrapped my own webpack application.
 - Overwrite existing webpack configuations.
 - Create webpack module federation remotes and hosts.
 - Integrate module federation in an enterpise context
-`,
+      `,
+      proficiency: ToolProficiencyEnum.professional,
     },
     [`${Xml}`]: <ToolDataDto>{
       displayName: "XML",
@@ -1091,7 +1142,8 @@ export const ToolData : ToolMap = {
       summary:`
 - Capture and debug xml soap requests.
 - Create software to process XML SOAP requests.
-`,
+      `,
+      proficiency: ToolProficiencyEnum.intermediate,
     },
     [`${Yaml}`]: <ToolDataDto>{
       displayName: "Yaml",
@@ -1101,6 +1153,7 @@ export const ToolData : ToolMap = {
 - build command scripts for github actions.
 - build command scripts for dockup compose.
       `,
+      proficiency: ToolProficiencyEnum.professional,
     },
 }
 
