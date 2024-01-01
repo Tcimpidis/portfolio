@@ -4,7 +4,6 @@ on:
   push: 
     branches:
       - development
-      - ssl_not_working
 
 env:
   REGISTRY: ghcr.io
