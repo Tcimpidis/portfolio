@@ -34,7 +34,7 @@ export const ToolList: FC<ToolListProps> = ({
   const toolList: ToolType[] = Object.keys(toolData).map(key => key as ToolType);
 
   const renderToolList = () => {
-    if(width <= WindowSize.LG) {
+    if(width && width <= WindowSize.LG) {
       return (
       <div className={styles.toolbox}>
         <div className={styles.icon_box}> 

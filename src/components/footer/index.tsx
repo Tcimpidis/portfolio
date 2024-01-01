@@ -11,29 +11,35 @@ export const Footer = () => {
   const { width } = useWindowSize();
 
   return (
-    <div className={styles.container}>
-      <div className={styles.detail}>
-        <div className={styles.summary_box}>
-          <Image 
-            alt='jamin_dapper'
-            height={200}
-            src={`${envRoute}/assets/dapper.jpeg`}
-            width={180}
-          />
-          <div className={styles.summary}>
-            { width > WindowSize.MD && <Summary /> }
-            { width < WindowSize.XL && <SocialBox /> }
+    <div>
+      <div className={styles.container}>
+        <div className={styles.detail}>
+          <div className={styles.summary_box}>
+            <Image 
+              alt='jamin_dapper'
+              height={200}
+              src={`${envRoute}/assets/dapper.jpeg`}
+              width={180}
+            />
+            <div className={styles.summary}>
+              { width > WindowSize.MD && <Summary /> }
+              { width < WindowSize.XL && <SocialBox /> }
+            </div>
           </div>
+          { width >= WindowSize.XL && <SocialBox /> }
         </div>
-        { width >= WindowSize.XL && <SocialBox /> }
+        { width <= WindowSize.MD && (
+            <div className={styles.summary}>
+              <Summary /> 
+            </div>
+          ) }
+        <Contact />
       </div>
-      { width <= WindowSize.MD && (
-          <div className={styles.summary}>
-            <Summary /> 
-          </div>
-        ) }
-      <Contact />
+      <div className={styles.copywrite}>
+          <span>&copy; 2023-2024 Jamin Tcimpidis. All Rights Reserved.</span>
+      </div>
     </div>
+
   )
 }
 
@@ -60,6 +66,6 @@ const SocialBox: FC = () => (
 
 const Summary: FC = () => (
   <span>
-    I&apos;m an full stack developer who specializes in secure, responsive, and scalable frontends. Interested in seeing how I can help you? Let&apos;s talk!
+    I&apos;m an full stack developer who specializes in secure, responsive and scalable frontends. Interested in seeing how I can help you? Let&apos;s talk!
   </span>
 )

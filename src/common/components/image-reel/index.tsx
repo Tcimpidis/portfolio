@@ -32,9 +32,9 @@ export const ImageReel: FC<PropsWithChildren<ImageReelProps>> = ({
       <Image 
         alt={`image_reel_background`}
         className={styles.image}
-        layout="fill"
-        objectFit="fit"
-        objectPosition="center"
+        fill
+        object-fit="fit"
+        object-position="center"
         src={`${envRoute}/${imageUrl}`}
       />
       <div className={styles.overlay_buttons}>

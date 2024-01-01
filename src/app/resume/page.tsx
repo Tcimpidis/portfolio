@@ -16,7 +16,7 @@ export default async function Resume() {
           <div className={styles.container}>
             <div className={styles.section}>
               <span className={styles.section_title}>Summary</span>
-              <div className={styles.section_detail}>
+              <div className={styles.summary_detail}>
                 {summary}
               </div>
             </div>

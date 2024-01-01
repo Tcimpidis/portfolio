@@ -51,6 +51,11 @@
   width: 100%;
 }
 
+.summary_detail {
+  composes: section_detail;
+  margin-bottom: 1rem;
+}
+
 .contact {
   composes: display_name from '../../app/layout.module.css';
   color: var(--tcimpidis-dusk-on-the-lake);

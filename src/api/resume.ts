@@ -14,7 +14,7 @@ export interface ResumeDetailDto {
 }
 
 export const ResumeData:ResumeDataDto = {
-  summary: "Senior Software Development Engineer. 8+ years experience specializing in the full-stack development with a focus micro-service/micro-frontend architecture design. Passionate about creating robust scalable solutions using the newest technologies.",
+  summary: "Senior Software Development Engineer. 8+ years experience specializing in full-stack development with a focus micro-service/micro-frontend architecture design. Passionate about creating robust scalable solutions using the newest technologies.",
   experience: [{
     entity: "Delhivery USA LLC",
     location: "Los Angeles, CA",

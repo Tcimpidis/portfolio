@@ -11,6 +11,13 @@
   position: relative;
 }
 
+.logo_container {
+  padding-left: .1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
   @media only screen and (max-width: 300px) {
     display: none;
@@ -24,6 +31,10 @@
 
 .logo:hover {
   cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--tcimpidis-sea-foam);
+  border-radius: var(--tcimpidis-input-border-radius);
 }
 
 .link_box {

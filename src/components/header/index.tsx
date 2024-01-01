@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { IconContext } from 'react-icons';
 import { FaBars } from 'react-icons/fa6';
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import styles from './index.module.css'
@@ -17,10 +16,6 @@ const Header = () => {
     if(isComponentVisible){
       setIsComponentVisible(!isComponentVisible);
     }
-  }
-  const redirectToServices = () => {
-    resetBarsActivity();
-    router.push('/about')
   }
 
   const redirectToPortfolio = () => {
@@ -43,15 +38,12 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <div>
+        <div className={styles.logo_container}> 
           <button className={styles.logo} onClick={redirectToHome}>
             <Image alt="header" height={50} src={`${envRoute}/assets/tci_logo.svg`} width={260} />
           </button>
         </div>
         <div className={styles.link_box}>
-          <div>
-            <button className={styles.button} onClick={redirectToServices}>About</button>
-          </div>
           <div>
             <button className={styles.button} onClick={redirectToPortfolio}>Portfolio</button>
           </div>
@@ -67,9 +59,6 @@ const Header = () => {
           </button>
           {isComponentVisible && (
             <div className={styles.bars_menu} ref={ref}>
-              <div className={styles.menu_button_container}>
-                <button className={styles.menu_button} onClick={redirectToServices}>About</button>
-              </div>
               <div className={styles.menu_button_container}>
                 <button className={styles.menu_button} onClick={redirectToPortfolio}>Portfolio</button>
               </div>
