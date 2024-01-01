@@ -14,17 +14,24 @@
 .image_container {
   @media only screen and (max-width: 1024px) {
     flex-direction: column;
-    width: 100%;
   }
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  width: 100%;
   margin: 1rem 0;
 }
 
 .heading {
+  composes: heading_container from '../../app/layout.module.css';
+}
+
+.heading {
   composes: heading from '../../app/layout.module.css';
-  margin-top: 5rem;
+  background: linear-gradient(var(--tcimpidis-dusk-on-the-lake), var(--tcimpidis-spring-kiss));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 } 
 
 .image_box {
@@ -35,10 +42,12 @@
   flex-direction: column;
   border-radius: var(--tcimpidis-image-border-radius);
   width: 100%;
-  max-width: 52vw;
+  max-width: 46vw;
+  height: auto;
 }
 
 .detail_box {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -97,22 +106,6 @@
   color: var(--tcimpidis-dusk-on-the-lake);
   max-height: 50vh;
   overflow: auto;
-}
-
-.text::-webkit-scrollbar-track {
-  border: 1px solid var(--tcimpidis-cool-shower);
-  padding: 2px 0;
-  background-color: var(--tcimpidis-sea-foam);
-}
-
-.text::-webkit-scrollbar {
-  width: 10px;
-}
-
-.text::-webkit-scrollbar-thumb {
-  border-radius: var(--tcimpidis-image-border-radius);
-  background-color: var(--tcimpidis-dusk-on-the-lake);
-  border: 1px solid var(--tcimpidis-sea-foam);
 }
 
 .url_container {

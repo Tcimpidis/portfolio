@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import styles from './page.module.css';
-import { CompanyNames, CompanyData, ProjectData } from '@/api/portfolio';
+import { CompanyData, ProjectData, CompanyType } from '@/api/portfolio';
 import { Company } from '@/components/company';
 
 export default async function Portfolio() {
@@ -11,8 +11,8 @@ export default async function Portfolio() {
       </div>
       <div className={styles.container}>
         <Suspense fallback={<span>...loading</span>}  >
-          {CompanyNames?.map(((name, i) => 
-            <Company  companyName={name} companyData={CompanyData} projectData={ProjectData} key={i}/>
+          {Object.keys(CompanyData).map(((key, i) => 
+            <Company  companyName={key as CompanyType} companyData={CompanyData} projectData={ProjectData} key={i}/>
           ))}
         </Suspense>
       </div>

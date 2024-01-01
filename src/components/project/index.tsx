@@ -28,10 +28,14 @@ export const Project: FC<ProjectProps> = ({
   importantUrls,
 }) => {
   return (
-    <div className={styles.container} id={type}>
-      <div className={styles.heading}>{title}</div>
-      <ImageContainer importantUrls={importantUrls} overview={overview} tech={tech} title={title} type={type}/>
-      {(specifications || takeaways)  && <DetailBox  specifications={specifications} takeaways={takeaways} /> }
+    <div  id={type}>
+      <div className={styles.heading_container}>
+        <div className={styles.heading}>{title}</div>
+      </div>
+      <div className={styles.container}>
+        <ImageContainer importantUrls={importantUrls} overview={overview} tech={tech.sort((a, b) => 0.5 - Math.random())} title={title} type={type}/>
+        {(specifications || takeaways)  && <DetailBox  specifications={specifications} takeaways={takeaways} /> }
+      </div>
     </div>
   )
 } 
@@ -107,7 +111,7 @@ const ImageContainer: FC<{  type: ProjectType;
           <label className={styles.icon_label}>
             Overview
           </label>
-          <span className={styles.overview_text}>{overview}</span>
+          <Markdown className={styles.overview_text}>{overview}</Markdown>
         </div>
       </div>
     </div>

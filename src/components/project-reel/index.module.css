@@ -4,7 +4,7 @@
   }
   composes: subtitle from '../../app/layout.module.css';
   font-weight: 600;
-  color: var(--tcimpidis-sweet-nothings);
+  color: var(--tcimpidis-spring-kiss);
 
 }
 

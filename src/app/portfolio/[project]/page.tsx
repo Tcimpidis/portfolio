@@ -1,5 +1,6 @@
-import { CompanyType, ProjectData, ProjectType } from "@/api/portfolio"
+import { ProjectData, ProjectType } from "@/api/portfolio"
 import { Project } from "@/components/project";
+import styles from './page.module.css';
 
 export default function Page({ params }: { params: { project: string } }) {
   const projectName = decodeURI(params.project);
@@ -14,7 +15,7 @@ export default function Page({ params }: { params: { project: string } }) {
     } = ProjectData[projectName as ProjectType];
   
   return  (
-    <div>
+    <div className={styles.container}>
       <Project  
         importantUrls={importantUrls}
         overview={overview}

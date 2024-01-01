@@ -17,7 +17,7 @@ export const ToolList: FC<ToolListProps> = ({
   const searchParams = useSearchParams();
   const { width } = useWindowSize();
   const tool = searchParams.get('tool')
-  const [focusedTool, setFocusedTool] = useState<ToolType| undefined>(tool as ToolType);
+  const [focusedTool, setFocusedTool] = useState<ToolType| undefined>(tool as ToolType || 'react');
 
   useEffect(() => {
     if(tool) {
@@ -34,7 +34,7 @@ export const ToolList: FC<ToolListProps> = ({
   const toolList: ToolType[] = Object.keys(toolData).map(key => key as ToolType);
 
   const renderToolList = () => {
-    if(width <= WindowSize.XL) {
+    if(width && width <= WindowSize.LG) {
       return (
       <div className={styles.toolbox}>
         <div className={styles.icon_box}> 
@@ -47,6 +47,7 @@ export const ToolList: FC<ToolListProps> = ({
           {focusedDetails && focusedTool && 
             <ToolDetail 
             displayName={focusedDetails.displayName}
+            proficiency={focusedDetails.proficiency}
             projects={focusedDetails.projects}
             summary={focusedDetails.summary}
             years={focusedDetails.years}
@@ -62,6 +63,7 @@ export const ToolList: FC<ToolListProps> = ({
           {focusedDetails && focusedTool && 
             <ToolDetail 
             displayName={focusedDetails.displayName}
+            proficiency={focusedDetails.proficiency}
             projects={focusedDetails.projects}
             summary={focusedDetails.summary}
             years={focusedDetails.years}

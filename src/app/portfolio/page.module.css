@@ -4,6 +4,10 @@
 
 .title {
   composes: heading from '../layout.module.css';
+  background: linear-gradient(var(--tcimpidis-dusk-on-the-lake), var(--tcimpidis-spring-kiss));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container { 
@@ -14,7 +18,7 @@
   }
   gap: 3rem 2rem;
   padding: 2rem 6rem;
-  background-image: linear-gradient(var(--tcimpidis-brunch-with-friends), var(--tcimpidis-sweet-nothings));
+  background-image: linear-gradient(var(--tcimpidis-brunch-with-friends), var(--tcimpidis-spring-kiss));
 }
 
 .heading {

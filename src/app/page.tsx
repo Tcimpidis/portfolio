@@ -13,7 +13,7 @@ export default function Home() {
       <div className={styles.title_container}>
         <span className={styles.title}>Home</span>
       </div>
-      <div className={styles.container}>
+      <div className={styles.summary_container}>
         <Markdown className={styles.summary}>{summary}</Markdown>
       </div>
       <div >

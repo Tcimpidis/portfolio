@@ -11,7 +11,7 @@
 
 .location {
   composes: label from '../../app/layout.module.css';
-  color: var(--tcimpidis-sweet-nothings);
+  color: var(--tcimpidis-cool-shower);
   opacity: 1;
 }
 
