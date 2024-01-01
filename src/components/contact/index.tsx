@@ -103,7 +103,7 @@ export const Contact = () => {
     subject,
     message,
   }) => {
-    await fetch('http://172.17.0.1:3000/api', {
+    await fetch(`${window.location.origin}/api`, {
       method: "post",
       body: JSON.stringify({
         email,
