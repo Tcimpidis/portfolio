@@ -58,7 +58,7 @@ jobs:
             docker run --detach \
               --name ${{ env.CONTAINER_NAME }} \
               --env "VIRTUAL_HOST=${{ secrets.HOST_DOMAIN }}" \
-              --env "VIRTUAL_PORT=3000" 
-              --env "LETSENCRYPT_HOST=${{ secrets.HOST_DOMAIN }}" 
+              --env "VIRTUAL_PORT=3000" \
+              --env "LETSENCRYPT_HOST=${{ secrets.HOST_DOMAIN }}" \
               --env "LETSENCRYPT_EMAIL=${{ secrets.ADMIN_EMAIL }}" \
               ${{ steps.meta.outputs.tags }}
