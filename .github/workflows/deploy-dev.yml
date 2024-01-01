@@ -38,6 +38,8 @@ jobs:
           build-args: |
             NEXT_PUBLIC_NODE_ENV=development
             RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+            ADMIN_RECIPIENT_EMAIL=${{ secrets.ADMIN_RECIPIENT_EMAIL}}
+            ADMIN_MAILTO_EMAIL=${{ secrets.ADMIN_EMAIL}}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       - name: Deploy package to Server
