@@ -527,6 +527,7 @@ export const ProjectData: ProjectMap = {
   - Building a server with server components instead of static site being the major one. 
   - This app reads static data and has no business with a server.
   - Still worth going through the process of setting up a docker frontend server.
+- Logo, icon and color pallet design were all done in house. 
 - The codebase is public 
     `,
     importantUrls: [{
