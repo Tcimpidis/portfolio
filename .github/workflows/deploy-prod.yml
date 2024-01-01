@@ -55,4 +55,10 @@ jobs:
             docker pull ${{ steps.meta.outputs.tags }}
             docker stop ${{ env.CONTAINER_NAME }}
             docker system prune -f
-            docker run --detach --name ${{ env.CONTAINER_NAME }} -p 3000:3000 --env "VIRTUAL_HOST=${{ secrets.HOST_DOMAIN }}" --env "LETSENCRYPT_HOST=${{ secrets.HOST_DOMAIN }}" ${{ steps.meta.outputs.tags }}
+            docker run --detach \
+              --name ${{ env.CONTAINER_NAME }} \
+              --env "VIRTUAL_HOST=${{ secrets.HOST_DOMAIN }}" \
+              --env "VIRTUAL_PORT=3000" 
+              --env "LETSENCRYPT_HOST=${{ secrets.HOST_DOMAIN }}" 
+              --env "LETSENCRYPT_EMAIL=${{ secrets.ADMIN_EMAIL }}" \
+              ${{ steps.meta.outputs.tags }}
