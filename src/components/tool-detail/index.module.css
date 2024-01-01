@@ -1,0 +1,97 @@
+.container { 
+  @media only screen and (max-width: 1024px) {
+    width: 95%;
+    height: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0 0;
+  height: 25.5rem;
+  overflow: auto;
+  border: solid 1px var(--tcimpidis-sweet-nothings);
+  border-radius: var(--tcimpidis-input-border-radius);
+}
+
+.container::-webkit-scrollbar-track {
+  border: 1px solid var(--tcimpidis-cool-shower);
+  padding: 2px 0;
+  background-color: var(--tcimpidis-sea-foam);
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  border-radius: var(--tcimpidis-image-border-radius);
+  background-color: var(--tcimpidis-dusk-on-the-lake);
+  border: 1px solid var(--tcimpidis-sea-foam);
+}
+
+
+.display_name {
+  composes: display_name from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.display_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: .5rem;
+  border-bottom: solid 1px var(--tcimpidis-sweet-nothings);
+}
+
+.item {
+  padding: .25rem 0 .25rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.label {
+  composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.text {
+  composes: detail from '../../app/layout.module.css';
+  text-align: right;
+  width: 70%;
+}
+
+.project_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.project_link {
+  gap: .1rem 0;
+  font-size: .7rem;
+  font-weight: 600;
+  text-align: right;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary_label {
+  padding-bottom: .25rem;
+  margin-bottom: .5rem;
+  margin-left: 1rem;
+  border-bottom: solid 1px var(--tcimpidis-sweet-nothings);
+}
+
+.summary_text {
+  composes: detail from '../../app/layout.module.css';
+  padding-left: .25rem;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}

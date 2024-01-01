@@ -1,0 +1,58 @@
+name: Deploy to dev
+
+on: 
+  push: 
+    branches:
+      - development
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: tcimpidis/dev/portfilio
+  CONTAINER_NAME: tcimpidis_portfolio_dev
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Log in to the Container registry
+        uses: docker/login-action@master
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@master
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: ./
+          push: true
+          build-args: |
+            NEXT_PUBLIC_NODE_ENV=development
+            RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+      - name: Deploy package to Server
+        uses: appleboy/ssh-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          host: ${{ secrets.HOST_SERVER }}
+          username: ${{ secrets.SERVER_ADMIN }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          envs: GITHUB_USERNAME, GITHUB_TOKEN
+          script: |
+            echo $GITHUB_TOKEN | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
+            docker pull ${{ steps.meta.outputs.tags }}
+            docker stop ${{ env.CONTAINER_NAME }}
+            docker system prune -f
+            docker run --detach --name ${{ env.CONTAINER_NAME }} --env "VIRTUAL_HOST=${{ secrets.DEV_HOST_DOMAIN }}" --env "VIRTUAL_PORT=3000" --env "LETSENCRYPT_HOST=${{ secrets.DEV_HOST_DOMAIN }}" --env "LETSENCRYPT_EMAIL=${{ secrets.ADMIN_EMAIL }}" ${{ steps.meta.outputs.tags }}

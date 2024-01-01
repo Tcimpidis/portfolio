@@ -1,0 +1,38 @@
+.container {  
+  display: flex;
+  flex-direction: column;
+}
+
+.header{ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.location {
+  composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-cool-shower);
+  opacity: 1;
+}
+
+.duration {
+  composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.entity {
+  composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.title {
+  composes: label from '../../app/layout.module.css';
+  color: var(--tcimpidis-dusk-on-the-lake);
+  font-weight: 500;
+}
+
+.detail {
+  composes: detail from '../../app/layout.module.css';
+}

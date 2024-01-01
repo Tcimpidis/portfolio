@@ -1,0 +1,24 @@
+.content {
+  @media only screen and (max-width: 640px) {
+    padding: 0;
+    width: 90%;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 0 8rem 3rem;
+  width: 60%;
+}
+
+.title {
+  composes: display_name from '../../app/layout.module.css';
+  text-align: left;
+  color: var(--tcimpidis-sea-foam);
+}
+
+.company {
+  composes: subtitle from '../../app/layout.module.css';
+  font-weight: 600;
+  color: var(--tcimpidis-sweet-nothings);
+}

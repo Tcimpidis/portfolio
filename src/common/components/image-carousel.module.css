@@ -1,0 +1,146 @@
+.fullscreen_tumbnail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 35rem;
+  border-radius: var(--tcimpidis-image-border-radius);
+  overflow: hidden;
+}
+
+.fullscreen_image {
+  object-fit: scale-down;
+  z-index: -1;
+  border-radius: var(--tcimpidis-image-border-radius);
+}
+
+.thumbnail_image {
+  object-fit: contain;
+  border-radius: var(--tcimpidis-image-border-radius);
+}
+
+.selected_thumbnail_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selected_thumbnail {
+  max-width: 100%;
+  position: relative;
+  width: 30vw;
+  height: 25vh;
+  border-radius: var(--tcimpidis-image-border-radius);
+  overflow: hidden;
+  border: solid 1px var(--tcimpidis-dusk-on-the-lake);
+}
+
+.fullscreeen_chrevon_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tcimpidis-brunch-with-friends);
+	height: 2.5rem;
+  width: 2.125rem;
+}
+.fullscreeen_chrevon_button_active {
+}
+
+.fullscreeen_chrevon_button_active:hover {
+  opacity: .1;
+}
+
+.fullscreeen_chrevon {
+  font-weight: 700;
+  color: var(--tcimpidis-brunch-with-friends);
+  opacity: .6;
+}
+
+.chrevon_button {
+
+}
+
+.chrevon_button:hover {
+  opacity: .1;
+}
+
+.chevron {
+  font-weight: 100;
+  height: 1.75rem;
+  opacity: .6;
+}
+
+.chevron_active {
+
+}
+
+.chevron_inactive {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.chevron_active:hover {
+  opacity: 1;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: .75rem;
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.carousel_selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0 .5rem;
+}
+
+.selector_image_wrapper {
+  position: relative;
+  border-radius: var(--tcimpidis-image-border-radius);
+}
+
+.selector_image {
+  border-radius: var(--tcimpidis-image-border-radius);
+}
+
+.selector_image_selected {
+  border: solid 1px var(--tcimpidis-cool-shower);
+}
+
+.selector_image_unselected {
+ opacity: .6;
+}
+
+.cursor_not_allowed {
+  cursor: not-allowed;
+}
+
+.image_button_count_overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--tcimpidis-image-border-radius);
+  background-color: var(--tcimpidis-cool-shower);
+  opacity: .7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.image_overlay_text {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--tcimpidis-brunch-with-friends);
+}

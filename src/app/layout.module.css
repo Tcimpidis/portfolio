@@ -1,0 +1,93 @@
+.heading_container {
+  @media only screen and (min-width: 1800px) {
+    min-height:20vh;
+  }
+  @media only screen and (max-height: 950px) {
+    min-height:25vh;
+  }
+  @media only screen and (max-height: 850px) {
+    min-height:30vh;
+  }
+  @media only screen and (max-height: 485px) {
+    min-height:40vh;
+  }
+  @media only screen and (max-height: 350px) {
+    min-height:50vh;
+  }
+  background-color: var(--tcimpidis-brunch-with-friends);
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading { 
+  @media only screen and (max-width: 640px) {
+    font-size: 1.8rem;
+  }
+  font-size: 3.25rem;
+  font-family: var(--tcimpidis-font-family);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title { 
+  @media only screen and (max-width: 640px) {
+    font-size: 2rem;
+  }
+  margin-right: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--tcimpidis-cool-shower);
+  font-family: var(--tcimpidis-font-family);
+  text-transform: uppercase;
+  opacity: .7;
+}
+
+.subtitle {
+  @media only screen and (max-width: 640px) {
+    font-size: 1.5rem;
+  }
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: var(--tcimpidis-font-family);;
+}
+
+.display_name {
+  @media only screen and (max-width: 640px) {
+    font-size: 1.25rem;
+  }
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: var(--tcimpidis-font-family);;
+}
+
+.content {
+  @media only screen and (max-width: 640px) {
+    font-size: .95rem;
+  }
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--tcimpidis-font-family);
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.detail {
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--tcimpidis-dusk-on-the-lake);
+}
+
+.container { 
+  gap: 3rem 2rem;
+  padding: 2rem 6rem;
+}
