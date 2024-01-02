@@ -511,23 +511,21 @@ export const ProjectData: ProjectMap = {
     tech: [
       TypeScript, React, Jest, Git_bash, Github, CSS3, React_testing_library, HTML5, JavaScript, Node_js, Yaml, Next_js, CSS_Modules, Apache, Ubuntu, Linux, Docker, NPM, React_hook_form, Web_performance
     ],
-    overview: `jamin.tcimpidis.com is a merger of the brand [Tcimpidis](/portfolio/#${Tcimpidis}) and the need to showcase the creator Jamin Tcimpidis' talents. 
+    overview: `jamin.tcimpidis.com is a merger of the brand [Tcimpidis](/portfolio/#${Tcimpidis}) and the need to showcase the creator Jamin Tcimpidis' talents. The focus not only being the UI, but the full end to end production of this website. From design to deployment. 
     `,
     specifications: `
 - Built in Next.js.
-- There is no api. All data is static and served locally. This decision was based on cost and time.
-- Using CSS modules instead of tailwind.
+- All data is static to the server.
+- CSS Modules.
 - Typescript.
-- Containerized and deployed through github actions and container management.
-- Hosted on Nginx reverse proxy with ACME companion.
-- Currently served as a static site, not a container.`,
+- Containerized with docker and deployed through github actions and container management.
+- Hosted on Nginx reverse proxy with ACME companion.`,
     takeaways: `
 - Website was built as an exploration of Next.js.
-- Some choices were to learn concepts and do not represent actual production decisions.
-  - Building a server with server components instead of static site being the major one. 
-  - This app reads static data and has no business with a server.
-  - Still worth going through the process of setting up a docker frontend server.
-- Logo, icon and color pallet design were all done in house. 
+- Standalone server build with secure environment variables.
+- Utilization of route handlers from creating email request.
+- Logo, icon and color pallet designed by [Tcimpidis](/portfolio/#${Tcimpidis}). 
+- Network from domain name through VPS server, DNS management, domain email management, reverse proxy container, acme companion container, enviornment setup and CI/CD were all built by [Tcimpidis](/portfolio/#${Tcimpidis}).
 - The codebase is public 
     `,
     importantUrls: [{

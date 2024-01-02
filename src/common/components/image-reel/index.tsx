@@ -4,7 +4,6 @@ import styles from "./index.module.css";
 import Image from "next/image";
 import { IconContext } from "react-icons";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { envRoute } from "@/envUtility";
 import { Button } from "@/common/components/button";
 
 interface ImageReelProps {
@@ -35,7 +34,7 @@ export const ImageReel: FC<PropsWithChildren<ImageReelProps>> = ({
         fill
         object-fit="fit"
         object-position="center"
-        src={`${envRoute}/${imageUrl}`}
+        src={`/${imageUrl}`}
       />
       <div className={styles.overlay_buttons}>
         <div className={styles.chevron_button_prev}>
