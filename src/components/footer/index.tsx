@@ -9,30 +9,70 @@ import { WindowSize, useWindowSize } from '@/common/hooks/useWindowSize';
 export const Footer = () => {
   const { width } = useWindowSize();
 
-  return (
-    <div>
-      <div className={styles.container}>
-        <div className={styles.detail}>
-          <div className={styles.summary_box}>
-            <Image 
-              alt='jamin_dapper'
-              height={200}
-              src={'/assets/dapper.jpeg'}
-              width={180}
-            />
-            <div className={styles.summary}>
-              { width > WindowSize.MD && <Summary /> }
-              { width < WindowSize.XL && <SocialBox /> }
-            </div>
-          </div>
-          { width >= WindowSize.XL && <SocialBox /> }
+  const renderDetail = () => {
+    if(width) {
+     return (
+      <div className={styles.detail}>
+        <div className={styles.summary_box}>
+          <Image 
+            alt='jamin_dapper'
+            height={200}
+            src={'/assets/dapper.jpeg'}
+            width={180}
+          />
+          {renderSummary()}
         </div>
-        { width <= WindowSize.MD && (
+        {width >= WindowSize.XL && <SocialBox /> }
+      </div>
+     )
+    }
+    return (
+      <div className={styles.detail}>
+        <div className={styles.summary_box}>
+          <Image 
+            alt='jamin_dapper'
+            height={200}
+            src={'/assets/dapper.jpeg'}
+            width={180}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  const renderSummary = () => {
+    if(width) { 
+      return (
+        <div className={styles.summary}>
+          { width > WindowSize.MD && <Summary /> }
+          { width < WindowSize.XL && <SocialBox /> }
+        </div>
+      )
+    } 
+    return null;
+  }
+
+  const renderContact = () => {
+    if(width) {
+      return (
+        <>
+          {width <= WindowSize.MD && (
             <div className={styles.summary}>
               <Summary /> 
             </div>
           ) }
-        <Contact />
+          <Contact />
+        </>
+      )
+    }
+    return <Contact />
+  }
+
+  return (
+    <div>
+      <div className={styles.container}>
+        {renderDetail()}
+        {renderContact()}
       </div>
       <div className={styles.copywrite}>
           <span>&copy; 2023-2024 Jamin Tcimpidis. All Rights Reserved.</span>
