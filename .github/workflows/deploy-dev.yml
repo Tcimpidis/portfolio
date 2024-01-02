@@ -4,7 +4,6 @@ on:
   push: 
     branches:
       - development
-      - trying_without_origin
 
 env:
   REGISTRY: ghcr.io
