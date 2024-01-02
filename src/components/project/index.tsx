@@ -6,7 +6,6 @@ import { ImportantUrl, ProjectType, ToolData, ToolType } from '@/api/portfolio';
 import { useRouter } from 'next/navigation';
 import Markdown from 'react-markdown';
 import Link from 'next/link';
-import { envRoute } from '@/envUtility';
 
 interface ProjectProps {
   type: ProjectType;
@@ -33,8 +32,13 @@ export const Project: FC<ProjectProps> = ({
         <div className={styles.heading}>{title}</div>
       </div>
       <div className={styles.container}>
-        <ImageContainer importantUrls={importantUrls} overview={overview} tech={tech.sort((a, b) => 0.5 - Math.random())} title={title} type={type}/>
-        {(specifications || takeaways)  && <DetailBox  specifications={specifications} takeaways={takeaways} /> }
+        <ImageContainer 
+          importantUrls={importantUrls} 
+          overview={overview} 
+          specifications={specifications} 
+          takeaways={takeaways} 
+          tech={tech.sort((a, b) => 0.5 - Math.random())} 
+          title={title} type={type}/>
       </div>
     </div>
   )
@@ -43,13 +47,17 @@ export const Project: FC<ProjectProps> = ({
 const ImageContainer: FC<{  type: ProjectType;
   title: string;
   tech: ToolType[];
+  overview: string,
   importantUrls?: ImportantUrl[];
-  overview: string}> = ({
+  specifications?: string;
+  takeaways?: string;}> = ({
   type,
   title,
   tech,
+  overview,
+  takeaways,
+  specifications,
   importantUrls,
-  overview
 }) => {
   const router = useRouter();
   const [activeTool, setActiveTool] = useState<number| undefined>();
@@ -71,7 +79,7 @@ const ImageContainer: FC<{  type: ProjectType;
         alt={`${title}_image`}
         className={styles.image_box}
         height={400}
-        src={`${envRoute}/projects/${type.toLowerCase()}.png`}
+        src={`/projects/${type.toLowerCase()}.png`}
         width={550}
       />
       <div className={styles.tech_container}>
@@ -84,7 +92,7 @@ const ImageContainer: FC<{  type: ProjectType;
                 onMouseLeave={onMouseLeave}
                 onClick={onIconClick(tool)}
                 height={20}
-                src={`${envRoute}/tools/${tool.toLowerCase()}.svg`}
+                src={`/tools/${tool.toLowerCase()}.svg`}
                 width={20}
               />
               {activeTool !== undefined && activeTool === i &&
@@ -97,7 +105,7 @@ const ImageContainer: FC<{  type: ProjectType;
         </div>
         {importantUrls?.map(({name, urlList}, i) =>  (
           <div key={i} className={styles.url_container}>
-            <label className={styles.icon_label}>
+            <label className={styles.detail_label}>
               {name}
             </label>
             <div className={styles.link_box}>
@@ -107,41 +115,29 @@ const ImageContainer: FC<{  type: ProjectType;
             </div>
           </div>
         ) )}
-        <div className={styles.overview_box}>
-          <label className={styles.icon_label}>
+        <div className={styles.detail_box}>
+          <label className={styles.detail_label}>
             Overview
           </label>
           <Markdown className={styles.overview_text}>{overview}</Markdown>
         </div>
+        {specifications && (
+          <div className={styles.detail_box}>
+            <label className={styles.detail_label}>
+            Specifications
+            </label>
+            <Markdown className={styles.text}>{specifications}</Markdown>
+          </div> 
+        )}
+        {takeaways && (
+          <div className={styles.detail_box}>
+            <label className={styles.detail_label}>
+            Takeaways
+            </label>
+            <Markdown className={styles.text}>{takeaways}</Markdown>
+          </div> 
+        )}
       </div>
     </div>
   )
 }
- 
-
-const DetailBox : FC<{  
-  specifications?: string;
-  takeaways?: string;
-}> = ({
-  specifications,
-  takeaways
-}) => (
-  <div className={styles.detail_box}>
-    {specifications && 
-      <>
-        <label className={styles.icon_label}>
-          Specifications
-        </label>
-        <Markdown className={styles.text}>{specifications}</Markdown>
-      </>
-    }
-    {takeaways && 
-      <>
-        <label className={styles.icon_label}>
-          Takeaways
-        </label>
-        <Markdown className={styles.text}>{takeaways}</Markdown>
-      </>
-    }
-  </div>
-)

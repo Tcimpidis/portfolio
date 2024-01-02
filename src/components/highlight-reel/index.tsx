@@ -2,11 +2,6 @@
 import { Highlight } from "@/api/home"
 import { FC, useState } from "react";
 import styles from "./index.module.css";
-import Image from "next/image";
-import { IconContext } from "react-icons";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-import { envRoute } from "@/envUtility";
-import { Button } from "@/common/components/button";
 import { useRouter } from "next/navigation";
 import { ImageReel } from "@/common/components/image-reel";
 

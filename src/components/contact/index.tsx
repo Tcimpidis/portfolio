@@ -103,7 +103,7 @@ export const Contact = () => {
     subject,
     message,
   }) => {
-    await fetch(`${window.location.origin}/api`, {
+    await fetch(`/api`, {
       method: "post",
       body: JSON.stringify({
         email,

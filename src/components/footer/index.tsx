@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { Contact } from '../contact';
 import styles from './index.module.css';
-import { envRoute } from '@/envUtility';
 import Link from 'next/link';
 import { FC } from 'react';
 import { WindowSize, useWindowSize } from '@/common/hooks/useWindowSize';
@@ -18,7 +17,7 @@ export const Footer = () => {
             <Image 
               alt='jamin_dapper'
               height={200}
-              src={`${envRoute}/assets/dapper.jpeg`}
+              src={'/assets/dapper.jpeg'}
               width={180}
             />
             <div className={styles.summary}>
@@ -49,7 +48,7 @@ const SocialBox: FC = () => (
       <Image 
         alt='jamin_linkedIn'
         height={40}
-        src={`${envRoute}/assets/LinkedIn.svg`}
+        src={'/assets/LinkedIn.svg'}
         width={40}
       />
     </Link>
@@ -57,7 +56,7 @@ const SocialBox: FC = () => (
       <Image 
           alt='jamin_linkedIn'
           height={40}
-          src={`${envRoute}/tools/github.svg`}
+          src={'/tools/github.svg'}
           width={40}
         />
     </Link>
