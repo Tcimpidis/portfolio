@@ -3,7 +3,8 @@ name: Deploy to dev
 on: 
   push: 
     branches:
-      - development
+      - developmen
+      - open_graph_not_working
 
 env:
   REGISTRY: ghcr.io
