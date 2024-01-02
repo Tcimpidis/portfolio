@@ -4,7 +4,6 @@ on:
   push: 
     branches:
       - developmen
-      - open_graph_not_working
 
 env:
   REGISTRY: ghcr.io
