@@ -17,7 +17,7 @@ export const ResumeData:ResumeDataDto = {
   summary: "Senior Software Development Engineer. 8+ years experience specializing in full-stack development with a focus micro-service/micro-frontend architecture design. Passionate about creating robust scalable solutions using the newest technologies.",
   experience: [{
     entity: "Delhivery USA LLC",
-    location: "Los Angeles, CA",
+    location: "Remote",
     title: "SENIOR SOFTWARE DEVELOPMENT ENGINEER",
     duration: "April 2022 - December 2023",
     responsibilities: [
@@ -35,7 +35,7 @@ export const ResumeData:ResumeDataDto = {
   },
   {
     entity: "C.H.Robinson Worldwide",
-    location: "Eden Prairie, MN",
+    location: "Eden Prairie, MN / Remote",
     title: "SOFTWARE ENGINEER III",
     duration: "January 2015 - April 2022",
     responsibilities: ["A lead developer for C.H.Robinson's smallbusiness application https://Freightquote.com/book.",
