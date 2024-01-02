@@ -4,7 +4,7 @@ import { Contact } from '../contact';
 import styles from './index.module.css';
 import Link from 'next/link';
 import { FC } from 'react';
-import { WindowSize, useWindowSize } from '@/common/hooks/useWindowSize';
+import { WindowSize, useWindowSize } from '@/common/hooks/useWindowSize'
 
 export const Footer = () => {
   const { width } = useWindowSize();

@@ -15,13 +15,14 @@
     width: 100%;
     margin: auto;
   } 
+  position: relative;
   display: flex;
   padding-top: 2rem;
   flex-direction: column;
 }
 
 .title_container {
-  composes: heading_container from '../layout.module.css'
+  composes: heading_container from '../layout.module.css';
 }
 
 .title {
@@ -61,3 +62,11 @@
   color: var(--tcimpidis-dusk-on-the-lake);
 }
 
+.download_container {
+  @media only screen and (max-width: 900px) {
+    margin-left: 1rem;
+  } 
+  position: absolute;
+  top: -1.5rem;
+  margin-left: 2rem;
+}

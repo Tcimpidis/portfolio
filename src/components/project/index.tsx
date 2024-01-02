@@ -6,12 +6,15 @@ import { ImportantUrl, ProjectType, ToolData, ToolType } from '@/api/portfolio';
 import { useRouter } from 'next/navigation';
 import Markdown from 'react-markdown';
 import Link from 'next/link';
+import { IconContext } from 'react-icons';
+import { MdArrowBack } from "react-icons/md";
 
 interface ProjectProps {
   type: ProjectType;
   title: string;
   tech: ToolType[];
   overview: string;
+  company?: string;
   specifications?: string;
   takeaways?: string;
   importantUrls?: ImportantUrl[];
@@ -22,6 +25,7 @@ export const Project: FC<ProjectProps> = ({
   title,
   tech,
   overview,
+  company,
   specifications,
   takeaways,
   importantUrls,
@@ -29,7 +33,19 @@ export const Project: FC<ProjectProps> = ({
   return (
     <div  id={type}>
       <div className={styles.heading_container}>
-        <div className={styles.heading}>{title}</div>
+        <div className={styles.go_back}>
+          <Link href={`/portfolio/#${company}`}> 
+            <div className={styles.back_link_container}>
+              <IconContext.Provider value={{className:`${styles.back_icon}`}}>
+                <MdArrowBack />
+              </IconContext.Provider>
+              {company}
+            </div>
+          </Link>
+        </div>
+        <div className={styles.heading}>
+          {title}
+        </div>
       </div>
       <div className={styles.container}>
         <ImageContainer 

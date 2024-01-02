@@ -201,7 +201,7 @@ export type ToolMap = {
 export const CompanyData: CompanyMap = {
   [`${CHRobinson}`]: <CompanyDataDto>{
     projects: [FreightQuote, TMC, CHRobinsonOnline],
-    summary: `At C.H. Robinson I learned the foundations of builiding scalable software. Fortunate enough to be exposed to a expansive technical network, where multiple functional teams, worked in tandem, to deliver business initiatives, without interrupting current functionality, as they adapted to new technical demands in the industry. I was introduced to, and developed working understandings of older technologies. Then later tasked with the uplift of these legacy apps. I was also blessed with a patient and knowledgable mentor Chris Hince, whose guideance and support nurtured my growth while at C.H. Robinson. With Chris's guindance I helped with the production of an internal C.H. Robinson applciation for their yearly charity auctions. Which helped facilitate over $150,000 in charitable donations annually. My time at C.H. Robinson awarded many opportunities to practice owning and developing solutions in a vary stable, growth centered enviornment.`,
+    summary: `At C.H. Robinson I learned the foundations of builiding scalable software. Fortunate enough to be exposed to a expansive technical network, where multiple functional teams, worked in tandem, to deliver business initiatives, without interrupting current functionality, as they adapted to new technical demands in the industry. I was introduced to, and developed working understandings of older technologies. Then later tasked with the uplift of these legacy apps. I was also blessed with a patient and knowledgable mentor Chris Hince, whose guidance and support nurtured my growth while at C.H. Robinson. With Chris's oversight I co-lead the production of an internal C.H.Robinson applciation for their yearly charity auctions. Which helped facilitate over $150,000 in charitable donations annually. My time at C.H. Robinson awarded many opportunities to practice owning and developing solutions in a vary stable, growth centered enviornment.`,
     references: [
       {
         name: "Chris Hince",
@@ -270,7 +270,7 @@ export const CompanyData: CompanyMap = {
   },
   [`${Tcimpidis}`]: <CompanyDataDto>{
     projects: [Portfolio, Personal],
-    summary: "A brand focused on developing scalable, responsive, rich frontends applications and frameworks. The product of a passion for frontend developmented coupled with proven expertise in enterpise hardened methodoliges and principles. Tcimpidis focuses on maintainablity, security and performance. Striving to build beautiful products, that complie to lightweight bundles. For a secure, cost effect approach to development.",
+    summary: "A brand focused on developing scalable, responsive, rich frontend applications and frameworks. The product of a passion for frontend development coupled with proven expertise in enterpise hardened methodoliges and principles. Tcimpidis focuses on maintainablity, security and performance. Striving to build beautiful products, that complie to lightweight bundles. For a secure, cost effect approach to development.",
     type: Tcimpidis 
   },
 }
@@ -427,7 +427,7 @@ export const ProjectData: ProjectMap = {
     tech: [
       Agile, Azure_devops, TypeScript, CSS3, Oauth, React, React_hook_form, Jest, Git_bash, Github, React_testing_library, REST, Google_analytics, HTML5, JavaScript, Node_js, Launchdarkly, CSharp, Docker, Dot_net_core, Figma, Terraform, OWASP, Sql_server, Kafka, Kubernetes, Jenkins, Mongodb, NPM, Powershell, Protractor, Redux, Sass, Web_performance, Webpack, Xml
     ],
-    overview: `FreightQuote by CHR deliver's it's vast carrier network to infrequent shippers. Offering free instant quotes on shipments. Users who want to create an order can go through an easy sign up process and start shipping.`,
+    overview: `FreightQuote by CHR delivers it's vast carrier network to infrequent shippers. Offering free instant quotes on shipments. Users who want to create an order can go through an easy sign up process and start shipping.`,
     specifications: `
 - Greenfield project. Started just as it went live and hadn't captured more than 10 orders.
 - Built in the newest C.H. Robinson technologies: 
@@ -437,8 +437,8 @@ export const ProjectData: ProjectMap = {
 - Had to work across functional domains to delivery FreightQuote business needs.`,
     takeaways: `
 - Most notably a B2B integration with twilio for managing user sms alerts.
-  - First time developing an event based interation.
-- Spearheaded potitioning decomposition initiative to our leadership group.
+  - First time developing an event based workflow.
+- Spearheaded UI decomposition initiative to our leadership group.
   - App deployment was getting bogged down with end-to-end tests. 
   - The Application started managing so many tasks and if any of them failed during deployment, the entire deployment would fail.
   - There were times where we'd lose weeks of deliverables due to these bottlenecks.
@@ -458,11 +458,11 @@ export const ProjectData: ProjectMap = {
   type: FreightQuote
   },
   [`${TMC}`]: <ProjectDataDto>{
-    title: "TMC a Division of C.H. Robinson ",
+    title: "TMC of C.H.Robinson",
     tech: [
       Agile, Angular, CSS3, REST, HTML5, JavaScript, CSharp, VBNet, Microsoft_azure, React, Webpack, Kafka, Sql_server, Xml, Jenkins, Github, Git_bash, Docker, Dot_net_core, Powershell, TypeScript
     ],
-    overview: `TMC offers C.H.Robinsons platform as a service for customers that manage a lot of shipments. These are customers that have their own relationships with carriers and to manage all of their logistics details on a single network.`,
+    overview: `TMC offers C.H.Robinsons platform as a service for customers that manage their own shipment network. These are customers that have their own relationships with carriers and to manage all of their logistics details on a single network.`,
     specifications: ` 
 - Delivered business initiatives across the entire chrobinson system. 
 - Worked with many teams, in many different code bases, with different deployment prototcals and legacy technologies.
@@ -472,7 +472,7 @@ export const ProjectData: ProjectMap = {
 - While in this role C.H. Robinson was going through massive technical changes. Moving away from legacy deployment stratigies and legacy tech.
 - Towards the end of the role the team built a branch in Poland.
   - Mentored and work with engineers in differnt time zones. 
-  - Trained developers in C.H. Robinson systems in Poland.
+  - Traveled to Poload to train developers in C.H. Robinson systems.
 - I worked within TMC for about three years before I tranistioned to [Freightquote by CHR](/portfolio/${FreightQuote}).`,
   keyPoints: [
     'Deliver large initiatives across many products',

@@ -3,6 +3,9 @@ import Image from 'next/image'
 import styles from './page.module.css';
 import { ResumeDetail } from '@/components/resume';
 import { ResumeData } from '@/api/resume';
+import { DownloadResume } from '@/components/download-resume';
+import { Suspense } from 'react';
+import { LoadingSpinner } from '@/common/components/loading-spinner';
 
 export default async function Resume() {
   const {education, experience, extracurricular, summary } =  ResumeData;
@@ -12,7 +15,12 @@ export default async function Resume() {
         <div className={styles.title_container}>
           <span className={styles.title}>Resume</span>
         </div>
-        <div className={styles.detail_container}> 
+        <div className={styles.detail_container}>
+        <div className={styles.download_container}>
+            <Suspense fallback={<LoadingSpinner />}>
+              <DownloadResume />
+            </Suspense>
+          </div>
           <div className={styles.container}>
             <div className={styles.section}>
               <span className={styles.section_title}>Summary</span>
