@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { IconContext } from 'react-icons';
 import { MdArrowBack } from "react-icons/md";
 
+
 interface ProjectProps {
   type: ProjectType;
   title: string;
