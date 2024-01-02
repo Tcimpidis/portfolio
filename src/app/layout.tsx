@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Jamin Tcimpidis',
   description: 'Frontend expert',
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_ORIGIN}`),
 }
 
 export default function RootLayout({
