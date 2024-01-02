@@ -40,7 +40,7 @@ jobs:
             RESEND_API_KEY=${{ secrets.PROD_RESEND_API_KEY }}
             ADMIN_RECIPIENT_EMAIL=${{ secrets.ADMIN_RECIPIENT_EMAIL}}
             ADMIN_MAILTO_EMAIL=${{ secrets.ADMIN_EMAIL}}
-            NEXT_PUBLIC_ORIGIN=https://jamin.tcimpidis.com
+            NEXT_PUBLIC_ORIGIN=https://${{ secrets.HOST_DOMAIN }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
       - name: Deploy package to Server
