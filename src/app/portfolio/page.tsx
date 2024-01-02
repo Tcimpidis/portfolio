@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import styles from './page.module.css';
 import { CompanyData, ProjectData, CompanyType } from '@/api/portfolio';
 import { Company } from '@/components/company';
+import { LoadingSpinner } from '@/common/components/loading-spinner';
 
 export default async function Portfolio() {
   return (
@@ -10,7 +11,7 @@ export default async function Portfolio() {
         <span className={styles.title}>Portfolio</span>
       </div>
       <div className={styles.container}>
-        <Suspense fallback={<span>...loading</span>}  >
+        <Suspense fallback={<LoadingSpinner />}  >
           {Object.keys(CompanyData).map(((key, i) => 
             <Company  companyName={key as CompanyType} companyData={CompanyData} projectData={ProjectData} key={i}/>
           ))}

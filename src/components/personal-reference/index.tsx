@@ -1,3 +1,4 @@
+'use client'
 import { PersonalReference } from "@/api/portfolio"
 import { FC } from "react"
 import Image from 'next/image';

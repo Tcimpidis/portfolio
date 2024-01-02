@@ -1,12 +1,9 @@
-'use client'
-import { FC, useEffect, useState } from 'react';
+import { FC, Suspense } from 'react';
 import styles from './index.module.css';
-import Image from 'next/image';
-import { CompanyMap, CompanyType, PersonalReference, ProjectDataDto, ProjectMap, ProjectType, ToolType } from '@/api/portfolio';
+import { CompanyMap, CompanyType, ProjectMap } from '@/api/portfolio';
 import { PresonalReferences } from '../personal-reference';
 import { ProjectReel } from '../project-reel/';
-import { useRouter } from 'next/navigation';
-import { envRoute } from '@/envUtility';
+import { LoadingSpinner } from '@/common/components/loading-spinner';
 
 interface CompanyProps {
   companyName: CompanyType;
@@ -30,8 +27,14 @@ export const Company: FC<CompanyProps> = ({
       <div className={styles.heading}>{companyName}</div>
       <div className={styles.summary}>{summary}</div>
       <div className={styles.details}>
-        {references &&<PresonalReferences references={references} /> }
-        <ProjectReel projects={projects}/>
+        {references && (
+          <Suspense fallback={<LoadingSpinner />}>
+            <PresonalReferences references={references} />
+          </Suspense>
+        )}
+        <Suspense fallback={<LoadingSpinner />} > 
+          <ProjectReel projects={projects}/>
+        </Suspense>
       </div>
     </div>
   )

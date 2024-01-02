@@ -5,7 +5,6 @@ import { FaBars } from 'react-icons/fa6';
 import { useRouter } from 'next/navigation';
 
 import styles from './index.module.css'
-import { envRoute } from '@/envUtility';
 import { useComponentVisible } from '@/common/hooks/useComponentVisible';
 
 const Header = () => {
@@ -40,7 +39,7 @@ const Header = () => {
       <header className={styles.header}>
         <div className={styles.logo_container}> 
           <button className={styles.logo} onClick={redirectToHome}>
-            <Image alt="header" height={50} src={`${envRoute}/assets/tci_logo.svg`} width={260} />
+            <Image alt="header" height={50} src={'/assets/tci_logo.svg'} width={260} />
           </button>
         </div>
         <div className={styles.link_box}>
