@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .4rem;
+  border: 1px solid var(--tcimpidis-smiling-diamond);
+  border-radius: var(--tcimpidis-input-border-radius);
+  color:  var(--tcimpidis-smiling-diamond);
+  padding: .3rem 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.icon {
+  color:  var(--tcimpidis-smiling-diamond);
+}

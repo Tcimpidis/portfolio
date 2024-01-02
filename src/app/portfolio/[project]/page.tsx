@@ -1,4 +1,4 @@
-import { ProjectData, ProjectType } from "@/api/portfolio"
+import { CompanyData, CompanyType, ProjectData, ProjectType } from "@/api/portfolio"
 import { Project } from "@/components/project";
 import styles from './page.module.css';
 import { Suspense } from "react";
@@ -15,11 +15,13 @@ export default function Page({ params }: { params: { project: string } }) {
       takeaways,
       importantUrls
     } = ProjectData[projectName as ProjectType];
+  const productCompany = Object.keys(CompanyData).find((key) => CompanyData[key as CompanyType].projects.find((value) => value === projectName as ProjectType));
   
   return  (
     <div className={styles.container}>
       <Suspense fallback={<LoadingSpinner />}>
-        <Project  
+        <Project
+          company={productCompany}
           importantUrls={importantUrls}
           overview={overview}
           specifications={specifications}
