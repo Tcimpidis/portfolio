@@ -1,8 +1,9 @@
 "use client"
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, useMemo, useState } from "react";
 import { useForm, Resolver, FieldErrors, FieldError, UseFormRegister, Path } from 'react-hook-form';
 import styles from './index.module.css';
 import { Button } from "@/common/components/button";
+import { LoadingSpinner } from "@/common/components/loading-spinner";
 
 interface ContactForm {
   firstName: string;
@@ -89,10 +90,17 @@ const ContactInput: FC<ContactInputProps> = ({
     </div>
   )
 }
-export const Contact = () => {
+export const Contact: FC = () => {
+  const [isSendingEmail, setIsSendingEmail] = useState<boolean>(false);
   const {register, handleSubmit, reset, formState: {isValid, errors }} = useForm<ContactForm>({
     mode: "onChange",
-    defaultValues: {},
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      message: ''
+    },
     resolver: contactValidationResolver
   });
 
@@ -103,6 +111,7 @@ export const Contact = () => {
     subject,
     message,
   }) => {
+    setIsSendingEmail(true);
     await fetch(`/api`, {
       method: "post",
       body: JSON.stringify({
@@ -112,7 +121,14 @@ export const Contact = () => {
         fullname:`${firstName} ${lastName}`})
     });
     reset();
+    setIsSendingEmail(false);
   });
+
+  if(isSendingEmail) {
+    return (<div className={styles.loading_container }>
+ <LoadingSpinner />
+    </div>)
+  }
   return (
     <div className={styles.container}>
       <div className={styles.name_box}> 
