@@ -7,21 +7,30 @@ import { ToolType } from '@/api/portfolio';
 
 interface ToolProps {
   name: ToolType;
-  onClick: (name: ToolType) => void; 
+  onClick: (name: ToolType | undefined) => void; 
+  onHover: (name: ToolType | undefined) => void;
+  selectedTool: ToolType | undefined
 }
 
-export const Tool: FC<ToolProps> = ({name, onClick}) => {
+export const Tool: FC<ToolProps> = ({name, onClick, onHover, selectedTool}) => {
   const handleOnClick = useCallback(() => {
     onClick(name);
   }, [name, onClick]);
 
+  const onMouseEnter = useCallback(() => {
+    onHover(name);
+  }, [name, onHover]);
+
+  const isSelected = selectedTool === name;
+  const selectedStyle = isSelected ? styles.selected : '';
   return (
     <div 
-      className={styles.item}
+      className={`${styles.item} ${selectedStyle}`}
       >
       <button 
         className={styles.item_button}
         onClick={handleOnClick}
+        onMouseEnter={onMouseEnter}
         >
         <Image 
           alt={name}

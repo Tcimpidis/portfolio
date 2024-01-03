@@ -18,18 +18,29 @@ export const ToolList: FC<ToolListProps> = ({
   const { width } = useWindowSize();
   const tool = searchParams.get('tool')
   const [focusedTool, setFocusedTool] = useState<ToolType| undefined>(tool as ToolType || 'react');
+  const [selectedTool, setSelectedTool] = useState<ToolType| undefined>(tool as ToolType);
 
   useEffect(() => {
     if(tool) {
       setFocusedTool(tool as ToolType);
     }
-  },[tool])
+  },[tool]);
+
+  const handleSelectedTool = (tool: ToolType | undefined) => {
+    if(selectedTool && selectedTool === tool) {
+      setSelectedTool(undefined)
+    } else {
+      setSelectedTool(tool);
+    }
+  }
 
   const focusedDetails = useMemo(() => {
-    if(focusedTool) {
+    if(!selectedTool && focusedTool) {
       return { ...toolData[focusedTool] } 
+    } else if (selectedTool) {
+      return { ...toolData[selectedTool] } 
     }
-  }, [focusedTool, toolData]);
+  }, [focusedTool, selectedTool, toolData]);
 
   const toolList: ToolType[] = Object.keys(toolData).map(key => key as ToolType);
 
@@ -40,8 +51,11 @@ export const ToolList: FC<ToolListProps> = ({
         <div className={styles.icon_box}> 
           {toolList.map((tool, i) => <Tool 
             name={tool}
-            onClick={setFocusedTool}
-            key={i} />)}
+            onClick={handleSelectedTool}
+            onHover={setFocusedTool}
+            key={i} 
+            selectedTool={selectedTool}
+            />)}
         </div>
         <div className={styles.detail_box}> 
           {focusedDetails && focusedTool && 
@@ -73,8 +87,10 @@ export const ToolList: FC<ToolListProps> = ({
         <div className={styles.icon_box}> 
           {toolList.map((tool, i) => <Tool 
             name={tool}
-            onClick={setFocusedTool}
-            key={i} />)}
+            onClick={handleSelectedTool}
+            onHover={setFocusedTool}
+            key={i}
+            selectedTool={selectedTool} />)}
         </div>
       </div>
     )
