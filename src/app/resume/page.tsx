@@ -16,7 +16,7 @@ export default async function Resume() {
           <span className={styles.title}>Resume</span>
         </div>
         <div className={styles.detail_container}>
-        <div className={styles.download_container}>
+          <div className={styles.download_container}>
             <Suspense fallback={<LoadingSpinner />}>
               <DownloadResume />
             </Suspense>
