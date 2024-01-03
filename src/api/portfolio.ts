@@ -991,7 +991,7 @@ export const ToolData : ToolMap = {
       summary:`
 - Used react extensively building complex ecosystems. 
 - Well versed in react context state vs app state.
-- React class components and lifecycle compoents. 
+- React class components and lifecycle components. 
 - Fetching data asynchronously.
 - React hooks, custom hooks, conditonal rendering, complex routing strategies, server components, fetch (react 18), suspense and useTransition. 
       `,
