@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
 
-valid_branch_regex="^(bug|feature)\/(\d{1,7})(\-{1}[\w\-]{1,})?"
+valid_branch_regex="^(bug|feature)\/(\-{1}[\w\-]{1,})?"
 
 task_id_in_branch=$(echo $(git rev-parse --abbrev-ref HEAD) | grep -o -E "$valid_branch_regex")
 
