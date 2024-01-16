@@ -1,0 +1,1 @@
+export const ToolProficiency = () => "ToolProficiency";

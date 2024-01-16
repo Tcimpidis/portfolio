@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResumeDetail snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="header"
+    >
+      <span
+        class="entity"
+      >
+        Concordia University
+      </span>
+      <span
+        class="location"
+      >
+        St Paul, MN
+      </span>
+    </div>
+    <div
+      class="header"
+    >
+      <span
+        class="title"
+      >
+        CERTIFICATE IN SOFTWARE DEVELOPMENT
+      </span>
+      <span
+        class="duration"
+      />
+    </div>
+    <ul
+      class="detail"
+    >
+      <li>
+        Hands-on software developer apprenticeship with full-stack experience.
+      </li>
+      <li>
+        C# language fundamentals: variable declaration, looping constructs, conditional statements, class modeling, exception handling, LINQ Queries, unit testing and n-Tier application structure
+      </li>
+      <li>
+        Web development fundamentals: ASP.Net MVC5, HTML5, CSS3, JavaScript, jQuery and AngularJS
+      </li>
+      <li>
+        Database fundamentals: SQL server 2014, T-SQL query writing, stored procedures, data modeling and table creation
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

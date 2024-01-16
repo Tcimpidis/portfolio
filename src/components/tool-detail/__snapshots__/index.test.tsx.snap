@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolDetail snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="display_container"
+    >
+      <span
+        class="display_name"
+      >
+        React
+      </span>
+      <div>
+        <div
+          class="expert_container"
+        >
+          <span
+            class="expert"
+          >
+            expert
+          </span>
+          <svg
+            class="expert"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+    >
+      <label
+        class="label"
+      >
+        Years:
+      </label>
+      <div
+        class="text"
+      >
+        <span>
+          + 6
+        </span>
+      </div>
+    </div>
+    <div
+      class="item"
+    >
+      <label
+        class="label"
+      >
+        Projects:
+      </label>
+      <div
+        class="project_text"
+      >
+        <a
+          class="project_link"
+          href="/portfolio/getos1_signup"
+        >
+          Customer Sign-up UI
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/marketplace_ui"
+        >
+          Marketplace UI
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/organization_ui"
+        >
+          Organization UI
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/developer_portal"
+        >
+          Developer Portal UI
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/console_ui"
+        >
+          Console UI
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/freightquote_by_chr"
+        >
+          FreightQuote by CHR
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/tmc"
+        >
+          TMC of C.H.Robinson
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/jamin.tcimpidis.com"
+        >
+          jamin.tcimpidis.com
+        </a>
+        <a
+          class="project_link"
+          href="/portfolio/personal"
+        >
+          Personal projects
+        </a>
+      </div>
+    </div>
+    <div
+      class="summary"
+    >
+      <div
+        class="summary_label"
+      >
+        <label
+          class="label"
+        >
+          Summary:
+        </label>
+      </div>
+      <div>
+        
+- Used react extensively building complex ecosystems. 
+- Well versed in react context state vs app state.
+- React class components and lifecycle components. 
+- Fetching data asynchronously.
+- React hooks, custom hooks, conditonal rendering, complex routing strategies, server components, fetch (react 18), suspense and useTransition. 
+      
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

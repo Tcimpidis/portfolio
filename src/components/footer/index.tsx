@@ -1,72 +1,73 @@
-'use client'
-import Image from 'next/image';
-import { Contact } from '../contact';
-import styles from './index.module.css';
-import Link from 'next/link';
-import { FC } from 'react';
-import { WindowSize, useWindowSize } from '@/common/hooks/useWindowSize'
+"use client";
+import { WindowSize } from "@/common/hooks/types";
+import { useWindowSize } from "@/common/hooks/useWindowSize";
+import Image from "next/image";
+import Link from "next/link";
+import { FC } from "react";
+import { Contact } from "../contact";
+import styles from "./index.module.css";
 
 export const Footer = () => {
   const { width } = useWindowSize();
 
   const renderDetail = () => {
-    if(width) {
-     return (
-      <div className={styles.detail}>
-        <div className={styles.summary_box}>
-          <Image 
-            alt='jamin_dapper'
-            height={200}
-            src={'/assets/dapper.jpeg'}
-            width={180}
-          />
-          {renderSummary()}
+    if (width) {
+      return (
+        <div className={styles.detail}>
+          <div className={styles.summary_box}>
+            <Image
+              alt="jamin_dapper"
+              height={200}
+              src={"/assets/dapper.jpeg"}
+              width={180}
+            />
+            {renderSummary()}
+          </div>
+          {width >= WindowSize.XL && <SocialBox />}
         </div>
-        {width >= WindowSize.XL && <SocialBox /> }
-      </div>
-     )
+      );
     }
     return (
       <div className={styles.detail}>
         <div className={styles.summary_box}>
-          <Image 
-            alt='jamin_dapper'
+          <Image
+            alt="jamin_dapper"
             height={200}
-            src={'/assets/dapper.jpeg'}
+            src={"/assets/dapper.jpeg"}
             width={180}
           />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   const renderSummary = () => {
-    if(width) { 
+    if (width) {
       return (
         <div className={styles.summary}>
-          { width > WindowSize.MD && <Summary /> }
-          { width < WindowSize.XL && <SocialBox /> }
+          {width > WindowSize.MD && <Summary />}
+          {width < WindowSize.XL && <SocialBox />}
         </div>
-      )
-    } 
+      );
+    }
     return null;
-  }
+  };
 
   const renderContact = () => {
-    if(width) {
+    if (width) {
       return (
         <>
           {width <= WindowSize.MD && (
             <div className={styles.summary}>
-              <Summary /> 
+              <Summary />
             </div>
-          ) }
+          )}
           <Contact />
         </>
-      )
+      );
     }
-    return <Contact />
-  }
+    return <Contact />;
+  };
 
   return (
     <div>
@@ -75,36 +76,37 @@ export const Footer = () => {
         {renderContact()}
       </div>
       <div className={styles.copywrite}>
-          <span>&copy; 2023-2024 Jamin Tcimpidis. All Rights Reserved.</span>
+        <span>&copy; 2023-2024 Jamin Tcimpidis. All Rights Reserved.</span>
       </div>
     </div>
-
-  )
-}
+  );
+};
 
 const SocialBox: FC = () => (
   <div className={styles.social_box}>
     <Link href="https://www.linkedin.com/in/jamintcimpidis/" target="_blank">
-      <Image 
-        alt='jamin_linkedIn'
+      <Image
+        alt="jamin_linkedIn"
         height={40}
-        src={'/assets/LinkedIn.svg'}
+        src={"/assets/LinkedIn.svg"}
         width={40}
       />
     </Link>
     <Link href="https://github.com/Tcimpidis/" target="_blank">
-      <Image 
-          alt='jamin_linkedIn'
-          height={40}
-          src={'/tools/github.svg'}
-          width={40}
-        />
+      <Image
+        alt="jamin_linkedIn"
+        height={40}
+        src={"/tools/github.svg"}
+        width={40}
+      />
     </Link>
   </div>
-)
+);
 
 const Summary: FC = () => (
   <span>
-    I&apos;m an full stack developer who specializes in secure, responsive and scalable frontends. Interested in seeing how I can help you? Let&apos;s talk!
+    I&apos;m an full stack developer who specializes in secure, responsive and
+    scalable frontends. Interested in seeing how I can help you? Let&apos;s
+    talk!
   </span>
-)
+);
