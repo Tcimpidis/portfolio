@@ -1,0 +1,3529 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolList snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="heading"
+    >
+      Tools/Skills
+    </div>
+    <div
+      class="toolbox"
+    >
+      <div
+        class="detail_box"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="display_container"
+          >
+            <span
+              class="display_name"
+            >
+              React
+            </span>
+            <div>
+              <div
+                class="expert_container"
+              >
+                <span
+                  class="expert"
+                >
+                  expert
+                </span>
+                <svg
+                  class="expert"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <label
+              class="label"
+            >
+              Years:
+            </label>
+            <div
+              class="text"
+            >
+              <span>
+                + 6
+              </span>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <label
+              class="label"
+            >
+              Projects:
+            </label>
+            <div
+              class="project_text"
+            >
+              <a
+                class="project_link"
+                href="/portfolio/getos1_signup"
+              >
+                Customer Sign-up UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/marketplace_ui"
+              >
+                Marketplace UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/organization_ui"
+              >
+                Organization UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/developer_portal"
+              >
+                Developer Portal UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/console_ui"
+              >
+                Console UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/freightquote_by_chr"
+              >
+                FreightQuote by CHR
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/tmc"
+              >
+                TMC of C.H.Robinson
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/jamin.tcimpidis.com"
+              >
+                jamin.tcimpidis.com
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/personal"
+              >
+                Personal projects
+              </a>
+            </div>
+          </div>
+          <div
+            class="summary"
+          >
+            <div
+              class="summary_label"
+            >
+              <label
+                class="label"
+              >
+                Summary:
+              </label>
+            </div>
+            <div>
+              
+- Used react extensively building complex ecosystems. 
+- Well versed in react context state vs app state.
+- React class components and lifecycle components. 
+- Fetching data asynchronously.
+- React hooks, custom hooks, conditonal rendering, complex routing strategies, server components, fetch (react 18), suspense and useTransition. 
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="icon_box"
+      >
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="agile_icon_button"
+          >
+            <img
+              alt="agile"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/agile.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="angular_icon_button"
+          >
+            <img
+              alt="angular"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/angular.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="apache_icon_button"
+          >
+            <img
+              alt="apache"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/apache.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="aws-cloudfront_icon_button"
+          >
+            <img
+              alt="aws-cloudfront"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/aws-cloudfront.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="azure-devops_icon_button"
+          >
+            <img
+              alt="azure-devops"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/azure-devops.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSharp_icon_button"
+          >
+            <img
+              alt="CSharp"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/csharp.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSS-Modules_icon_button"
+          >
+            <img
+              alt="CSS-Modules"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/css-modules.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSS3_icon_button"
+          >
+            <img
+              alt="CSS3"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/css3.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Docker_icon_button"
+          >
+            <img
+              alt="Docker"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/docker.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="dot-net-core_icon_button"
+          >
+            <img
+              alt="dot-net-core"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/dot-net-core.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="figma_icon_button"
+          >
+            <img
+              alt="figma"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/figma.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="git-bash_icon_button"
+          >
+            <img
+              alt="git-bash"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/git-bash.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="github_icon_button"
+          >
+            <img
+              alt="github"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/github.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="google-analytics_icon_button"
+          >
+            <img
+              alt="google-analytics"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/google-analytics.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="HTML5_icon_button"
+          >
+            <img
+              alt="HTML5"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/html5.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="JavaScript_icon_button"
+          >
+            <img
+              alt="JavaScript"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/javascript.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Jenkins_icon_button"
+          >
+            <img
+              alt="Jenkins"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/jenkins.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Jest_icon_button"
+          >
+            <img
+              alt="Jest"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/jest.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="kafka_icon_button"
+          >
+            <img
+              alt="kafka"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/kafka.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="kubernetes_icon_button"
+          >
+            <img
+              alt="kubernetes"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/kubernetes.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="launchdarkly_icon_button"
+          >
+            <img
+              alt="launchdarkly"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/launchdarkly.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="lerna_icon_button"
+          >
+            <img
+              alt="lerna"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/lerna.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="linux_icon_button"
+          >
+            <img
+              alt="linux"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/linux.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="microsoft-azure_icon_button"
+          >
+            <img
+              alt="microsoft-azure"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/microsoft-azure.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="mongodb_icon_button"
+          >
+            <img
+              alt="mongodb"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/mongodb.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Next-js_icon_button"
+          >
+            <img
+              alt="Next-js"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/next-js.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="node-js_icon_button"
+          >
+            <img
+              alt="node-js"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/node-js.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="NPM_icon_button"
+          >
+            <img
+              alt="NPM"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/npm.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="oauth_icon_button"
+          >
+            <img
+              alt="oauth"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/oauth.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="OWASP_icon_button"
+          >
+            <img
+              alt="OWASP"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/owasp.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="platform_ui_icon_button"
+          >
+            <img
+              alt="platform_ui"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/platform_ui.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="powershell_icon_button"
+          >
+            <img
+              alt="powershell"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/powershell.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="protractor_icon_button"
+          >
+            <img
+              alt="protractor"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/protractor.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-hook-form_icon_button"
+          >
+            <img
+              alt="react-hook-form"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-hook-form.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-query_icon_button"
+          >
+            <img
+              alt="react-query"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-query.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-testing-library_icon_button"
+          >
+            <img
+              alt="react-testing-library"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-testing-library.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react_icon_button"
+          >
+            <img
+              alt="react"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="redux_icon_button"
+          >
+            <img
+              alt="redux"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/redux.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="REST_icon_button"
+          >
+            <img
+              alt="REST"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/rest.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="rollupjs_icon_button"
+          >
+            <img
+              alt="rollupjs"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/rollupjs.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="S3_icon_button"
+          >
+            <img
+              alt="S3"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/s3.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="sass_icon_button"
+          >
+            <img
+              alt="sass"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/sass.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="storybook_icon_button"
+          >
+            <img
+              alt="storybook"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/storybook.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="sql-server_icon_button"
+          >
+            <img
+              alt="sql-server"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/sql-server.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="tailwindcss_icon_button"
+          >
+            <img
+              alt="tailwindcss"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/tailwindcss.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="terraform_icon_button"
+          >
+            <img
+              alt="terraform"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/terraform.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="TypeScript_icon_button"
+          >
+            <img
+              alt="TypeScript"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/typescript.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="ubuntu_icon_button"
+          >
+            <img
+              alt="ubuntu"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/ubuntu.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="VBNet_icon_button"
+          >
+            <img
+              alt="VBNet"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/vbnet.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Web-Performance_icon_button"
+          >
+            <img
+              alt="Web-Performance"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/web-performance.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="webpack_icon_button"
+          >
+            <img
+              alt="webpack"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/webpack.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="xml_icon_button"
+          >
+            <img
+              alt="xml"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/xml.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="yaml_icon_button"
+          >
+            <img
+              alt="yaml"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/yaml.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ToolList snapshot use windowsize is large 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="heading"
+    >
+      Tools/Skills
+    </div>
+    <div
+      class="toolbox"
+    >
+      <div
+        class="icon_box"
+      >
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="agile_icon_button"
+          >
+            <img
+              alt="agile"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/agile.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="angular_icon_button"
+          >
+            <img
+              alt="angular"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/angular.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="apache_icon_button"
+          >
+            <img
+              alt="apache"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/apache.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="aws-cloudfront_icon_button"
+          >
+            <img
+              alt="aws-cloudfront"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/aws-cloudfront.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="azure-devops_icon_button"
+          >
+            <img
+              alt="azure-devops"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/azure-devops.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSharp_icon_button"
+          >
+            <img
+              alt="CSharp"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/csharp.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSS-Modules_icon_button"
+          >
+            <img
+              alt="CSS-Modules"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/css-modules.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSS3_icon_button"
+          >
+            <img
+              alt="CSS3"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/css3.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Docker_icon_button"
+          >
+            <img
+              alt="Docker"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/docker.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="dot-net-core_icon_button"
+          >
+            <img
+              alt="dot-net-core"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/dot-net-core.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="figma_icon_button"
+          >
+            <img
+              alt="figma"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/figma.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="git-bash_icon_button"
+          >
+            <img
+              alt="git-bash"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/git-bash.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="github_icon_button"
+          >
+            <img
+              alt="github"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/github.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="google-analytics_icon_button"
+          >
+            <img
+              alt="google-analytics"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/google-analytics.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="HTML5_icon_button"
+          >
+            <img
+              alt="HTML5"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/html5.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="JavaScript_icon_button"
+          >
+            <img
+              alt="JavaScript"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/javascript.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Jenkins_icon_button"
+          >
+            <img
+              alt="Jenkins"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/jenkins.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Jest_icon_button"
+          >
+            <img
+              alt="Jest"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/jest.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="kafka_icon_button"
+          >
+            <img
+              alt="kafka"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/kafka.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="kubernetes_icon_button"
+          >
+            <img
+              alt="kubernetes"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/kubernetes.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="launchdarkly_icon_button"
+          >
+            <img
+              alt="launchdarkly"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/launchdarkly.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="lerna_icon_button"
+          >
+            <img
+              alt="lerna"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/lerna.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="linux_icon_button"
+          >
+            <img
+              alt="linux"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/linux.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="microsoft-azure_icon_button"
+          >
+            <img
+              alt="microsoft-azure"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/microsoft-azure.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="mongodb_icon_button"
+          >
+            <img
+              alt="mongodb"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/mongodb.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Next-js_icon_button"
+          >
+            <img
+              alt="Next-js"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/next-js.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="node-js_icon_button"
+          >
+            <img
+              alt="node-js"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/node-js.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="NPM_icon_button"
+          >
+            <img
+              alt="NPM"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/npm.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="oauth_icon_button"
+          >
+            <img
+              alt="oauth"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/oauth.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="OWASP_icon_button"
+          >
+            <img
+              alt="OWASP"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/owasp.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="platform_ui_icon_button"
+          >
+            <img
+              alt="platform_ui"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/platform_ui.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="powershell_icon_button"
+          >
+            <img
+              alt="powershell"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/powershell.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="protractor_icon_button"
+          >
+            <img
+              alt="protractor"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/protractor.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-hook-form_icon_button"
+          >
+            <img
+              alt="react-hook-form"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-hook-form.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-query_icon_button"
+          >
+            <img
+              alt="react-query"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-query.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-testing-library_icon_button"
+          >
+            <img
+              alt="react-testing-library"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-testing-library.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react_icon_button"
+          >
+            <img
+              alt="react"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="redux_icon_button"
+          >
+            <img
+              alt="redux"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/redux.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="REST_icon_button"
+          >
+            <img
+              alt="REST"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/rest.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="rollupjs_icon_button"
+          >
+            <img
+              alt="rollupjs"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/rollupjs.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="S3_icon_button"
+          >
+            <img
+              alt="S3"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/s3.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="sass_icon_button"
+          >
+            <img
+              alt="sass"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/sass.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="storybook_icon_button"
+          >
+            <img
+              alt="storybook"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/storybook.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="sql-server_icon_button"
+          >
+            <img
+              alt="sql-server"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/sql-server.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="tailwindcss_icon_button"
+          >
+            <img
+              alt="tailwindcss"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/tailwindcss.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="terraform_icon_button"
+          >
+            <img
+              alt="terraform"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/terraform.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="TypeScript_icon_button"
+          >
+            <img
+              alt="TypeScript"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/typescript.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="ubuntu_icon_button"
+          >
+            <img
+              alt="ubuntu"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/ubuntu.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="VBNet_icon_button"
+          >
+            <img
+              alt="VBNet"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/vbnet.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Web-Performance_icon_button"
+          >
+            <img
+              alt="Web-Performance"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/web-performance.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="webpack_icon_button"
+          >
+            <img
+              alt="webpack"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/webpack.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="xml_icon_button"
+          >
+            <img
+              alt="xml"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/xml.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="yaml_icon_button"
+          >
+            <img
+              alt="yaml"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/yaml.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="detail_box"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="display_container"
+          >
+            <span
+              class="display_name"
+            >
+              React
+            </span>
+            <div>
+              <div
+                class="expert_container"
+              >
+                <span
+                  class="expert"
+                >
+                  expert
+                </span>
+                <svg
+                  class="expert"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <label
+              class="label"
+            >
+              Years:
+            </label>
+            <div
+              class="text"
+            >
+              <span>
+                + 6
+              </span>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <label
+              class="label"
+            >
+              Projects:
+            </label>
+            <div
+              class="project_text"
+            >
+              <a
+                class="project_link"
+                href="/portfolio/getos1_signup"
+              >
+                Customer Sign-up UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/marketplace_ui"
+              >
+                Marketplace UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/organization_ui"
+              >
+                Organization UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/developer_portal"
+              >
+                Developer Portal UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/console_ui"
+              >
+                Console UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/freightquote_by_chr"
+              >
+                FreightQuote by CHR
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/tmc"
+              >
+                TMC of C.H.Robinson
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/jamin.tcimpidis.com"
+              >
+                jamin.tcimpidis.com
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/personal"
+              >
+                Personal projects
+              </a>
+            </div>
+          </div>
+          <div
+            class="summary"
+          >
+            <div
+              class="summary_label"
+            >
+              <label
+                class="label"
+              >
+                Summary:
+              </label>
+            </div>
+            <div>
+              
+- Used react extensively building complex ecosystems. 
+- Well versed in react context state vs app state.
+- React class components and lifecycle components. 
+- Fetching data asynchronously.
+- React hooks, custom hooks, conditonal rendering, complex routing strategies, server components, fetch (react 18), suspense and useTransition. 
+      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ToolList snapshot with URL params 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="heading"
+    >
+      Tools/Skills
+    </div>
+    <div
+      class="toolbox"
+    >
+      <div
+        class="detail_box"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="display_container"
+          >
+            <span
+              class="display_name"
+            >
+              React
+            </span>
+            <div>
+              <div
+                class="expert_container"
+              >
+                <span
+                  class="expert"
+                >
+                  expert
+                </span>
+                <svg
+                  class="expert"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <label
+              class="label"
+            >
+              Years:
+            </label>
+            <div
+              class="text"
+            >
+              <span>
+                + 6
+              </span>
+            </div>
+          </div>
+          <div
+            class="item"
+          >
+            <label
+              class="label"
+            >
+              Projects:
+            </label>
+            <div
+              class="project_text"
+            >
+              <a
+                class="project_link"
+                href="/portfolio/getos1_signup"
+              >
+                Customer Sign-up UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/marketplace_ui"
+              >
+                Marketplace UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/organization_ui"
+              >
+                Organization UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/developer_portal"
+              >
+                Developer Portal UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/console_ui"
+              >
+                Console UI
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/freightquote_by_chr"
+              >
+                FreightQuote by CHR
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/tmc"
+              >
+                TMC of C.H.Robinson
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/jamin.tcimpidis.com"
+              >
+                jamin.tcimpidis.com
+              </a>
+              <a
+                class="project_link"
+                href="/portfolio/personal"
+              >
+                Personal projects
+              </a>
+            </div>
+          </div>
+          <div
+            class="summary"
+          >
+            <div
+              class="summary_label"
+            >
+              <label
+                class="label"
+              >
+                Summary:
+              </label>
+            </div>
+            <div>
+              
+- Used react extensively building complex ecosystems. 
+- Well versed in react context state vs app state.
+- React class components and lifecycle components. 
+- Fetching data asynchronously.
+- React hooks, custom hooks, conditonal rendering, complex routing strategies, server components, fetch (react 18), suspense and useTransition. 
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="icon_box"
+      >
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="agile_icon_button"
+          >
+            <img
+              alt="agile"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/agile.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="angular_icon_button"
+          >
+            <img
+              alt="angular"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/angular.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="apache_icon_button"
+          >
+            <img
+              alt="apache"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/apache.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="aws-cloudfront_icon_button"
+          >
+            <img
+              alt="aws-cloudfront"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/aws-cloudfront.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="azure-devops_icon_button"
+          >
+            <img
+              alt="azure-devops"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/azure-devops.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSharp_icon_button"
+          >
+            <img
+              alt="CSharp"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/csharp.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSS-Modules_icon_button"
+          >
+            <img
+              alt="CSS-Modules"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/css-modules.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="CSS3_icon_button"
+          >
+            <img
+              alt="CSS3"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/css3.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Docker_icon_button"
+          >
+            <img
+              alt="Docker"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/docker.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="dot-net-core_icon_button"
+          >
+            <img
+              alt="dot-net-core"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/dot-net-core.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="figma_icon_button"
+          >
+            <img
+              alt="figma"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/figma.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="git-bash_icon_button"
+          >
+            <img
+              alt="git-bash"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/git-bash.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="github_icon_button"
+          >
+            <img
+              alt="github"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/github.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="google-analytics_icon_button"
+          >
+            <img
+              alt="google-analytics"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/google-analytics.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="HTML5_icon_button"
+          >
+            <img
+              alt="HTML5"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/html5.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="JavaScript_icon_button"
+          >
+            <img
+              alt="JavaScript"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/javascript.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Jenkins_icon_button"
+          >
+            <img
+              alt="Jenkins"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/jenkins.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Jest_icon_button"
+          >
+            <img
+              alt="Jest"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/jest.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="kafka_icon_button"
+          >
+            <img
+              alt="kafka"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/kafka.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="kubernetes_icon_button"
+          >
+            <img
+              alt="kubernetes"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/kubernetes.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="launchdarkly_icon_button"
+          >
+            <img
+              alt="launchdarkly"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/launchdarkly.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="lerna_icon_button"
+          >
+            <img
+              alt="lerna"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/lerna.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="linux_icon_button"
+          >
+            <img
+              alt="linux"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/linux.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="microsoft-azure_icon_button"
+          >
+            <img
+              alt="microsoft-azure"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/microsoft-azure.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="mongodb_icon_button"
+          >
+            <img
+              alt="mongodb"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/mongodb.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Next-js_icon_button"
+          >
+            <img
+              alt="Next-js"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/next-js.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="node-js_icon_button"
+          >
+            <img
+              alt="node-js"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/node-js.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="NPM_icon_button"
+          >
+            <img
+              alt="NPM"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/npm.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="oauth_icon_button"
+          >
+            <img
+              alt="oauth"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/oauth.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="OWASP_icon_button"
+          >
+            <img
+              alt="OWASP"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/owasp.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="platform_ui_icon_button"
+          >
+            <img
+              alt="platform_ui"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/platform_ui.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="powershell_icon_button"
+          >
+            <img
+              alt="powershell"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/powershell.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="protractor_icon_button"
+          >
+            <img
+              alt="protractor"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/protractor.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-hook-form_icon_button"
+          >
+            <img
+              alt="react-hook-form"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-hook-form.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-query_icon_button"
+          >
+            <img
+              alt="react-query"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-query.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react-testing-library_icon_button"
+          >
+            <img
+              alt="react-testing-library"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react-testing-library.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="react_icon_button"
+          >
+            <img
+              alt="react"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/react.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="redux_icon_button"
+          >
+            <img
+              alt="redux"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/redux.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="REST_icon_button"
+          >
+            <img
+              alt="REST"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/rest.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="rollupjs_icon_button"
+          >
+            <img
+              alt="rollupjs"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/rollupjs.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="S3_icon_button"
+          >
+            <img
+              alt="S3"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/s3.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="sass_icon_button"
+          >
+            <img
+              alt="sass"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/sass.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="storybook_icon_button"
+          >
+            <img
+              alt="storybook"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/storybook.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="sql-server_icon_button"
+          >
+            <img
+              alt="sql-server"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/sql-server.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="tailwindcss_icon_button"
+          >
+            <img
+              alt="tailwindcss"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/tailwindcss.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="terraform_icon_button"
+          >
+            <img
+              alt="terraform"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/terraform.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="TypeScript_icon_button"
+          >
+            <img
+              alt="TypeScript"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/typescript.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="ubuntu_icon_button"
+          >
+            <img
+              alt="ubuntu"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/ubuntu.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="VBNet_icon_button"
+          >
+            <img
+              alt="VBNet"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/vbnet.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="Web-Performance_icon_button"
+          >
+            <img
+              alt="Web-Performance"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/web-performance.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="webpack_icon_button"
+          >
+            <img
+              alt="webpack"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/webpack.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="xml_icon_button"
+          >
+            <img
+              alt="xml"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/xml.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+        <div
+          class="item "
+        >
+          <button
+            class="item_button"
+            data-testid="yaml_icon_button"
+          >
+            <img
+              alt="yaml"
+              data-nimg="1"
+              decoding="async"
+              height="32"
+              loading="lazy"
+              src="/tools/yaml.svg"
+              style="color: transparent;"
+              width="32"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

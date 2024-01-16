@@ -36,7 +36,6 @@ jobs:
           context: ./
           push: true
           build-args: |
-            NEXT_PUBLIC_NODE_ENV=production
             RESEND_API_KEY=${{ secrets.PROD_RESEND_API_KEY }}
             ADMIN_RECIPIENT_EMAIL=${{ secrets.ADMIN_RECIPIENT_EMAIL}}
             ADMIN_MAILTO_EMAIL=${{ secrets.ADMIN_EMAIL}}
