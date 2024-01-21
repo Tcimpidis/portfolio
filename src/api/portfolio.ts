@@ -238,7 +238,7 @@ export const CompanyData: CompanyMap = {
   [`${Delhivery}`]: <CompanyDataDto>{
     projects: [CustomerSignUpUI, MarketplaceUI, DeveloperPortal, ConsoleUI],
     summary:
-      "Delhivery was the first job where I had to make technical desicions without guidance. I was the sole UI designer, developer, and architect for the commercialization branch of their SaaS product: Getos1. Tasked with creating an ecosystem that would allow for common login and UX across multiple applications. I created an internal framework of two libraries. One for core functionial features. Such as Http interceptors, Oauth wrappers, and base contexts/providers. The other for common reuseable styles and components, from complex components like a generic payment widget, to simple components like common buttons and inputs. These libraries were used in four different websites hosted in the os1 domain. In the framework I built, there was provisioning for managing micro-frontends across the shared domain. Which is utilized by two apps in the domain. The frameworked worked for the product, though a little tedious to maintain given the scope. The feedback I received from managers, colueges, and the product team was generally positive.",
+      "Delhivery was the first job where I had to make technical desicions without guidance. Leading a team of 3, I was the UI designer, and UI architect for the commercialization branch of their SaaS product: Getos1. asked with creating an ecosystem that would allow for common login and UX across multiple applications. I created an internal framework of two libraries. One for core functionial features. Such as Http interceptors, Oauth wrappers, and base contexts/providers. The other for common reuseable styles and components, from complex components like a generic payment widget, to simple components like common buttons and inputs. These libraries were used in four different websites hosted in the os1 domain. In the framework I built, there was provisioning for managing micro-frontends across the shared domain. Which is utilized by two apps in the domain.",
     references: [
       {
         name: "Derek Gordon",
@@ -599,21 +599,26 @@ export const ProjectData: ProjectMap = {
       Xml,
     ],
     overview: `FreightQuote by CHR delivers it's vast carrier network to infrequent shippers. Offering free instant quotes on shipments. Users who want to create an order can go through an easy sign up process and start shipping.`,
-    specifications: `
-- Greenfield project. Started just as it went live and hadn't captured more than 10 orders.
+    specifications: `.
 - Built in the newest C.H. Robinson technologies: 
   - React frontend.
   - Servicestack .net core gateways, microservicees, and kafka producers/consumers.
   - full devops pipeline with unit and e2e quality gates.
-- Had to work across functional domains to delivery FreightQuote business needs.`,
+- Scope included functional domains to outside of FreightQuote's web domain.
+`,
     takeaways: `
-- Most notably a B2B integration with twilio for managing user sms alerts.
-  - First time developing an event based workflow.
+- Leadership experience
+  - Mentored junior devs
+  - Reoported on progress 
+  - Design system wide technical solutions for features
 - Spearheaded UI decomposition initiative to our leadership group.
   - App deployment was getting bogged down with end-to-end tests. 
   - The Application started managing so many tasks and if any of them failed during deployment, the entire deployment would fail.
   - There were times where we'd lose weeks of deliverables due to these bottlenecks.
   - The site spilt into funcitonal pieces across the domain.
+- Greenfield project
+    - Less than 10 orders in system when onboarded
+    - Rapid growth over 3 years with 2nd year seeing 500% increase
 `,
     keyPoints: [
       "Collect minimal data to show users instant free quotes",
@@ -621,6 +626,7 @@ export const ProjectData: ProjectMap = {
       "Email and text notification/tracking",
       "Create and manage orders",
       "Secure payment management",
+      3,
     ],
     importantUrls: [
       {
