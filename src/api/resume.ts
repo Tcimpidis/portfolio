@@ -23,6 +23,7 @@ export const ResumeData: ResumeDataDto = {
       duration: "April 2022 - December 2023",
       responsibilities: [
         "Directed frontend architecture by defining a platform framework, establishing coding best-practices and creating workflows that enabled continual, adaptive development.",
+        "Developed cutting edge websites by using React, Webpack Module-Federation, and Typescript. allowing for fast- paced, flexible, and scalable growth of four different micro-frontends and two libraries.",
         "Designed effective scalable component libraries by working closely with stakeholders, building technical requirement documents, execution plans and estimating effort. Ensuring all work aligned with business expectations.",
         "Managed a team of 3 by delegating consumable features, performing in-depth code reviews and administering 1 on 1 feedback sessions that fostered an environment of growth.",
         "Secured sensitive data by adhering to OWASP best practices, building secure deployment pipelines and encrypting data transfers to give peace of mind to both users and shareholders.",
